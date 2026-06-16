@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 評価ガイド用（行構成は変えない） */
+.evaluation-guide {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #374151; /* gray-700 */
+}
+
+.evaluation-guide strong {
+  font-weight: 600;
+  color: #111827; /* gray-900 */
+}
