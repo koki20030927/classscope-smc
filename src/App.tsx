@@ -47,12 +47,13 @@ function App() {
       <header className="sticky top-0 z-30 border-b border-[var(--divider)] bg-[var(--page)]/95 backdrop-blur-sm lg:hidden">
         <div className="flex h-16 items-center justify-between px-4 sm:px-6">
           <div>
-            <h1 className="text-base font-semibold tracking-[-0.01em]">ClassScope SMC</h1>
-            <p className="text-[10px] text-[var(--muted)]">非公式SMC学生レビュー</p>
+            <h1 className="text-[17px] font-semibold leading-tight tracking-[-0.015em]">ClassScope SMC</h1>
+            <p className="mt-0.5 text-[10px] leading-4 text-[var(--muted)]">非公式SMC学生レビュー</p>
           </div>
           <button
             onClick={signOut}
-            className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-sm text-[var(--secondary)] transition-colors duration-150 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none"
+            aria-label="ログアウト"
+            className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-[13px] font-medium leading-5 text-[var(--secondary)] transition-colors duration-150 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none"
           >
             <LogOut size={17} aria-hidden="true" />
             <span className="hidden sm:inline">ログアウト</span>
@@ -63,31 +64,34 @@ function App() {
       <div className="mx-auto flex max-w-[1536px]">
         <aside className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-[var(--divider)] bg-[var(--workspace)] px-3 py-4 lg:flex">
           <div className="px-3 py-2">
-            <h1 className="text-sm font-semibold tracking-[-0.01em]">ClassScope SMC</h1>
-            <p className="mt-1 text-[11px] text-[var(--muted)]">※ Santa Monica College 公式サイトではありません</p>
+            <h1 className="text-[15px] font-semibold leading-5 tracking-[-0.015em]">ClassScope SMC</h1>
+            <p className="mt-1.5 text-[10px] leading-[1.55] text-[var(--muted)]">※ Santa Monica College 公式サイトではありません</p>
           </div>
           <nav aria-label="メインナビゲーション" className="mt-7 grid gap-0.5">
-            {navigationItems.map(({ id, label, icon: Icon }) => (
-              <button key={id} onClick={() => setActiveTab(id)} aria-pressed={activeTab === id} className={`relative flex min-h-11 items-center gap-3 rounded-md px-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${activeTab === id ? 'font-medium text-white before:absolute before:bottom-2 before:left-0 before:top-2 before:w-0.5 before:bg-[var(--accent)]' : 'text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'}`}>
+            {navigationItems.map(({ id, label, icon: Icon }, index) => (
+              <div key={id} className={index === 1 ? 'mt-5' : undefined}>
+                {index === 1 && <p className="mb-1.5 px-3 text-[10px] font-medium leading-4 text-[var(--muted)]">管理</p>}
+              <button onClick={() => setActiveTab(id)} aria-pressed={activeTab === id} className={`relative flex min-h-11 items-center gap-3 rounded-md px-3 text-[14px] leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${activeTab === id ? 'font-medium text-white before:absolute before:bottom-2 before:left-0 before:top-2 before:w-0.5 before:bg-[var(--accent)]' : 'font-normal text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'}`}>
                 <Icon size={17} aria-hidden="true" /><span>{label}</span>
               </button>
+              </div>
             ))}
           </nav>
           <div className="mt-auto border-t border-[var(--divider)] pt-3">
-            <button onClick={signOut} className="flex min-h-11 w-full items-center gap-3 rounded-md px-3 text-sm text-[var(--secondary)] transition-colors duration-150 hover:bg-white/[0.025] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"><LogOut size={16} aria-hidden="true" />ログアウト</button>
+            <button onClick={signOut} aria-label="ログアウト" className="flex min-h-11 w-full items-center gap-3 rounded-md px-3 text-[13px] font-normal leading-5 text-[var(--secondary)] transition-colors duration-150 hover:bg-white/[0.025] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"><LogOut size={16} aria-hidden="true" />ログアウト</button>
           </div>
         </aside>
 
-        <main className="min-w-0 flex-1 px-4 py-7 sm:px-6 sm:py-10 lg:px-10 xl:px-12">
+        <main className="min-w-0 flex-1 px-4 py-8 sm:px-6 sm:py-11 lg:px-10 lg:py-12 xl:px-12">
         <div className="mx-auto max-w-[1180px]">
-        <div className="mb-8 flex flex-col gap-6 lg:mb-11">
+        <div className="mb-10 flex flex-col gap-7 sm:mb-12 lg:mb-12">
           <div>
-            <h2 className="text-3xl font-semibold tracking-[-0.035em] text-white sm:text-[2rem]">
-              {activeTab === 'reviews' ? 'レビューを投稿' : activeTab === 'professors' ? '教授管理' : '授業管理'}
+            <h2 className="app-page-title text-white">
+              {activeTab === 'reviews' ? 'レビューを書く' : activeTab === 'professors' ? '教授管理' : '授業管理'}
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--secondary)] sm:text-base">
+            <p className="app-page-description mt-2.5 text-[var(--secondary)]">
               {activeTab === 'reviews'
-                ? '学生の実体験を共有し、次の授業選びに役立つ情報を整理します。'
+                ? '受講した経験を、次に授業を選ぶ学生へ共有します。'
                 : activeTab === 'professors'
                   ? 'レビューで使用する教授情報を確認し、新しい教授を登録できます。'
                   : '科目コードと授業名を整理し、レビュー投稿に必要な授業情報を管理します。'}
@@ -96,12 +100,12 @@ function App() {
 
           <nav
             aria-label="メインナビゲーション"
-            className={`grid w-full border-b border-[var(--divider)] lg:hidden ${isAdmin && !isAdminLoading ? 'grid-cols-3' : 'grid-cols-1'}`}
+            className="flex max-w-full items-center gap-1 overflow-hidden border-b border-[var(--divider)] lg:hidden"
           >
           <button
             onClick={() => setActiveTab('reviews')}
             aria-pressed={activeTab === 'reviews'}
-            className={`border-b-2 flex min-h-11 items-center justify-center gap-2 px-2 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none sm:text-sm ${
+            className={`flex min-h-11 shrink-0 items-center justify-center gap-2 border-b-2 px-3 text-[14px] leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
               activeTab === 'reviews'
                 ? 'border-[var(--accent)] font-medium text-white'
                 : 'border-transparent text-[var(--muted)] hover:text-white'
@@ -113,7 +117,7 @@ function App() {
           {isAdmin && !isAdminLoading && <button
             onClick={() => setActiveTab('professors')}
             aria-pressed={activeTab === 'professors'}
-            className={`border-b-2 flex min-h-11 items-center justify-center gap-2 px-2 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none sm:text-sm ${
+            className={`ml-4 flex min-h-11 shrink-0 items-center justify-center gap-2 border-b-2 px-2.5 text-[13px] leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none sm:text-[14px] ${
               activeTab === 'professors'
                 ? 'border-[var(--accent)] font-medium text-white'
                 : 'border-transparent text-[var(--muted)] hover:text-white'
@@ -125,7 +129,7 @@ function App() {
           {isAdmin && !isAdminLoading && <button
             onClick={() => setActiveTab('courses')}
             aria-pressed={activeTab === 'courses'}
-            className={`border-b-2 flex min-h-11 items-center justify-center gap-2 px-2 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none sm:text-sm ${
+            className={`flex min-h-11 shrink-0 items-center justify-center gap-2 border-b-2 px-3 text-[13px] leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none sm:text-[14px] ${
               activeTab === 'courses'
                 ? 'border-[var(--accent)] font-medium text-white'
                 : 'border-transparent text-[var(--muted)] hover:text-white'
@@ -138,11 +142,11 @@ function App() {
         </div>
 
         {activeTab === 'reviews' && (
-          <div className="grid items-start gap-10 xl:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.65fr)]">
+          <div className="grid items-start gap-11 xl:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.65fr)] xl:gap-12">
             <div>
               <ReviewForm onReviewSubmitted={() => setReviewRefresh(prev => prev + 1)} />
             </div>
-            <div className="grid gap-6">
+            <div className="grid gap-8">
               <ProfessorStats refresh={reviewRefresh} />
               <ReviewList refresh={reviewRefresh} />
             </div>

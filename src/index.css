@@ -25,6 +25,55 @@
   --transition-fast: 150ms;
 }
 
+@layer components {
+  .app-page-title {
+    font-size: 1.875rem;
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: -0.032em;
+  }
+
+  .app-page-description {
+    max-width: 42rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .app-section-title {
+    font-size: 1.1875rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
+  }
+
+  .app-section-description {
+    max-width: 38rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  .app-field-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  .app-metadata {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .app-page-title {
+      font-size: 2.125rem;
+      line-height: 1.18;
+    }
+  }
+}
+
 .auth-input:-webkit-autofill,
 .auth-input:-webkit-autofill:hover,
 .auth-input:-webkit-autofill:focus {

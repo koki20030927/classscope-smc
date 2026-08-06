@@ -12,6 +12,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
   const [loading, setLoading] = useState(true);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     loadReviews();
@@ -37,6 +38,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
   const loadReviews = async () => {
     setLoading(true);
+    setLoadError(null);
     const { data, error } = await supabase
       .from('reviews')
       .select(`
@@ -63,6 +65,8 @@ export function ReviewList({ refresh }: { refresh: number }) {
       const reviewRows = data as unknown as ReviewWithDetails[];
       setReviews(reviewRows);
       setFilteredReviews(reviewRows);
+    } else {
+      setLoadError('レビューを読み込めませんでした。少し時間をおいて再度お試しください。');
     }
     setLoading(false);
   };
@@ -132,24 +136,28 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
   if (loading) {
     return (
-      <div className="border-y border-[var(--divider)] py-10">
-        <p className="text-sm text-[var(--secondary)]">読み込み中...</p>
+      <div className="py-10" aria-live="polite">
+        <p className="text-sm text-[var(--secondary)]">レビューを読み込んでいます...</p>
       </div>
     );
   }
 
+  if (loadError) {
+    return <p role="alert" className="py-10 text-sm leading-6 text-[var(--danger)]">{loadError}</p>;
+  }
+
   return (
     <section>
-      <div className="border-y border-[var(--divider)] py-6">
-        <div className="mb-4 flex items-end justify-between gap-4">
-          <div><h2 className="text-lg font-medium text-white">レビューを探す</h2><p className="mt-1 text-sm text-[var(--secondary)]">教授名または授業コードで絞り込めます。</p></div>
-          <span className="shrink-0 text-xs tabular-nums text-[var(--muted)]">{filteredReviews.length}件</span>
+      <div className="border-b border-[var(--divider)] pb-8 pt-2 sm:pb-9 sm:pt-3">
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div><h2 className="app-section-title text-white">レビューを探す</h2><p className="app-section-description mt-1.5 text-[var(--secondary)]">教授名または授業コードで絞り込めます。</p></div>
+          <span className="app-metadata shrink-0 tabular-nums text-[var(--muted)]">{filteredReviews.length}件</span>
         </div>
         <div className="relative">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" size={17} aria-hidden="true" />
-          <input type="text" placeholder="教授名または授業コードを検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-base text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" />
+          <input type="search" aria-label="レビューを教授名または授業コードで検索" placeholder="教授名または授業コードを検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-[15px] leading-6 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[14px] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" />
         </div>
-        <p className="mt-3 text-xs leading-5 text-[var(--muted)]">評価は5段階です。おすすめ度・サポートは5が高評価、難易度・宿題量は5が高負荷です。</p>
+        <p className="app-metadata mt-3.5 max-w-lg text-[var(--muted)]">おすすめ度・サポートは5が高評価、難易度・宿題量は5が高負荷です。</p>
       </div>
 
       <div className="divide-y divide-[var(--divider)]">
@@ -158,24 +166,24 @@ export function ReviewList({ refresh }: { refresh: number }) {
           const isOwner = user?.id === review.user_id;
 
           return (
-            <article key={review.id} className="py-7 first:pt-6 sm:py-8">
-              <div className="flex items-start justify-between gap-5">
+            <article key={review.id} className="py-8 first:pt-7 sm:py-9">
+              <div className="flex items-start justify-between gap-6">
                 <div className="min-w-0">
-                  <h3 className="text-base font-semibold text-white sm:text-lg">{review.professors?.name}</h3>
-                  <p className="mt-1 text-sm text-[var(--secondary)]"><span className="font-medium text-slate-300">{review.courses?.code}</span>{review.courses?.name ? ` · ${review.courses.name}` : ''}</p>
+                  <h3 className="text-[17px] font-semibold leading-[1.35] tracking-[-0.01em] text-white sm:text-[18px]">{review.professors?.name}</h3>
+                  <p className="mt-1.5 text-[13px] leading-5 text-[var(--secondary)]"><span className="font-medium text-slate-300">{review.courses?.code}</span>{review.courses?.name ? ` · ${review.courses.name}` : ''}</p>
                 </div>
-                <div className="shrink-0 text-right"><span className="text-2xl font-semibold tabular-nums text-white">{review.rating.toFixed(1)}</span><span className="ml-1 text-xs text-[var(--muted)]">/ 5</span><p className="mt-0.5 text-[10px] text-[var(--muted)]">おすすめ度</p></div>
+                <div className="shrink-0 text-right"><span className="text-[22px] font-semibold leading-none tabular-nums text-white">{review.rating.toFixed(1)}</span><span className="ml-1 text-[11px] font-normal text-[var(--muted)]">/ 5</span><p className="mt-1 text-[10px] font-normal leading-4 text-[var(--muted)]">おすすめ度</p></div>
               </div>
-              <p className="mt-5 whitespace-pre-wrap text-[15px] leading-7 text-slate-300">{review.content}</p>
-              <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs tabular-nums text-[var(--secondary)]">
+              <p className="mt-6 whitespace-pre-wrap text-[15px] font-normal leading-[1.8] text-slate-300">{review.content}</p>
+              <div className="app-metadata mt-5 flex flex-wrap gap-x-4 gap-y-2 tabular-nums text-[var(--secondary)]">
                 <span>難易度 {review.difficulty.toFixed(1)}</span><span>宿題 {review.homework_amount.toFixed(1)}</span><span>サポート {review.support_quality.toFixed(1)}</span><span>{review.attendance_required === 'yes' ? '出席あり' : review.attendance_required === 'no' ? '出席なし' : 'オンライン'}</span>
               </div>
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex flex-wrap items-center gap-2">
                   <button
                     onClick={() => handleVote(review.id, 'helpful')}
                     disabled={!user}
-                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
+                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-[12px] font-normal leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
                       userVote?.vote_type === 'helpful'
                         ? 'font-medium text-[var(--success)]'
                         : 'text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'
@@ -183,12 +191,12 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   >
                     <ThumbsUp size={18} />
                     <span>Helpful</span>
-                    <span className="font-semibold">{review.helpful_count}</span>
+                    <span className="font-medium">{review.helpful_count}</span>
                   </button>
                   <button
                     onClick={() => handleVote(review.id, 'not_good')}
                     disabled={!user}
-                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
+                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-[12px] font-normal leading-5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
                       userVote?.vote_type === 'not_good'
                         ? 'font-medium text-[var(--danger)]'
                         : 'text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'
@@ -196,12 +204,12 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   >
                     <ThumbsDown size={18} />
                     <span>Not good</span>
-                    <span className="font-semibold">{review.not_good_count}</span>
+                    <span className="font-medium">{review.not_good_count}</span>
                   </button>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-xs text-[var(--muted)]">
+                  <span className="app-metadata text-[var(--muted)]">
                     {new Date(review.created_at).toLocaleDateString('ja-JP')}
                   </span>
                   {isOwner && (
@@ -239,14 +247,10 @@ export function ReviewList({ refresh }: { refresh: number }) {
           );
         })}
         {filteredReviews.length === 0 && reviews.length > 0 && (
-          <p className="py-12 text-center text-sm text-[var(--secondary)]">
-            検索結果が見つかりませんでした
-          </p>
+          <div className="py-12 text-center"><p className="text-sm font-medium text-[var(--text)]">該当するレビューがありません</p><p className="app-metadata mt-1.5 text-[var(--secondary)]">教授名または授業コードを変えてお試しください。</p></div>
         )}
         {reviews.length === 0 && (
-          <p className="py-12 text-center text-sm text-[var(--secondary)]">
-            まだレビューがありません
-          </p>
+          <div className="py-12 text-center"><p className="text-sm font-medium text-[var(--text)]">まだレビューがありません</p><p className="app-metadata mt-1.5 text-[var(--secondary)]">最初の受講体験が投稿されると、ここに表示されます。</p></div>
         )}
       </div>
     </section>

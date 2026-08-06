@@ -27,6 +27,7 @@ export function ProfessorManager() {
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [listLoading, setListLoading] = useState(false);
 
   useEffect(() => {
     if (isAdmin) {
@@ -35,6 +36,7 @@ export function ProfessorManager() {
   }, [isAdmin]);
 
   const loadProfessors = async () => {
+    setListLoading(true);
     setErrorMessage(null);
     const { data, error } = await supabase
       .from('professors')
@@ -46,6 +48,7 @@ export function ProfessorManager() {
     } else if (error) {
       setErrorMessage(getProfessorErrorMessage(error));
     }
+    setListLoading(false);
   };
 
   const handleAddProfessor = async (e: React.FormEvent) => {
@@ -81,32 +84,33 @@ export function ProfessorManager() {
 
   return (
     <div>
-      <section className="border-y border-[var(--divider)] py-6 sm:py-7">
+      <section className="border-b border-[var(--divider)] pb-8 pt-2 sm:pb-9 sm:pt-3">
         {errorMessage && <p role="alert" className="mb-5 rounded-lg border border-rose-400/20 bg-rose-400/[0.06] px-4 py-3 text-sm text-[var(--danger)]">{errorMessage}</p>}
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-          <div><h2 className="text-lg font-medium text-white">教授ディレクトリ</h2><p className="mt-1 text-sm text-[var(--secondary)]">レビューで使用する教授情報を名前順に表示します。</p></div>
-          <button onClick={() => setShowForm(!showForm)} aria-expanded={showForm} className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-[var(--border)] px-4 text-sm font-medium text-[var(--text)] transition-colors duration-150 hover:bg-white/[0.035] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div><h2 className="app-section-title text-white">教授ディレクトリ</h2><p className="app-section-description mt-1.5 text-[var(--secondary)]">教授情報を名前順に表示</p></div>
+          <button onClick={() => setShowForm(!showForm)} aria-expanded={showForm} className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-[var(--border)] px-4 text-[14px] font-medium leading-5 text-[var(--text)] transition-colors duration-150 hover:bg-white/[0.035] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none">
             {showForm ? <X size={17} aria-hidden="true" /> : <Plus size={17} aria-hidden="true" />}{showForm ? 'キャンセル' : '教授を追加'}
           </button>
         </div>
 
         {showForm && (
-          <form onSubmit={handleAddProfessor} className="mt-6 flex flex-col gap-3 border-t border-[var(--divider)] pt-6 sm:flex-row sm:items-end">
-            <div className="min-w-0 flex-1"><label className="mb-2 block text-sm font-medium text-[var(--text)]">教授名</label><input type="text" value={newProfessorName} onChange={(e) => setNewProfessorName(e.target.value)} placeholder="教授名を入力" required className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] px-4 text-base text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" /></div>
-            <button type="submit" disabled={loading} className="h-[50px] rounded-lg bg-[var(--accent)] px-6 text-sm font-semibold text-slate-950 transition-colors duration-150 hover:bg-[var(--accent-hover)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--focus)] disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-500 motion-reduce:transition-none">{loading ? '追加中...' : '追加'}</button>
+          <form onSubmit={handleAddProfessor} className="mt-7 flex flex-col gap-4 border-t border-[var(--divider)] pt-7 sm:flex-row sm:items-end">
+            <div className="min-w-0 flex-1"><label htmlFor="new-professor-name" className="app-field-label mb-2.5 block text-[var(--text)]">教授名</label><input id="new-professor-name" type="text" value={newProfessorName} onChange={(e) => setNewProfessorName(e.target.value)} placeholder="教授名を入力" required className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] px-4 text-[15px] leading-6 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[14px] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" /></div>
+            <button type="submit" disabled={loading} className="h-[50px] rounded-lg bg-[var(--accent)] px-6 text-[14px] font-semibold leading-5 text-slate-950 transition-colors duration-150 hover:bg-[var(--accent-hover)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--focus)] disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-500 motion-reduce:transition-none">{loading ? '追加中...' : '追加'}</button>
           </form>
         )}
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <div className="relative min-w-0 flex-1"><Search size={17} aria-hidden="true" className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" /><input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="教授名を検索" className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-base text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" /></div>
-          <p className="shrink-0 text-xs tabular-nums text-[var(--muted)]">{searchQuery ? `${filteredProfessors.length} / ${professors.length}名` : `${professors.length}名`}</p>
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="relative min-w-0 flex-1"><Search size={17} aria-hidden="true" className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" /><input type="search" aria-label="教授名を検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="教授名を検索" className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-[15px] leading-6 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[14px] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" /></div>
+          <p className="app-metadata shrink-0 tabular-nums text-[var(--muted)]">{searchQuery ? `${filteredProfessors.length} / ${professors.length}名` : `${professors.length}名`}</p>
         </div>
       </section>
 
       <section aria-label="教授一覧" className="divide-y divide-[var(--divider)]">
-        {filteredProfessors.map((professor) => <div key={professor.id} className="flex min-h-14 items-center px-1 py-3 text-sm text-[var(--text)] transition-colors duration-150 hover:bg-white/[0.02] motion-reduce:transition-none">{professor.name}</div>)}
-        {professors.length === 0 && <p className="py-12 text-center text-sm text-[var(--secondary)]">教授が登録されていません</p>}
-        {professors.length > 0 && filteredProfessors.length === 0 && <p className="py-12 text-center text-sm text-[var(--secondary)]">検索結果が見つかりませんでした</p>}
+        {listLoading && <p className="py-10 text-sm text-[var(--secondary)]" aria-live="polite">教授一覧を読み込んでいます...</p>}
+        {!listLoading && filteredProfessors.map((professor) => <div key={professor.id} className="flex min-h-12 items-center px-1 py-2.5 text-[14px] font-normal leading-6 text-[var(--text)] transition-colors duration-150 hover:bg-white/[0.02] motion-reduce:transition-none">{professor.name}</div>)}
+        {!listLoading && professors.length === 0 && !errorMessage && <p className="py-12 text-center text-sm text-[var(--secondary)]">教授が登録されていません</p>}
+        {!listLoading && professors.length > 0 && filteredProfessors.length === 0 && <p className="py-12 text-center text-sm text-[var(--secondary)]">該当する教授が見つかりません。</p>}
       </section>
     </div>
   );
