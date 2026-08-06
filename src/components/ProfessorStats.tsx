@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
-import { Professor, ReviewWithDetails } from '../lib/types';
-import { Star, BookOpen } from 'lucide-react';
+import { Professor } from '../lib/types';
 
 interface ProfessorWithStats extends Professor {
   averageRating: number;
@@ -62,55 +61,52 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow p-6">
-        <p className="text-center text-gray-500">読み込み中...</p>
+      <div className="border-y border-[var(--divider)] py-10">
+        <p className="text-center text-sm text-[var(--secondary)]">読み込み中...</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">教授別評価チャート</h2>
+    <section>
+      <div className="flex flex-col gap-3 border-y border-[var(--divider)] py-5 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 className="text-xl font-semibold tracking-[-0.02em] text-[var(--text)]">教授別評価</h2>
+          <p className="mt-1.5 text-sm leading-6 text-[var(--secondary)]">投稿されたおすすめ度の平均が高い順に表示します。</p>
+        </div>
+        <p className="text-sm tabular-nums text-[var(--muted)]">{professors.length}名</p>
+      </div>
 
       {professors.length === 0 ? (
-        <p className="text-gray-500 text-center py-4">
-          まだ評価データがありません
-        </p>
+        <div className="border-b border-[var(--divider)] px-1 py-12 text-center">
+          <p className="text-sm font-medium text-[var(--text)]">まだ評価データがありません</p>
+          <p className="mt-1 text-xs text-[var(--secondary)]">レビューが投稿されると集計が表示されます。</p>
+        </div>
       ) : (
-        <div className="space-y-4">
+        <div className="divide-y divide-[var(--divider)] border-b border-[var(--divider)]">
           {professors.map((professor) => (
             <div
               key={professor.id}
-              className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition"
+              className="grid gap-4 px-1 py-5 sm:grid-cols-[minmax(0,1fr)_minmax(220px,0.65fr)] sm:items-center sm:gap-8"
             >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-semibold text-gray-800 text-lg">
-                    {professor.name}
-                  </h3>
-                  <div className="flex items-center gap-1 text-sm text-gray-600">
-                    <BookOpen size={16} />
-                    <span>{professor.reviewCount}件のレビュー</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full">
-                  <Star size={20} className="fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold text-gray-800 text-xl">
-                    {professor.averageRating.toFixed(2)}
-                  </span>
-                </div>
+              <div className="min-w-0">
+                <h3 className="truncate text-base font-medium text-[var(--text)]">{professor.name}</h3>
+                <p className="mt-1 text-xs text-[var(--muted)]">{professor.reviewCount}件のレビュー</p>
               </div>
 
-              <div className="relative">
-                <div className="w-full bg-gray-200 rounded-full h-3">
+              <div>
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="text-xs text-[var(--secondary)]">おすすめ度</span>
+                  <span className="text-lg font-semibold tabular-nums text-[var(--text)]">{professor.averageRating.toFixed(2)}</span>
+                </div>
+                <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-white/[0.08]">
                   <div
-                    className="bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 h-3 rounded-full transition-all"
+                    className="h-full rounded-full bg-[var(--accent)] transition-[width] duration-200 motion-reduce:transition-none"
                     style={{ width: `${(professor.averageRating / 5) * 100}%` }}
                   />
                 </div>
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                <div className="mt-1.5 flex justify-between text-[10px] tabular-nums text-[var(--muted)]">
                   <span>1.0</span>
-                  <span>2.5</span>
                   <span>5.0</span>
                 </div>
               </div>
@@ -118,6 +114,6 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

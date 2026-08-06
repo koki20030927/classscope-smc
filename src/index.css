@@ -1,6 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --page: #090b0f;
+  --workspace: rgba(17, 21, 27, 0.86);
+  --surface: var(--workspace);
+  --elevated: #171b22;
+  --divider: rgba(148, 163, 184, 0.1);
+  --border: rgba(148, 163, 184, 0.14);
+  --text: #f8fafc;
+  --secondary: #94a3b8;
+  --muted: #64748b;
+  --accent: #5eead4;
+  --accent-hover: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.1);
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #fb7185;
+  --focus: rgba(94, 234, 212, 0.28);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --transition-fast: 150ms;
+}
+
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  box-shadow: 0 0 0 1000px var(--elevated) inset;
+  caret-color: var(--text);
+  transition: background-color 9999s ease-out 0s;
+}
+
 /* 評価ガイド用（行構成は変えない） */
 .evaluation-guide {
   font-size: 14px;

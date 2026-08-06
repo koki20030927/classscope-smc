@@ -40,15 +40,29 @@ export function ReviewList({ refresh }: { refresh: number }) {
     const { data, error } = await supabase
       .from('reviews')
       .select(`
-        *,
+        id,
+        user_id,
+        professor_id,
+        course_id,
+        rating,
+        difficulty,
+        homework_amount,
+        support_quality,
+        attendance_required,
+        content,
+        helpful_count,
+        not_good_count,
+        created_at,
+        updated_at,
         professors(name),
         courses(code, name)
       `)
       .order('created_at', { ascending: false });
 
     if (!error && data) {
-      setReviews(data);
-      setFilteredReviews(data);
+      const reviewRows = data as unknown as ReviewWithDetails[];
+      setReviews(reviewRows);
+      setFilteredReviews(reviewRows);
     }
     setLoading(false);
   };
@@ -58,7 +72,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
     const { data, error } = await supabase
       .from('review_votes')
-      .select('*')
+      .select('id, user_id, review_id, vote_type, created_at')
       .eq('user_id', user.id);
 
     if (!error && data) {
@@ -118,98 +132,53 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow p-6">
-        <p className="text-center text-gray-500">読み込み中...</p>
+      <div className="border-y border-[var(--divider)] py-10">
+        <p className="text-sm text-[var(--secondary)]">読み込み中...</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 max-h-[calc(100vh-12rem)] overflow-y-auto">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">レビュー一覧</h2>
-
-      <div className="mb-4">
+    <section>
+      <div className="border-y border-[var(--divider)] py-6">
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <div><h2 className="text-lg font-medium text-white">レビューを探す</h2><p className="mt-1 text-sm text-[var(--secondary)]">教授名または授業コードで絞り込めます。</p></div>
+          <span className="shrink-0 text-xs tabular-nums text-[var(--muted)]">{filteredReviews.length}件</span>
+        </div>
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-          <input
-            type="text"
-            placeholder="教授名または科目コードで検索..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" size={17} aria-hidden="true" />
+          <input type="text" placeholder="教授名または授業コードを検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-base text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" />
         </div>
+        <p className="mt-3 text-xs leading-5 text-[var(--muted)]">評価は5段階です。おすすめ度・サポートは5が高評価、難易度・宿題量は5が高負荷です。</p>
       </div>
 
-      <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-        <h3 className="font-semibold text-gray-800 mb-2">評価ガイド</h3>
-        <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
-          <div><span className="font-medium">おすすめ度:</span> 1=悪い / 5=良い </div>
-          <div><span className="font-medium">難易度:</span> 1=簡単 / 5=難しい</div>
-          <div><span className="font-medium">宿題の多さ:</span> 1=少ない / 5=多い</div>
-          <div><span className="font-medium">サポートの良さ:</span> 1=悪い / 5=良い</div>
-        </div>
-      </div>
-
-      <div className="space-y-4">
+      <div className="divide-y divide-[var(--divider)]">
         {filteredReviews.map((review) => {
           const userVote = userVotes.get(review.id);
           const isOwner = user?.id === review.user_id;
 
           return (
-            <div key={review.id} className="border border-gray-200 rounded-lg p-5 bg-white hover:shadow-md transition">
-              <div className="flex gap-6">
-                <div className="flex-shrink-0 w-48 space-y-3">
-                  <div className="text-sm">
-                    <div className="text-xs text-gray-500 mb-1">おすすめ度</div>
-                    <div className="text-2xl font-bold text-blue-600">{review.rating.toFixed(1)}</div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="text-xs text-gray-500 mb-1">難易度</div>
-                    <div className="text-lg font-semibold text-gray-700">{review.difficulty.toFixed(1)}</div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="text-xs text-gray-500 mb-1">宿題の多さ</div>
-                    <div className="text-lg font-semibold text-gray-700">{review.homework_amount.toFixed(1)}</div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="text-xs text-gray-500 mb-1">サポートの良さ</div>
-                    <div className="text-lg font-semibold text-gray-700">{review.support_quality.toFixed(1)}</div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="text-xs text-gray-500 mb-1">出席確認</div>
-                    <div className="text-sm font-medium text-gray-700">
-                      {review.attendance_required === 'yes' ? 'はい（出席あり）' :
-                       review.attendance_required === 'no' ? 'いいえ（出席なし）' :
-                       'オンライン'}
-                    </div>
-                  </div>
+            <article key={review.id} className="py-7 first:pt-6 sm:py-8">
+              <div className="flex items-start justify-between gap-5">
+                <div className="min-w-0">
+                  <h3 className="text-base font-semibold text-white sm:text-lg">{review.professors?.name}</h3>
+                  <p className="mt-1 text-sm text-[var(--secondary)]"><span className="font-medium text-slate-300">{review.courses?.code}</span>{review.courses?.name ? ` · ${review.courses.name}` : ''}</p>
                 </div>
-
-                <div className="flex-1 min-w-0">
-                  <div className="mb-3">
-                    <div className="font-bold text-gray-900 text-lg mb-1">
-                      {review.professors?.name}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {review.courses?.code} - {review.courses?.name}
-                    </div>
-                  </div>
-                  <div className="text-gray-700 whitespace-pre-wrap leading-relaxed">
-                    {review.content}
-                  </div>
-                </div>
+                <div className="shrink-0 text-right"><span className="text-2xl font-semibold tabular-nums text-white">{review.rating.toFixed(1)}</span><span className="ml-1 text-xs text-[var(--muted)]">/ 5</span><p className="mt-0.5 text-[10px] text-[var(--muted)]">おすすめ度</p></div>
               </div>
-
-              <div className="flex items-center justify-between mt-4 pt-4 border-t">
-                <div className="flex items-center gap-3">
+              <p className="mt-5 whitespace-pre-wrap text-[15px] leading-7 text-slate-300">{review.content}</p>
+              <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs tabular-nums text-[var(--secondary)]">
+                <span>難易度 {review.difficulty.toFixed(1)}</span><span>宿題 {review.homework_amount.toFixed(1)}</span><span>サポート {review.support_quality.toFixed(1)}</span><span>{review.attendance_required === 'yes' ? '出席あり' : review.attendance_required === 'no' ? '出席なし' : 'オンライン'}</span>
+              </div>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-wrap items-center gap-2">
                   <button
                     onClick={() => handleVote(review.id, 'helpful')}
                     disabled={!user}
-                    className={`flex items-center gap-2 px-4 py-2 rounded transition ${
+                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
                       userVote?.vote_type === 'helpful'
-                        ? 'bg-green-100 text-green-700 font-medium'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        ? 'font-medium text-[var(--success)]'
+                        : 'text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'
                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
                     <ThumbsUp size={18} />
@@ -219,10 +188,10 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   <button
                     onClick={() => handleVote(review.id, 'not_good')}
                     disabled={!user}
-                    className={`flex items-center gap-2 px-4 py-2 rounded transition ${
+                    className={`flex min-h-10 items-center gap-2 rounded-md px-2.5 text-xs transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] motion-reduce:transition-none ${
                       userVote?.vote_type === 'not_good'
-                        ? 'bg-red-100 text-red-700 font-medium'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        ? 'font-medium text-[var(--danger)]'
+                        : 'text-[var(--secondary)] hover:bg-white/[0.025] hover:text-white'
                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
                     <ThumbsDown size={18} />
@@ -231,24 +200,24 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-gray-500">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-xs text-[var(--muted)]">
                     {new Date(review.created_at).toLocaleDateString('ja-JP')}
                   </span>
                   {isOwner && (
                     <>
                       {deleteConfirmId === review.id ? (
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-gray-600">削除しますか?</span>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-xs text-[var(--secondary)]">削除しますか?</span>
                           <button
                             onClick={() => handleDelete(review.id)}
-                            className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition"
+                            className="min-h-9 rounded-lg bg-[var(--danger)] px-3 text-xs font-medium text-slate-950 transition hover:brightness-110"
                           >
                             はい
                           </button>
                           <button
                             onClick={() => setDeleteConfirmId(null)}
-                            className="px-3 py-1 bg-gray-300 text-gray-700 text-sm rounded hover:bg-gray-400 transition"
+                            className="min-h-9 rounded-lg bg-white/[0.06] px-3 text-xs font-medium text-[var(--secondary)] transition hover:bg-white/[0.1] hover:text-white"
                           >
                             いいえ
                           </button>
@@ -256,7 +225,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
                       ) : (
                         <button
                           onClick={() => setDeleteConfirmId(review.id)}
-                          className="p-2 text-red-600 hover:bg-red-50 rounded transition"
+                          className="min-h-10 min-w-10 rounded-xl p-2 text-[var(--danger)] transition hover:bg-rose-400/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-rose-400/10"
                           title="削除"
                         >
                           <Trash2 size={18} />
@@ -266,20 +235,20 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
         {filteredReviews.length === 0 && reviews.length > 0 && (
-          <p className="text-gray-500 text-center py-8">
+          <p className="py-12 text-center text-sm text-[var(--secondary)]">
             検索結果が見つかりませんでした
           </p>
         )}
         {reviews.length === 0 && (
-          <p className="text-gray-500 text-center py-8">
+          <p className="py-12 text-center text-sm text-[var(--secondary)]">
             まだレビューがありません
           </p>
         )}
       </div>
-    </div>
+    </section>
   );
 }

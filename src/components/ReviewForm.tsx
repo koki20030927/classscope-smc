@@ -24,10 +24,6 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
   const [loading, setLoading] = useState(false);
 
   const searchProfessors = async (query: string) => {
-    console.log('query', query);
-    console.log('VITE_SUPABASE_URL', import.meta.env.VITE_SUPABASE_URL);
-    console.log('VITE_SUPABASE_ANON_KEY', import.meta.env.VITE_SUPABASE_ANON_KEY);
-
     const { data, error } = await supabase
       .from('professors')
       .select('id, name')
@@ -35,11 +31,9 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
       .order('name')
       .limit(10);
 
-    console.log({ dataLen: data?.length, error });
-
     if (error) {
-      console.error('Professor search error:', error);
-      throw new Error(`教授検索エラー: ${error.message}`);
+      console.error('教授を検索できませんでした。');
+      throw new Error('教授を検索できませんでした。');
     }
 
     return (data || []).map((p) => ({
@@ -49,8 +43,6 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
   };
 
   const searchCourses = async (query: string) => {
-  console.log("query", query);
-
   const q = query.trim();
 
   // ✅ 教授が選ばれて prefix が取れてたら、その科目カテゴリだけ出す
@@ -66,11 +58,9 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
    
     .limit(30);
 
-  console.log({ dataLen: data?.length, error, coursePrefix, pattern });
-
   if (error) {
-    console.error("Course search error:", error);
-    throw new Error(`科目検索エラー: ${error.message}`);
+    console.error('授業を検索できませんでした。');
+    throw new Error('授業を検索できませんでした。');
   }
 
   const parseCourse = (code: string) => {
@@ -105,18 +95,18 @@ return sorted.map((c) => ({
 
   // 教授が過去に教えた course_id を取得
   const { data, error } = await supabase
-    .from("professor_course_pairs")
+    .from("professor_courses")
     .select("course_id")
     .eq("professor_id", id)
     .limit(200);
 
   if (error) {
-    console.error("prefix detect error:", error);
+    console.error('教授に対応する授業を取得できませんでした。');
     setCoursePrefix(null);
     return;
   }
 
-  const courseIds = (data ?? []).map((r: any) => r.course_id).filter(Boolean);
+  const courseIds = (data ?? []).map((r: { course_id: string | null }) => r.course_id).filter(Boolean);
 
   if (courseIds.length === 0) {
     setCoursePrefix(null);
@@ -130,12 +120,12 @@ return sorted.map((c) => ({
     .in("id", courseIds);
 
   if (courseErr) {
-    console.error("prefix detect (courses) error:", courseErr);
+    console.error('授業情報を取得できませんでした。');
     setCoursePrefix(null);
     return;
   }
 
-  const codes = (courseRows ?? []).map((r: any) => r.code).filter(Boolean) as string[];
+  const codes = (courseRows ?? []).map((r: { code: string | null }) => r.code).filter(Boolean) as string[];
 
   // "MATH 13" → "MATH"
   const prefixes = codes.map((c) => c.split(" ")[0]);
@@ -209,156 +199,80 @@ return sorted.map((c) => ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 max-h-[calc(100vh-12rem)] overflow-y-auto">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">レビューを投稿</h2>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <AutocompleteInput
-          label="教授名"
-          value={professorInput}
-          selectedId={selectedProfessorId}
-          onSearch={searchProfessors}
-          onChange={handleProfessorChange}
-          placeholder="教授名を入力（2文字以上）"
-          required
-        />
-
-        <AutocompleteInput
-          label="授業コード"
-          value={courseInput}
-          selectedId={selectedCourseId}
-          onSearch={searchCourses}
-          onChange={handleCourseChange}
-          placeholder="授業コードを入力（2文字以上）"
-          required
-        />
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            おすすめ度: {rating} / 5 <span className="text-red-500">*</span>
-          </label>
-          <div className="text-xs text-gray-500 mb-1">1: おすすめしない → 5: かなりおすすめ</div>
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value={rating}
-            onChange={(e) => setRating(Number(e.target.value))}
-            className="w-full"
-          />
+    <form onSubmit={handleSubmit} className="border-y border-[var(--divider)]">
+      <section className="py-7 sm:py-9">
+        <div className="mb-6">
+          <h2 className="text-lg font-medium text-white">教授と授業</h2>
+          <p className="mt-1.5 text-sm leading-6 text-[var(--secondary)]">レビューする対象を候補から選択してください。</p>
         </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            難易度: {difficulty} / 5 <span className="text-red-500">*</span>
-          </label>
-          <div className="text-xs text-gray-500 mb-1">1: 簡単 → 5: 難しい</div>
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value={difficulty}
-            onChange={(e) => setDifficulty(Number(e.target.value))}
-            className="w-full"
-          />
+        <div className="grid gap-5 md:grid-cols-2">
+          <AutocompleteInput label="教授名" value={professorInput} selectedId={selectedProfessorId} onSearch={searchProfessors} onChange={handleProfessorChange} placeholder="教授名を入力（2文字以上）" required />
+          <AutocompleteInput label="授業コード" value={courseInput} selectedId={selectedCourseId} onSearch={searchCourses} onChange={handleCourseChange} placeholder="授業コードを入力（2文字以上）" required />
         </div>
+      </section>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            宿題の多さ: {homeworkAmount} / 5 <span className="text-red-500">*</span>
-          </label>
-          <div className="text-xs text-gray-500 mb-1">1: 少ない → 5: 多い</div>
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value={homeworkAmount}
-            onChange={(e) => setHomeworkAmount(Number(e.target.value))}
-            className="w-full"
-          />
+      <section className="border-t border-[var(--divider)] py-7 sm:py-9">
+        <div className="mb-2">
+          <h2 className="text-lg font-medium text-white">授業を評価</h2>
+          <p className="mt-1.5 text-sm leading-6 text-[var(--secondary)]">1から5の範囲で、実際に受講した印象を選んでください。</p>
         </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            サポートの良さ: {supportQuality} / 5 <span className="text-red-500">*</span>
-          </label>
-          <div className="text-xs text-gray-500 mb-1">1: 悪い → 5: 良い</div>
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value={supportQuality}
-            onChange={(e) => setSupportQuality(Number(e.target.value))}
-            className="w-full"
-          />
+        <div className="divide-y divide-[var(--divider)]">
+          {[
+            { label: 'おすすめ度', help: 'おすすめしない → かなりおすすめ', value: rating, setValue: setRating },
+            { label: '難易度', help: '簡単 → 難しい', value: difficulty, setValue: setDifficulty },
+            { label: '宿題の多さ', help: '少ない → 多い', value: homeworkAmount, setValue: setHomeworkAmount },
+            { label: 'サポートの良さ', help: '悪い → 良い', value: supportQuality, setValue: setSupportQuality },
+          ].map((item) => (
+            <div key={item.label} className="grid gap-4 py-5 sm:grid-cols-[minmax(150px,0.55fr)_minmax(220px,1fr)] sm:items-center sm:gap-8">
+              <div>
+                <label className="text-sm font-medium text-[var(--text)]">{item.label} <span className="ml-1 tabular-nums text-[var(--secondary)]">{item.value}/5</span></label>
+                <p className="mt-1 text-xs leading-5 text-[var(--muted)]">{item.help}</p>
+              </div>
+              <div>
+                <input type="range" min="1" max="5" value={item.value} onChange={(e) => item.setValue(Number(e.target.value))} className="h-2 w-full cursor-pointer accent-[var(--accent)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--focus)]" />
+                <div className="mt-1.5 flex justify-between px-0.5 text-[10px] tabular-nums text-[var(--muted)]" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+              </div>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            出席確認 <span className="text-red-500">*</span>
-          </label>
-          <div className="flex gap-4">
-            <label className="flex items-center">
-              <input
-                type="radio"
-                name="attendance"
-                checked={attendanceRequired === 'yes'}
-                onChange={() => setAttendanceRequired('yes')}
-                className="mr-2"
-              />
-              はい（出席あり）
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                name="attendance"
-                checked={attendanceRequired === 'no'}
-                onChange={() => setAttendanceRequired('no')}
-                className="mr-2"
-              />
-              いいえ（出席なし）
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                name="attendance"
-                checked={attendanceRequired === 'online'}
-                onChange={() => setAttendanceRequired('online')}
-                className="mr-2"
-              />
-              オンライン（出席確認なし / 該当なし）
-            </label>
+      <section className="border-t border-[var(--divider)] py-7 sm:py-9">
+        <fieldset>
+          <legend className="text-lg font-medium text-white">授業形式・出席 <span className="ml-1 text-sm font-normal text-[var(--secondary)]">必須</span></legend>
+          <div className="mt-5 grid overflow-hidden rounded-lg border border-[var(--border)] sm:grid-cols-3 sm:divide-x sm:divide-[var(--divider)]">
+            {[
+              { value: 'yes', label: '出席あり', help: '確認があります' },
+              { value: 'no', label: '出席なし', help: '確認はありません' },
+              { value: 'online', label: 'オンライン', help: '該当なし' },
+            ].map((option) => (
+              <label key={option.value} className="relative cursor-pointer border-b border-[var(--divider)] last:border-b-0 sm:border-b-0">
+                <input type="radio" name="attendance" checked={attendanceRequired === option.value} onChange={() => setAttendanceRequired(option.value as 'yes' | 'no' | 'online')} className="peer sr-only" />
+                <span className="flex min-h-14 items-center justify-between px-4 py-3 pr-10 text-sm text-[var(--secondary)] transition-colors duration-150 peer-checked:bg-white/[0.035] peer-checked:font-medium peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-inset peer-focus-visible:ring-[var(--accent)] motion-reduce:transition-none">
+                  <span><span className="block">{option.label}</span><span className="mt-0.5 block text-xs font-normal text-[var(--muted)]">{option.help}</span></span>
+                </span>
+                <span aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm text-[var(--accent)] opacity-0 transition-opacity duration-150 peer-checked:opacity-100 motion-reduce:transition-none">✓</span>
+              </label>
+            ))}
           </div>
+        </fieldset>
+      </section>
+
+      <section className="border-t border-[var(--divider)] py-8 sm:py-10">
+        <div className="mb-5">
+          <h2 className="text-lg font-medium text-white">受講した経験を書く</h2>
+          <p className="mt-1.5 text-sm leading-6 text-[var(--secondary)]">授業の雰囲気や教授の教え方を、次の学生へ共有してください。</p>
         </div>
+        <label className="mb-2 block text-sm font-medium text-[var(--text)]">コメント <span className="text-[var(--secondary)]">必須</span></label>
+        <textarea value={content} onChange={(e) => setContent(e.target.value)} required rows={8} className="w-full resize-y rounded-lg border border-[var(--border)] bg-[var(--elevated)] px-4 py-3 text-base leading-7 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] hover:border-slate-500 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" placeholder="授業の感想や教授の教え方などを記入してください" />
+      </section>
 
-       <div>
-  <label className="block text-sm font-medium text-gray-700 mb-1">
-    レビューコメント <span className="text-red-500">*</span>
-  </label>
-
-  <textarea
-    value={content}
-    onChange={(e) => setContent(e.target.value)}
-    required
-    rows={4}
-    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-    placeholder="授業の感想や教授の教え方などを記入してください"
-  />
-</div>
-
-
-        
-
-        <button
-  type="submit"
-  disabled={loading || !isFormValid()}
-  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
->
-  {loading ? '投稿中...' : 'レビューを投稿'}
-</button>
-
-      </form>
-    </div>
+      <section className="flex flex-col gap-4 border-t border-[var(--divider)] py-6 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-[var(--secondary)]">投稿後はレビュー一覧へすぐに反映されます。</p>
+        <button type="submit" disabled={loading || !isFormValid()} className="h-[50px] w-full rounded-lg bg-[var(--accent)] px-6 text-sm font-semibold text-slate-950 transition-colors duration-150 hover:bg-[var(--accent-hover)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--focus)] active:translate-y-px disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-500 motion-reduce:transform-none motion-reduce:transition-none sm:w-auto sm:min-w-44">
+          {loading ? '投稿中...' : 'レビューを投稿'}
+        </button>
+      </section>
+    </form>
   );
 }
-

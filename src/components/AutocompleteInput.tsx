@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useId, useRef } from 'react';
 
 interface AutocompleteOption {
   id: string;
@@ -31,6 +31,7 @@ export function AutocompleteInput({
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
+  const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -121,10 +122,11 @@ export function AutocompleteInput({
 
   return (
     <div className="relative">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
-        {label} {required && <span className="text-red-500">*</span>}
+      <label htmlFor={inputId} className="mb-2 block text-sm font-medium text-[var(--text)]">
+        {label} {required && <span className="text-[var(--muted)]">必須</span>}
       </label>
       <input
+        id={inputId}
         ref={inputRef}
         type="text"
         value={value}
@@ -143,33 +145,33 @@ export function AutocompleteInput({
 
         placeholder={placeholder}
         required={required}
-        className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+        className={`h-[50px] w-full rounded-lg border bg-[var(--elevated)] px-4 text-base text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[var(--muted)] hover:border-slate-500 focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none ${
           required && value && !selectedId && hasSearched && filteredOptions.length > 0
-            ? 'border-red-300'
-            : 'border-gray-300'
+            ? 'border-[var(--danger)]'
+            : 'border-[var(--border)]'
         }`}
       />
       {loading && (
-        <p className="text-xs text-gray-500 mt-1">検索中...</p>
+        <p className="mt-2 text-xs text-[var(--secondary)]">検索中...</p>
       )}
       {searchError && (
-        <p className="text-xs text-red-600 mt-1 font-semibold">{searchError}</p>
+        <p className="mt-2 text-xs font-medium text-[var(--danger)]">{searchError}</p>
       )}
       {required && value && !selectedId && hasSearched && filteredOptions.length > 0 && !loading && !searchError && (
-        <p className="text-xs text-red-600 mt-1">候補から選択してください</p>
+        <p className="mt-2 text-xs text-[var(--danger)]">候補から選択してください</p>
       )}
       {showSuggestions && filteredOptions.length > 0 && (
         <div
           ref={suggestionsRef}
-          className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto"
+          className="absolute z-50 mt-2 max-h-64 w-full overflow-y-auto rounded-lg border border-[var(--border)] bg-[var(--elevated)] shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
         >
           {filteredOptions.map((option, index) => (
             <div
               key={option.id}
               onClick={() => handleSelectOption(option)}
               onMouseEnter={() => setHighlightedIndex(index)}
-              className={`px-3 py-2 cursor-pointer ${
-                index === highlightedIndex ? 'bg-blue-100' : 'hover:bg-gray-100'
+              className={`cursor-pointer border-b border-[var(--divider)] px-4 py-3 text-sm text-[var(--secondary)] transition-colors duration-150 last:border-b-0 motion-reduce:transition-none ${
+                index === highlightedIndex ? 'bg-white/[0.055] font-medium text-[var(--text)]' : 'hover:bg-white/[0.035] hover:text-[var(--text)]'
               }`}
             >
               {option.label}
