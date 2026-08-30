@@ -3,9 +3,11 @@ import { supabase } from '../lib/supabase';
 import { ReviewWithDetails, ReviewVote } from '../lib/types';
 import { ThumbsUp, ThumbsDown, Trash2, Search } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useSchool } from '../contexts/SchoolContext';
 
 export function ReviewList({ refresh }: { refresh: number }) {
   const { user } = useAuth();
+  const { currentSchool } = useSchool();
   const [reviews, setReviews] = useState<ReviewWithDetails[]>([]);
   const [filteredReviews, setFilteredReviews] = useState<ReviewWithDetails[]>([]);
   const [userVotes, setUserVotes] = useState<Map<string, ReviewVote>>(new Map());
@@ -15,11 +17,13 @@ export function ReviewList({ refresh }: { refresh: number }) {
   const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
-    loadReviews();
-    if (user) {
-      loadUserVotes();
-    }
-  }, [refresh, user]);
+    const loadSchoolReviews = async () => {
+      const reviewIds = await loadReviews();
+      if (user) await loadUserVotes(reviewIds);
+      else setUserVotes(new Map());
+    };
+    void loadSchoolReviews();
+  }, [refresh, user, currentSchool?.id]);
 
   useEffect(() => {
     if (searchQuery.trim() === '') {
@@ -36,13 +40,14 @@ export function ReviewList({ refresh }: { refresh: number }) {
     }
   }, [searchQuery, reviews]);
 
-  const loadReviews = async () => {
+  const loadReviews = async (): Promise<string[]> => {
     setLoading(true);
     setLoadError(null);
     const { data, error } = await supabase
       .from('reviews')
       .select(`
         id,
+        school_id,
         user_id,
         professor_id,
         course_id,
@@ -56,28 +61,36 @@ export function ReviewList({ refresh }: { refresh: number }) {
         not_good_count,
         created_at,
         updated_at,
-        professors(name),
-        courses(code, name)
+        professors!reviews_school_professor_fkey(name),
+        courses!reviews_school_course_fkey(code, name)
       `)
+      .eq('school_id', currentSchool!.id)
       .order('created_at', { ascending: false });
 
     if (!error && data) {
       const reviewRows = data as unknown as ReviewWithDetails[];
       setReviews(reviewRows);
       setFilteredReviews(reviewRows);
+      setLoading(false);
+      return reviewRows.map((review) => review.id);
     } else {
       setLoadError('レビューを読み込めませんでした。少し時間をおいて再度お試しください。');
     }
     setLoading(false);
+    return [];
   };
 
-  const loadUserVotes = async () => {
-    if (!user) return;
+  const loadUserVotes = async (reviewIds: string[]) => {
+    if (!user || reviewIds.length === 0) {
+      setUserVotes(new Map());
+      return;
+    }
 
     const { data, error } = await supabase
       .from('review_votes')
       .select('id, user_id, review_id, vote_type, created_at')
-      .eq('user_id', user.id);
+      .eq('user_id', user.id)
+      .in('review_id', reviewIds);
 
     if (!error && data) {
       const votesMap = new Map<string, ReviewVote>();
@@ -95,7 +108,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
     if (existingVote) {
       if (existingVote.vote_type === voteType) {
-        await supabase.from('review_votes').delete().eq('id', existingVote.id);
+        await supabase.from('review_votes').delete().eq('id', existingVote.id).eq('user_id', user.id);
         const newVotes = new Map(userVotes);
         newVotes.delete(reviewId);
         setUserVotes(newVotes);
@@ -103,7 +116,8 @@ export function ReviewList({ refresh }: { refresh: number }) {
         await supabase
           .from('review_votes')
           .update({ vote_type: voteType })
-          .eq('id', existingVote.id);
+          .eq('id', existingVote.id)
+          .eq('user_id', user.id);
         const newVotes = new Map(userVotes);
         newVotes.set(reviewId, { ...existingVote, vote_type: voteType });
         setUserVotes(newVotes);
@@ -122,11 +136,16 @@ export function ReviewList({ refresh }: { refresh: number }) {
       }
     }
 
-    await loadReviews();
+    const reviewIds = await loadReviews();
+    await loadUserVotes(reviewIds);
   };
 
   const handleDelete = async (reviewId: string) => {
-    const { error } = await supabase.from('reviews').delete().eq('id', reviewId);
+    const { error } = await supabase
+      .from('reviews')
+      .delete()
+      .eq('id', reviewId)
+      .eq('school_id', currentSchool!.id);
 
     if (!error) {
       setDeleteConfirmId(null);

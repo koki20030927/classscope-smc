@@ -1,0 +1,1731 @@
+subject,course_number,course_title,first_seen_term,last_seen_term
+ACCT,A101,Financial Accounting,Intersession/Spring 2023,Fall 2026
+ACCT,A101H,Financial Accounting Honors,Fall 2025,Fall 2026
+ACCT,A102,Managerial Accounting,Intersession/Spring 2023,Fall 2026
+ACCT,A102H,Managerial Accounting Honors,Fall 2025,Fall 2026
+ACCT,A110,Excel for Accounting & Finance,Intersession/Spring 2023,Fall 2026
+ACCT,A111,Individual Income Tax,Fall 2023,Fall 2026
+ACCT,A112,Acct with QuickBooks,Winter/Spring 2025,Winter/Spring 2025
+ACCT,A116,Business Taxation,Intersession/Spring 2023,Winter/Spring 2026
+ACCT,A118,Accounting Ethics,Intersession/Spring 2023,Summer 2026
+ACCT,A119,Payroll,Intersession/Spring 2024,Summer 2026
+ACCT,A210,Cost Accounting,Fall 2023,Fall 2026
+ACCT,A212,Intermediate Accounting 1,Fall 2023,Fall 2026
+ACCT,A213,Intermediate Accounting 2,Intersession/Spring 2023,Winter/Spring 2026
+ACCT,A215,Governmental Accounting,Intersession/Spring 2024,Intersession/Spring 2024
+ACCT,A218,Auditing,Fall 2023,Winter/Spring 2026
+ADLT,A040N,Spanish for Daily Life,Fall 2026,Fall 2026
+ADLT,A041N,Spanish for Travel,Fall 2026,Fall 2026
+ALH,A001N,Personal Care Aide I,Fall 2023,Fall 2026
+ALH,A002N,Personal Care Aide II,Fall 2023,Fall 2026
+ALH,A009N,PCA: Assist Alzheimer/Dementia,Fall 2023,Fall 2026
+ALH,A010,Health Occupations,Intersession/Spring 2023,Fall 2026
+ALH,A012,Health Occupations for DA & MA,Intersession/Spring 2023,Fall 2025
+ALH,A111,Medical Terminology,Intersession/Spring 2023,Fall 2026
+ALH,A112,Intro to Autism/ABA,Intersession/Spring 2023,Winter/Spring 2026
+ALH,A115,Patient Care,Fall 2023,Fall 2026
+ALH,A120,Human Diseases,Intersession/Spring 2023,Fall 2026
+ALH,A130,Applied Pharmacology,Intersession/Spring 2023,Fall 2026
+AMT,A150,Gen Maintenance Records FAA,Fall 2023,Fall 2026
+AMT,A151,General Electricity FAA,Fall 2023,Fall 2026
+AMT,A152,Gen Airfrm/Pwrplnt Fuel FAA,Summer 2023,Fall 2026
+AMT,A153,Gen Mat/Processes/Weld FAA,Intersession/Spring 2023,Fall 2026
+AMT,A154,Gen Wgt/Bal/Math/Physcs FAA,Intersession/Spring 2023,Fall 2026
+AMT,A155,Gen Blueprint Read/Drft FAA,Intersession/Spring 2023,Winter/Spring 2026
+AMT,A160,Airframe & Pwrplnt Elec FAA,Intersession/Spring 2023,Winter/Spring 2026
+AMT,A161,Arfrm Sheet Mtl/Cmposte FAA,Intersession/Spring 2023,Winter/Spring 2026
+AMT,A162,Airframe Asmbly/Rig/ECS FAA,Intersession/Spring 2023,Fall 2026
+AMT,A163,Arfrm Hyd & Lndg Gear FAA,Intersession/Spring 2023,Summer 2026
+AMT,A170,Pwrplnt Recip Engines FAA,Fall 2023,Fall 2026
+AMT,A171,Pwrplnt Fuel/Mtr/Exhst FAA,Fall 2023,Fall 2026
+AMT,A172,Pwrplnt Prplr/Lube Sys FAA,Intersession/Spring 2023,Winter/Spring 2026
+AMT,A173,Pwrplnt Gas Turbine Eng FAA,Intersession/Spring 2023,Fall 2026
+AMT,A174,Powerplant Ignition Sys FAA,Intersession/Spring 2023,Fall 2026
+AMT,A180,Airframe Instrumentatn FAA,Intersession/Spring 2023,Summer 2026
+AMT,A181,Arfrm Comm/Nvgation Sys FAA,Intersession/Spring 2023,Winter/Spring 2026
+AMT,A182,Avionics Install Practices,Fall 2023,Winter/Spring 2026
+AMT,A184,Avionics Install/Trblshtg,Intersession/Spring 2023,Fall 2026
+AMT,A188,GROL Avionic Rules/Regs,Fall 2025,Fall 2025
+AMT,A290,Helicopter Maint FAA,Fall 2023,Fall 2023
+ANTH,A100,Cultural Anthropology,Intersession/Spring 2023,Fall 2026
+ANTH,A100H,Cultural Anthro Honors,Fall 2023,Fall 2026
+ANTH,A102,Native American,Fall 2023,Winter/Spring 2026
+ANTH,A185,Intro to Bio Anthropology,Intersession/Spring 2023,Fall 2026
+ANTH,A185H,Physical Anthropology Honors,Intersession/Spring 2023,Intersession/Spring 2024
+ANTH,A185L,Bio Anthropology Lab,Intersession/Spring 2023,Fall 2026
+ANTH,A187,Introduction Primate Studies,Fall 2023,Fall 2026
+ANTH,A188,Intro to Forensic Anthropology,Fall 2025,Fall 2026
+ANTH,A190,Intro to Linguistic Anth,Intersession/Spring 2023,Fall 2026
+ANTH,A220,"Magic, Witchcraft, and Religio",Intersession/Spring 2023,Fall 2026
+ANTH,A280,Introduction to Archaeology,Intersession/Spring 2023,Fall 2026
+APT,A110,Intro to Airport Operations,Fall 2023,Fall 2026
+APT,A115,Intro to Flight Operations,Fall 2023,Fall 2026
+APT,A120,Private Pilot Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A121,Instrument Pilot Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A122,Commercial Pilot Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A123,Privat Pilot Advanc Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A124,Adv Commercl Pilot Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A126,Multi-Engine Aircraft Ops Lab,Winter/Spring 2026,Winter/Spring 2026
+APT,A127,Adv Instrmnt Pilot Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A128,Flight Instructor Flight Lab,Intersession/Spring 2023,Fall 2026
+APT,A129,Adv Flght Instructor Flght Lab,Intersession/Spring 2023,Fall 2026
+APT,A130,Private Pilot Grnd Sch,Intersession/Spring 2023,Fall 2026
+APT,A131,Intro to Unmanned Aircraft Sys,Intersession/Spring 2023,Fall 2026
+APT,A132,Aviation Navigation,Intersession/Spring 2023,Winter/Spring 2026
+APT,A133,Aviation-Meteorology,Intersession/Spring 2023,Fall 2026
+APT,A134,Av Instrument Grnd Schl,Intersession/Spring 2023,Fall 2026
+APT,A138,Aerodynamics,Intersession/Spring 2023,Fall 2026
+APT,A139,Commercl Pilot Grnd Sch,Intersession/Spring 2023,Fall 2026
+APT,A140,Flt Instructor Grnd Sch,Intersession/Spring 2023,Winter/Spring 2026
+APT,A141,Instrument Flight Simulatr Lab,Intersession/Spring 2023,Fall 2026
+APT,A143,Introduction to Air Trfc Cntrl,Fall 2026,Fall 2026
+APT,A145,Airline Transport Pilot Ground,Intersession/Spring 2023,Fall 2026
+APT,A146,Advanced Aircraft & Engines,Fall 2023,Fall 2026
+APT,A151,Unmanned Aircraft Systems Lab,Intersession/Spring 2023,Fall 2026
+APT,A160,Introduction to UAS Automation,Fall 2026,Fall 2026
+APT,A173,Aircraft Recog and Perform,Fall 2026,Fall 2026
+APT,A180,Basic Air Transportatn,Intersession/Spring 2023,Winter/Spring 2026
+APT,A192,Human Fctrs/Crew Resource Mgmt,Fall 2023,Fall 2026
+APT,A199,Current Topics Aviation/Aerosp,Fall 2026,Fall 2026
+ARCH,A001N,Design/Build 1 for Arch NC,Intersession/Spring 2023,Fall 2026
+ARCH,A004N,Intro FrameCAD Steel Framng NC,Intersession/Spring 2023,Fall 2026
+ARCH,A006N,Accesory Dwelling Unit Desn NC,Intersession/Spring 2023,Fall 2026
+ARCH,A007N,Tiny House Design Noncredit,Intersession/Spring 2023,Winter/Spring 2026
+ARCH,A008N,Solar Panels Small Projects NC,Intersession/Spring 2023,Fall 2026
+ARCH,A021N,FrameCAD Studio 1 NC,Intersession/Spring 2023,Fall 2026
+ARCH,A022N,FrameCAD Studio 2 NC,Intersession/Spring 2023,Fall 2026
+ARCH,A041N,FrameCAD Workshop 1 NC,Intersession/Spring 2023,Fall 2026
+ARCH,A042N,FrameCAD Workshop 2 NC,Winter/Spring 2025,Fall 2026
+ARCH,A043N,FrameCAD Workshop 3 NC,Fall 2025,Fall 2026
+ARCH,A101,Intro Environ Sustainability,Intersession/Spring 2023,Fall 2026
+ARCH,A102,Intro to Environmental Studies,Intersession/Spring 2023,Fall 2024
+ARCH,A104,Intro FrameCAD Steel Framing,Intersession/Spring 2023,Fall 2026
+ARCH,A105,Drawing/Design Visualization 1,Intersession/Spring 2023,Fall 2026
+ARCH,A106,Accessory Dwelling Unit Design,Intersession/Spring 2023,Fall 2026
+ARCH,A107,Tiny House Design,Intersession/Spring 2023,Winter/Spring 2026
+ARCH,A108,Solar Panels for Small Project,Intersession/Spring 2023,Fall 2026
+ARCH,A110,Intro To Architecture,Intersession/Spring 2023,Fall 2026
+ARCH,A110H,Intro to Architecture Honors,Intersession/Spring 2024,Winter/Spring 2026
+ARCH,A115,Architectural Design/Theory 1,Intersession/Spring 2023,Fall 2026
+ARCH,A121,FrameCAD Studio 1,Intersession/Spring 2023,Fall 2026
+ARCH,A122,FrameCAD Studio 2,Intersession/Spring 2023,Fall 2026
+ARCH,A141,Intro Resource Management,Intersession/Spring 2023,Intersession/Spring 2023
+ARCH,A150,CAD 2-D for Architecture,Intersession/Spring 2023,Fall 2026
+ARCH,A155,BIM 1 for Architecture,Intersession/Spring 2023,Fall 2026
+ARCH,A156,BIM 2 for Architecture,Intersession/Spring 2023,Fall 2026
+ARCH,A157,BIM Multidisciplinary,Intersession/Spring 2023,Winter/Spring 2025
+ARCH,A158,BIM Project Integration,Summer 2023,Summer 2025
+ARCH,A160,3-D Modeling:SketchUp 1,Intersession/Spring 2023,Fall 2026
+ARCH,A162,3-D Modeling: Rhino 1,Intersession/Spring 2023,Fall 2026
+ARCH,A163,3-D Modeling:Rhino 2,Intersession/Spring 2023,Summer 2026
+ARCH,A165,Presentation Graphics,Intersession/Spring 2023,Winter/Spring 2026
+ARCH,A170,Intro to Design Fabrication,Summer 2024,Summer 2026
+ARCH,A171,Design Fabrication 1,Intersession/Spring 2023,Fall 2026
+ARCH,A172,Design Fabrication 2,Intersession/Spring 2023,Fall 2026
+ARCH,A180,Architecturl Constructn Docs,Intersession/Spring 2023,Fall 2026
+ARCH,A185,Environmental Design Systems,Fall 2023,Fall 2026
+ARCH,A196,Green Building Codes,Winter/Spring 2025,Winter/Spring 2025
+ARCH,A197,California Energy Code,Winter/Spring 2025,Winter/Spring 2026
+ARCH,A199,Current Topics Arch,Intersession/Spring 2024,Summer 2026
+ARCH,A201,Design/Build 1 for Architectur,Intersession/Spring 2023,Fall 2026
+ARCH,A202,Design/Build 2 Architecture,Intersession/Spring 2023,Fall 2026
+ARCH,A203,Design/Build 3 Architecture,Fall 2025,Fall 2026
+ARCH,A205,Arch Dwg/Desgn Visual 2,Intersession/Spring 2023,Fall 2026
+ARCH,A215,Architectural Design/Theory 2,Intersession/Spring 2023,Fall 2026
+ARCH,A220,Bldg Materials/Systems,Intersession/Spring 2023,Winter/Spring 2026
+ARCH,A230,Architectural Design/Theory 3,Fall 2023,Fall 2026
+ARCH,A230H,Arch Design/Theory 3 Honors,Intersession/Spring 2023,Winter/Spring 2026
+ARCH,A241,FrameCAD Workshop 1,Intersession/Spring 2023,Fall 2026
+ARCH,A242,FrameCAD Workshop 2,Winter/Spring 2025,Fall 2026
+ARCH,A243,FrameCAD Workshop 3,Fall 2025,Fall 2026
+ARCH,A290,History Of Architecture 1,Intersession/Spring 2023,Fall 2026
+ARCH,A290H,Hist of Architecture 1 Honors,Fall 2023,Fall 2026
+ARCH,A296,History of Architecture 2,Intersession/Spring 2023,Fall 2026
+ARCH,A296H,Hist of Architecture 2 Honors,Intersession/Spring 2023,Winter/Spring 2026
+ARLN,A117,Aviation Management,Intersession/Spring 2023,Intersession/Spring 2023
+ARLN,A137,"Operations, Terms, Safety",Fall 2023,Fall 2026
+ARLN,A139,Flight Attendant Qualification,Intersession/Spring 2023,Winter/Spring 2026
+ART,A030N,Painting for Lifelong Learning,Fall 2026,Fall 2026
+ART,A036N,Figure Painting for Lifelong,Fall 2026,Fall 2026
+ART,A043N,Sculpture Studio for Lifelong,Fall 2026,Fall 2026
+ART,A048N,Jewelry for Lifelong Learning,Fall 2026,Fall 2026
+ART,A070N,Printmaking for Lifelong Learn,Fall 2026,Fall 2026
+ART,A075N,Screen Printing for Lifelong,Fall 2026,Fall 2026
+ART,A100,Western Art Prehistory-Gothic,Intersession/Spring 2023,Winter/Spring 2026
+ART,A100H,West Art Prehistory-Gothic Hon,Fall 2023,Fall 2025
+ART,A101,Western Art Ren-Modern,Intersession/Spring 2023,Summer 2026
+ART,A101H,Western Art Ren-Modern Honors,Intersession/Spring 2023,Winter/Spring 2026
+ART,A102,Survey Modern/Contemporary Art,Intersession/Spring 2023,Fall 2026
+ART,A103,Survey of Asian Art,Intersession/Spring 2023,Winter/Spring 2026
+ART,A107,Introduction to Art,Intersession/Spring 2023,Fall 2026
+ART,A108,Women in Art,Intersession/Spring 2023,Winter/Spring 2026
+ART,A110,Color & Design: 2-D,Intersession/Spring 2023,Fall 2026
+ART,A111,Color & Design: 3-D,Intersession/Spring 2023,Fall 2026
+ART,A114,Art of the Ancient Americas,Fall 2023,Fall 2026
+ART,A116,Furniture Making/Design,Intersession/Spring 2023,Fall 2026
+ART,A118,Visual Communication 1,Intersession/Spring 2023,Fall 2026
+ART,A120,Beginning Drawing,Intersession/Spring 2023,Fall 2026
+ART,A121,Life Drawing 1,Intersession/Spring 2023,Fall 2026
+ART,A122,Human Anat for Artists,Intersession/Spring 2023,Winter/Spring 2026
+ART,A124,Advanced Drawing,Intersession/Spring 2023,Summer 2026
+ART,A125,Perspective Drawing,Intersession/Spring 2023,Fall 2026
+ART,A127,Introduction to Storyboarding,Fall 2023,Fall 2026
+ART,A128,Adv Storyboard & Previsualiztn,Intersession/Spring 2024,Fall 2025
+ART,A129,Figure Draw Animate/Illustrate,Summer 2023,Winter/Spring 2026
+ART,A130,Painting 1,Intersession/Spring 2023,Fall 2026
+ART,A131,Painting 2,Intersession/Spring 2023,Fall 2026
+ART,A132,Painting 3,Intersession/Spring 2023,Fall 2026
+ART,A135,Digital Painting,Intersession/Spring 2023,Fall 2026
+ART,A141,Sculpture 1,Intersession/Spring 2023,Fall 2026
+ART,A143,Story Illustration Tech,Intersession/Spring 2023,Winter/Spring 2026
+ART,A144,Illustration 2 - Sequential,Intersession/Spring 2023,Winter/Spring 2026
+ART,A147,Jewelry 1,Intersession/Spring 2023,Fall 2026
+ART,A148,World History of Ceramics,Intersession/Spring 2023,Fall 2026
+ART,A150,Ceramics 1,Intersession/Spring 2023,Fall 2026
+ART,A151,Ceramics 2,Intersession/Spring 2023,Fall 2026
+ART,A152,Intermediate Ceramic Design,Intersession/Spring 2023,Fall 2026
+ART,A153,Ceramics and Its Narrative,Intersession/Spring 2023,Fall 2026
+ART,A170,Printmaking 1,Intersession/Spring 2023,Fall 2026
+ART,A171,Printmaking 2,Intersession/Spring 2023,Fall 2026
+ART,A175,Screen Process Printing 1,Intersession/Spring 2023,Fall 2026
+ART,A176,Screen Process Printing 2,Intersession/Spring 2023,Fall 2026
+ART,A180,Professional Studies,Intersession/Spring 2023,Winter/Spring 2026
+ART,A220,Figure Composition,Intersession/Spring 2023,Winter/Spring 2026
+ART,A236,Life Painting 1,Fall 2023,Fall 2026
+ART,A237,Life Painting 2,Fall 2023,Fall 2026
+ART,A241,Sculpture 2,Fall 2023,Winter/Spring 2026
+ART,A247,Jewelry 2,Intersession/Spring 2023,Fall 2026
+ART,A249,Digital Sculpture with ZBrush,Fall 2023,Fall 2026
+ART,A250,Digital Sculpture 2,Fall 2026,Fall 2026
+ART,A251,Character Design,Fall 2023,Fall 2026
+ART,A252,Prop and Vehicle Design,Intersession/Spring 2023,Winter/Spring 2026
+ART,A253,Environment Dsgn& Illustration,Fall 2023,Fall 2026
+ART,A255,Entertainment Art Project,Intersession/Spring 2023,Winter/Spring 2026
+ART,A256,Character Design 2,Fall 2025,Fall 2026
+ART,A258,Environment Design 2,Fall 2025,Fall 2026
+ART,A263,Watercolor 1,Fall 2023,Fall 2026
+ART,A269,Cartooning 1,Intersession/Spring 2023,Summer 2026
+ART,A270,Cartooning 2,Intersession/Spring 2023,Summer 2026
+ARTH,A100,Art to the Medieval Era,Fall 2026,Fall 2026
+ARTH,A100H,Survey Art Prehistory-Med H,Fall 2026,Fall 2026
+ARTH,A101,Survey Art Ren-Cont,Fall 2026,Fall 2026
+ASTR,A100,Introduction to Astronomy,Intersession/Spring 2023,Fall 2026
+ASTR,A100H,Introduction Astronomy Honors,Intersession/Spring 2023,Fall 2026
+ASTR,A100L,Introduction to Astronomy Lab,Intersession/Spring 2023,Fall 2026
+ASTR,A100M,Intro Astronomy Lab Honors,Intersession/Spring 2023,Fall 2026
+ASTR,A101,Planetary Astronomy,Fall 2023,Fall 2026
+ASTR,A102,Stellar Astronomy,Intersession/Spring 2023,Winter/Spring 2026
+ASTR,A103,Cosmology,Fall 2023,Fall 2026
+ASTR,A104,Galactic Astronomy,Intersession/Spring 2023,Winter/Spring 2026
+ASTR,A110,Observational Astronomy,Fall 2023,Fall 2026
+ASTR,A200,Introduction to Astrophysics,Intersession/Spring 2024,Winter/Spring 2026
+ASTR,A200H,Intro to Astrophysics Honors,Intersession/Spring 2024,Winter/Spring 2026
+ATHL,A109,Sports Conditioning,Intersession/Spring 2023,Summer 2026
+ATHL,A119,Athletic Team Training,Intersession/Spring 2023,Fall 2026
+ATHL,A129,Fitness for Performance,Intersession/Spring 2023,Fall 2026
+ATHL,A222,Pep Squad,Intersession/Spring 2023,Fall 2026
+ATHL,A235,Basketball Team - Women's,Fall 2023,Fall 2026
+ATHL,A236,Cross Country Team - Women's,Fall 2023,Fall 2026
+ATHL,A238,Crew Team - Women's,Intersession/Spring 2023,Fall 2026
+ATHL,A239,Golf Team - Women's,Fall 2023,Fall 2026
+ATHL,A240,Soccer Team - Women's,Fall 2023,Fall 2026
+ATHL,A241,Fastpitch Team,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A242,Swimming Team - Women's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A243,Tennis Team - Women's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A244,Track & Field Team - Women's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A245,Volleyball Team - Women's,Fall 2023,Fall 2026
+ATHL,A246,Water Polo Team - Women's,Fall 2023,Fall 2026
+ATHL,A247,Sand Volleyball Team-Women's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A250,Baseball Team,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A251,Basketball Team - Men's,Fall 2023,Fall 2026
+ATHL,A252,Crew Team - Men's,Intersession/Spring 2023,Fall 2026
+ATHL,A253,Cross Country Team - Men's,Fall 2023,Fall 2026
+ATHL,A254,Football Team,Fall 2023,Fall 2026
+ATHL,A255,Golf Team - Men's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A257,Soccer Team - Men's,Fall 2023,Fall 2026
+ATHL,A258,Swimming Team - Men's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A259,Tennis Team - Men's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A260,Track & Field Team - Men's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A261,Volleyball Team - Men's,Intersession/Spring 2023,Winter/Spring 2026
+ATHL,A263,Water Polo Team - Men's,Fall 2023,Fall 2026
+BIOL,A010N,Biology lab/field experience,Fall 2026,Fall 2026
+BIOL,A100,Principles of Biology,Intersession/Spring 2023,Fall 2026
+BIOL,A100H,Principles of Biology Honors,Intersession/Spring 2023,Winter/Spring 2026
+BIOL,A114,Basic Microbiology,Fall 2023,Fall 2026
+BIOL,A120,Anatomy Discussion,Intersession/Spring 2023,Fall 2026
+BIOL,A125,Human Biology,Intersession/Spring 2023,Fall 2026
+BIOL,A172,Nature of Birds,Intersession/Spring 2023,Winter/Spring 2026
+BIOL,A180,Intro to Bio for Majors 1,Intersession/Spring 2023,Fall 2026
+BIOL,A182,Zoology,Intersession/Spring 2023,Fall 2026
+BIOL,A182L,Zoology Lab,Intersession/Spring 2023,Fall 2026
+BIOL,A183,Botany,Intersession/Spring 2023,Fall 2026
+BIOL,A183L,Botany Lab,Intersession/Spring 2023,Fall 2026
+BIOL,A185,Intro to Bio for Majors 2,Intersession/Spring 2023,Fall 2026
+BIOL,A200,Advanced Anatomy Practicum,Intersession/Spring 2023,Fall 2024
+BIOL,A201,Human Cadaver Prosection,Fall 2024,Fall 2026
+BIOL,A210,General Microbiology,Intersession/Spring 2023,Fall 2026
+BIOL,A220,Human Anatomy,Intersession/Spring 2023,Fall 2026
+BIOL,A221,Anatomy-Physiology,Intersession/Spring 2023,Fall 2026
+BIOL,A225,Human Physiology,Intersession/Spring 2023,Fall 2026
+BIOL,A280,Evolutionary Ecology,Intersession/Spring 2023,Winter/Spring 2026
+BIOL,A281,Biochemistry,Intersession/Spring 2023,Winter/Spring 2026
+BIOL,A282,Molecular Biology,Intersession/Spring 2023,Winter/Spring 2026
+BIOL,A283,Genetics,Intersession/Spring 2023,Fall 2026
+BRCT,A105,Broadcast Journalism,Fall 2023,Fall 2024
+BRCT,A205,Remote Broadcasting,Intersession/Spring 2023,Intersession/Spring 2024
+BUS,A100,Intro to Business,Intersession/Spring 2023,Fall 2026
+BUS,A100H,Intro Business Honors,Intersession/Spring 2023,Fall 2026
+BUS,A101,Social Media for Business,Intersession/Spring 2023,Fall 2026
+BUS,A110,Business Law,Intersession/Spring 2023,Fall 2026
+BUS,A110H,Business Law Honors,Intersession/Spring 2023,Fall 2026
+BUS,A118,International Business,Intersession/Spring 2023,Winter/Spring 2025
+BUS,A118H,International Business Honors,Intersession/Spring 2023,Winter/Spring 2025
+BUS,A120,Personl Financl Success,Intersession/Spring 2023,Fall 2026
+BUS,A134,Excel 1,Intersession/Spring 2023,Fall 2026
+BUS,A138,Business English,Intersession/Spring 2023,Fall 2026
+BUS,A139,Business Communication,Intersession/Spring 2023,Fall 2026
+BUS,A185,Public Relations,Intersession/Spring 2023,Fall 2026
+BUS,A200,Business Finance,Fall 2023,Fall 2026
+BUS,A210,Securities Investment,Intersession/Spring 2023,Winter/Spring 2026
+BUS,A212,Practical Investmt Mgmt,Fall 2023,Fall 2026
+BUS,A234,Excel 2,Intersession/Spring 2023,Fall 2026
+BUS,A239,Professionl Communicatn,Intersession/Spring 2023,Fall 2026
+BUS,A240,Entrepreneurship,Intersession/Spring 2023,Fall 2026
+CA,A100,Intro Hospitality Industry,Intersession/Spring 2023,Intersession/Spring 2023
+CA,A120,Culinary Principles 1,Intersession/Spring 2023,Fall 2026
+CA,A122,Culinary Principles 2,Intersession/Spring 2023,Fall 2026
+CA,A124,Principles of Baking 1,Intersession/Spring 2023,Fall 2026
+CA,A126,Principles of Baking 2,Intersession/Spring 2023,Fall 2026
+CA,A131,Principles of Artisan Bread,Intersession/Spring 2023,Fall 2026
+CA,A149,Pantry,Intersession/Spring 2023,Fall 2026
+CA,A170,Culinary Team Competition,Fall 2023,Fall 2026
+CA,A199,Current Issues in C A,Intersession/Spring 2023,Intersession/Spring 2023
+CA,A200,Garde Manger 1,Intersession/Spring 2023,Fall 2026
+CA,A205,Culinary & Baking-Spec Diets,Fall 2024,Fall 2026
+CA,A210,Dir Practice Culinary Arts 1,Intersession/Spring 2023,Fall 2024
+CA,A215,Dir Practice Culinary Arts,Intersession/Spring 2023,Summer 2026
+CA,A226,Principles Pastry Arts,Fall 2023,Fall 2026
+CA,A236,Direc Prac Bakng/Pastry 1,Intersession/Spring 2023,Fall 2026
+CA,A237,Dir Practic Baking/Pastry 2,Intersession/Spring 2023,Fall 2026
+CA,A245,Culinary Principles 3,Fall 2023,Fall 2026
+CA,A255,Garde Manger 2,Intersession/Spring 2023,Fall 2026
+CA,A265,Ala Minute Cont Cooking,Intersession/Spring 2023,Fall 2026
+CA,A270,Ice Carving,Intersession/Spring 2023,Intersession/Spring 2023
+CDE,A102,Teaching in Elementary Setting,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A112,Intro Autism Spectrum & ABA,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A126,Teaching in a Diverse Society,Intersession/Spring 2023,Fall 2026
+CDE,A127,"Health, Safety, and Nutrition",Intersession/Spring 2023,Fall 2026
+CDE,A130,Language Arts for Children,Intersession/Spring 2023,Fall 2026
+CDE,A131,Creativity for Children,Intersession/Spring 2023,Fall 2026
+CDE,A132,Science & Math for Young Child,Intersession/Spring 2023,Fall 2026
+CDE,A155,Principles & Practice Teaching,Intersession/Spring 2023,Fall 2026
+CDE,A156,EC Lab: Interaction Young Chld,Intersession/Spring 2023,Fall 2026
+CDE,A157,Guidance for Young Children,Intersession/Spring 2023,Fall 2026
+CDE,A165,Observing & Recording Behavior,Intersession/Spring 2023,Fall 2026
+CDE,A174,Collaborating with Families,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A175,The Teaching Profession,Intersession/Spring 2023,Fall 2026
+CDE,A180,"Child, Growth and Development",Intersession/Spring 2023,Fall 2026
+CDE,A182,Mid Childhood Dev & Guidance,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A184,Infant Dev & Relationships,Intersession/Spring 2023,Fall 2026
+CDE,A190,"Family, School & Comm Partners",Intersession/Spring 2023,Fall 2026
+CDE,A199,Current Issues in E C,Intersession/Spring 2023,Fall 2026
+CDE,A200,ECE Program - The Curriculum,Intersession/Spring 2023,Fall 2026
+CDE,A201,EC Practicum/Field Experience,Intersession/Spring 2023,Fall 2026
+CDE,A210,Intro to Exceptional Child,Intersession/Spring 2023,Fall 2026
+CDE,A211,Strategies for Inclusion,Fall 2023,Fall 2026
+CDE,A220,Infant & Toddler Programs,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A261,Learning Title 22,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A262,Disaster Preparedness,Fall 2023,Fall 2026
+CDE,A264,Trauma Informed Care,Intersession/Spring 2023,Fall 2025
+CDE,A275,EC Admin Program,Fall 2023,Fall 2026
+CDE,A276,Early Chldhd Management,Intersession/Spring 2023,Winter/Spring 2026
+CDE,A277,Adult Supervision in EC,Intersession/Spring 2023,Fall 2026
+CFT,A100,Intro to Composite Fabrication,Intersession/Spring 2023,Intersession/Spring 2023
+CFT,A114,Contemporary Cabinetmaking,Intersession/Spring 2023,Fall 2026
+CHEM,A010N,Chem Skills for Intro Chem NC,Intersession/Spring 2023,Fall 2026
+CHEM,A020,Prob Solvg/Organic Chem 1,Intersession/Spring 2023,Winter/Spring 2026
+CHEM,A025,Prob Solvg/Organic Chem 2,Fall 2023,Fall 2026
+CHEM,A030N,Chem Skills for Gen Chem NC Corequisite: CHEM A130,Intersession/Spring 2023,Fall 2025
+CHEM,A080N,Chem Study Skills Gen Chem A Corequisite: CHEM A180,Intersession/Spring 2023,Fall 2024
+CHEM,A085N,Chem Study Skills Gen Chem B,Intersession/Spring 2023,Fall 2026
+CHEM,A100,Principles of Chemistry,Intersession/Spring 2023,Fall 2026
+CHEM,A110,Introduction to Chemistry,Intersession/Spring 2023,Fall 2026
+CHEM,A130,Preparation for Gen Chemistry,Intersession/Spring 2023,Fall 2026
+CHEM,A180,General Chemistry A,Intersession/Spring 2023,Fall 2026
+CHEM,A185,General Chemistry B,Intersession/Spring 2023,Fall 2026
+CHEM,A220,Organic Chemistry A,Intersession/Spring 2023,Fall 2026
+CHEM,A220L,Organic Chemistry A Lab,Intersession/Spring 2023,Fall 2026
+CHEM,A225,Organic Chemistry B,Intersession/Spring 2023,Fall 2026
+CHEM,A225L,Organic Chemistry B Lab,Intersession/Spring 2023,Fall 2026
+CHIN,A180,Elementary Chinese 1,Intersession/Spring 2023,Fall 2026
+CHIN,A185,Elementary Chinese 2,Intersession/Spring 2023,Winter/Spring 2026
+CHT,A001N,Computer Basics - Introduction,Intersession/Spring 2023,Fall 2026
+CHT,A002N,Comp Basics - Nav the Internet,Intersession/Spring 2023,Fall 2026
+CHT,A015N,MS Word & PowerPoint Basics,Fall 2024,Fall 2026
+CHT,A020N,Microsoft Excel Basics,Winter/Spring 2025,Fall 2026
+CHT,A030N,Computer Skills for 21st Cntry,Fall 2024,Fall 2026
+CHT,A040N,Google Applications,Winter/Spring 2025,Fall 2026
+CHT,A090N,Artificial Intelligence Basics,Fall 2026,Fall 2026
+CHT,A095N,AI for Professionals,Fall 2026,Fall 2026
+CHT,A100,Comp Use in Technology,Intersession/Spring 2023,Fall 2026
+CHT,A110,PC A+ Certificate Prep,Intersession/Spring 2023,Fall 2025
+CHT,A162,Fundmntls Information Security,Fall 2023,Fall 2024
+CHT,A191,Network/Comm Technologies,Intersession/Spring 2023,Winter/Spring 2025
+CHT,A286,VMwareVspher/Instal/Config/Mgm,Fall 2023,Fall 2024
+CIS,A090,Beg Comptr Kyboarding 1,Intersession/Spring 2023,Fall 2026
+CIS,A092,Beg Computer Keyboarding 2,Intersession/Spring 2023,Fall 2026
+CIS,A100,Intro Computer Applications,Intersession/Spring 2023,Fall 2026
+CIS,A100H,Intro Computer App Honors,Fall 2024,Fall 2026
+CIS,A111,Intro Computer Info Sys,Intersession/Spring 2023,Fall 2026
+CIS,A111H,Intro Computer Info Sys Honors,Fall 2024,Fall 2026
+CIS,A123,Web Page Design 1,Intersession/Spring 2023,Fall 2025
+CIS,A129,Web Page Design 2,Intersession/Spring 2023,Fall 2024
+CIS,A134,Excel 1,Intersession/Spring 2023,Fall 2026
+CIS,A134H,Excel 1 Honor,Fall 2024,Fall 2026
+CIS,A137,Microsoft Outlook,Intersession/Spring 2023,Fall 2024
+CIS,A149,Office Procedures,Intersession/Spring 2023,Fall 2024
+CIS,A171,Introduction to Javascript,Intersession/Spring 2023,Fall 2025
+CIS,A223,JavaScript 2,Intersession/Spring 2023,Fall 2024
+CIS,A234,Excel 2,Intersession/Spring 2023,Fall 2026
+CIS,A234H,Excel 2 Honors,Fall 2024,Fall 2026
+CMST,A100,Interpersonal Communication,Intersession/Spring 2023,Summer 2026
+CMST,A105,Intrapersonal Communication,Intersession/Spring 2024,Fall 2026
+CMST,A109,Social Media Strategies,Intersession/Spring 2023,Fall 2026
+CMST,A110,Public Speaking,Intersession/Spring 2023,Summer 2025
+CMST,A120,Readers Theatre Oral Interp,Intersession/Spring 2023,Fall 2026
+CMST,A150,Forensics Workshop,Intersession/Spring 2023,Fall 2026
+CMST,A155,Intercultural Communication,Intersession/Spring 2023,Fall 2026
+CMST,A165,Gender Communication,Intersession/Spring 2023,Fall 2026
+CMST,A170,Nonverbal Communication,Intersession/Spring 2023,Fall 2025
+CMST,A180,Intro to Mass Communications,Intersession/Spring 2023,Fall 2026
+CMST,A185,Public Relations,Intersession/Spring 2023,Fall 2026
+CMST,A220,Essentials of Argumentation,Intersession/Spring 2023,Fall 2026
+CMST,A236,Direct Practice Soc Med Strat,Intersession/Spring 2023,Fall 2026
+CMST,A240,Media Literacy,Intersession/Spring 2023,Fall 2026
+CMST,A260,Organizational Communication,Intersession/Spring 2023,Fall 2024
+CMST,A291,Directed Study,Fall 2025,Fall 2025
+CNST,A001N,Principles of Construction NC,Summer 2025,Fall 2026
+CNST,A010N,Concrete Construction NC,Winter/Spring 2026,Winter/Spring 2026
+CNST,A012N,Stair Framing Noncredit,Summer 2025,Winter/Spring 2026
+CNST,A040N,Specialty Trades Noncredit,Fall 2025,Fall 2026
+CNST,A041N,Finish Carpentry Noncredit,Fall 2025,Fall 2025
+CNST,A054N,Drywall & Taping Noncredit,Summer 2025,Summer 2026
+CNST,A060N,Masonry Construction Noncredit,Fall 2025,Fall 2026
+CNST,A100,Principles of Construction,Intersession/Spring 2023,Fall 2026
+CNST,A108,Solar Panels for Small Project,Intersession/Spring 2023,Winter/Spring 2025
+CNST,A112,Stair Framing,Summer 2023,Winter/Spring 2026
+CNST,A114,Cabinet Making,Intersession/Spring 2023,Fall 2026
+CNST,A116,Furniture Making/Design,Intersession/Spring 2023,Fall 2026
+CNST,A154,Drywall & Taping,Intersession/Spring 2023,Summer 2026
+CNST,A155,Intro to Home Automation,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A156,National Electrical Code,Summer 2023,Summer 2026
+CNST,A157,Photovoltaic Syst Installation,Fall 2023,Fall 2026
+CNST,A165,Constr Safety-CAL/OSHA,Intersession/Spring 2023,Fall 2026
+CNST,A170,Intro to Construction,Fall 2023,Fall 2024
+CNST,A180,Building Construction 1,Fall 2023,Fall 2026
+CNST,A185,Building Construction 2,Intersession/Spring 2023,Fall 2026
+CNST,A189,Blueprint Reading,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A190,Blueprnt Readng & Draft,Intersession/Spring 2023,Fall 2026
+CNST,A194,Intro to to Building Codes,Winter/Spring 2026,Summer 2026
+CNST,A195,Residential Code,Intersession/Spring 2023,Fall 2026
+CNST,A196,Green Building Codes,Winter/Spring 2025,Winter/Spring 2025
+CNST,A197,California Energy Code,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A199,Current Topics Const,Summer 2023,Summer 2025
+CNST,A210,Concrete Construction,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A220,Construction Estimating,Intersession/Spring 2023,Fall 2026
+CNST,A230,Construction Inspection,Intersession/Spring 2023,Intersession/Spring 2024
+CNST,A240,Specialty Trades,Intersession/Spring 2023,Fall 2026
+CNST,A241,Finish Carpentry,Intersession/Spring 2023,Fall 2025
+CNST,A250,Const Supv & Proj Mgmt,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A252,Bus Law For Contractors,Intersession/Spring 2023,Intersession/Spring 2024
+CNST,A260,Masonry Construction,Fall 2023,Fall 2026
+CNST,A265,Plumbing 1,Fall 2023,Fall 2026
+CNST,A266,Plumbing 2,Intersession/Spring 2023,Winter/Spring 2026
+CNST,A270,Contrator's License Law,Fall 2023,Fall 2026
+CNST,A275,Residential Elec Wiring,Intersession/Spring 2023,Fall 2026
+CNST,A285,Light Steel Frame Const,Intersession/Spring 2023,Winter/Spring 2026
+COMM,A100,Interpersonal Communication,Fall 2026,Fall 2026
+COMM,A110,Introduction Public Speaking,Fall 2025,Fall 2026
+COS,A001N,Intro to Customer Service,Intersession/Spring 2023,Fall 2026
+COS,A002N,Customer Serv & Retail Emply,Intersession/Spring 2023,Fall 2026
+COS,A180,Life Management,Intersession/Spring 2023,Fall 2026
+COUN,A035N,Effective Parenting,Winter/Spring 2025,Winter/Spring 2025
+COUN,A100,Introduction to College,Intersession/Spring 2023,Fall 2026
+COUN,A101,New Horizons:Adults Retrng Clg,Intersession/Spring 2023,Fall 2025
+COUN,A104,Career/Life Planng:Holistic,Intersession/Spring 2023,Fall 2026
+COUN,A105,Strategies for College Success,Intersession/Spring 2023,Fall 2026
+COUN,A107,Chicana/o Latina/o Exp Hgr Ed,Intersession/Spring 2023,Fall 2026
+COUN,A107H,Chican@ Latin@ ExpHgrEd Honors,Intersession/Spring 2023,Fall 2026
+COUN,A109,Devlop/Undrstnd Hapines,Intersession/Spring 2023,Fall 2024
+COUN,A110,Applied Stress Management,Intersession/Spring 2023,Fall 2023
+COUN,A120,Career Decisn Making/Accleratd,Intersession/Spring 2023,Fall 2026
+COUN,A125,Job Search Strategies/Agility,Intersession/Spring 2023,Fall 2026
+COUN,A135,Effective Parenting,Intersession/Spring 2023,Winter/Spring 2025
+COUN,A170,College Major Search,Intersession/Spring 2023,Fall 2026
+COUN,A199,Topics in Counseling,Intersession/Spring 2023,Intersession/Spring 2024
+COUN,A205,Transfer Success Seminar,Intersession/Spring 2023,Winter/Spring 2026
+CS,A131,Python Programming 1,Intersession/Spring 2023,Fall 2026
+CS,A150,C++ Programming 1,Intersession/Spring 2023,Fall 2026
+CS,A170,Java Programming 1,Intersession/Spring 2023,Fall 2026
+CS,A200,Data Structures,Intersession/Spring 2023,Fall 2026
+CS,A216,Computer Architecture,Intersession/Spring 2023,Fall 2026
+CS,A220,Software Engineering,Intersession/Spring 2023,Fall 2026
+CS,A231,Python Programming II,Intersession/Spring 2023,Winter/Spring 2026
+CS,A242,Computer Org/Assembly Language,Winter/Spring 2026,Winter/Spring 2026
+CS,A250,C++ Programming 2,Intersession/Spring 2023,Fall 2026
+CS,A253,Principles in System Design Corequisite: CS A253L,Fall 2026,Fall 2026
+CS,A253L,Principles in System Dsgn Lab Corequisite: CS A253,Fall 2026,Fall 2026
+CS,A255,Cybersecurity Foundations,Summer 2026,Summer 2026
+CS,A257,Boolean Algebra and Logic,Intersession/Spring 2023,Winter/Spring 2026
+CS,A262,Discrete Structures,Intersession/Spring 2023,Fall 2026
+CS,A263,Probability & Stats for CS,Intersession/Spring 2024,Winter/Spring 2026
+CS,A272,Java Programming 2,Fall 2023,Winter/Spring 2026
+CVT,A100,Introduction to ECG,Fall 2023,Fall 2026
+CVT,A130,Intro Invasive Cardiolo,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A150,Adv Electrocardiography,Fall 2023,Fall 2026
+CVT,A160,Cardiac Anat/Pathophys,Fall 2023,Fall 2026
+CVT,A170,ECG Clinical Experience,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A190,Intro to Sonography/Imaging,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A200,Intro Echocardiography,Fall 2023,Fall 2026
+CVT,A205,Intro Echocardiog Lab,Fall 2023,Fall 2026
+CVT,A210,Echo Clinical Lab 1,Fall 2023,Fall 2026
+CVT,A220,Ultrasound Sonograph Phys/Inst,Fall 2023,Fall 2026
+CVT,A224,Echocardiography Clinical Lab2,Intersession/Spring 2024,Winter/Spring 2026
+CVT,A250,Adv Echocardiography,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A255,Adv Echocardiography Lb,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A260,Cerebro/Periphrl Ultrasound,Intersession/Spring 2023,Winter/Spring 2026
+CVT,A265,Echo Clinical Lab 3,Intersession/Spring 2023,Winter/Spring 2026
+DA,A100,Dental Anatomy,Fall 2023,Fall 2026
+DA,A101,Patient Care for Dental Assist,Fall 2023,Fall 2026
+DA,A110,Chairside Techniques 1,Fall 2023,Fall 2026
+DA,A115,Chairside Techniques 2,Intersession/Spring 2023,Winter/Spring 2026
+DA,A120,Dental Materials,Fall 2023,Fall 2026
+DA,A125,Expanded Functions,Intersession/Spring 2023,Winter/Spring 2026
+DA,A130,Prevnt & Comm Dentistry,Fall 2023,Fall 2026
+DA,A140,Dental Radiography 1,Fall 2023,Fall 2026
+DA,A145,Specialized Practices,Intersession/Spring 2023,Winter/Spring 2026
+DA,A150,Biomedical Sciences,Intersession/Spring 2023,Winter/Spring 2026
+DA,A160,Clinical Experience 1,Fall 2023,Fall 2026
+DA,A163,Clinical Experience 2,Intersession/Spring 2023,Winter/Spring 2026
+DA,A165,Clinical Experience 3,Intersession/Spring 2023,Winter/Spring 2026
+DA,A168,Clinical Experience 4,Intersession/Spring 2023,Winter/Spring 2026
+DA,A175,Prin of Bus & Prac Mgmt,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A101,Modern Dance 1,Intersession/Spring 2023,Fall 2026
+DANC,A102,Modern Dance 2,Intersession/Spring 2023,Fall 2026
+DANC,A106,Strength and Stretch,Intersession/Spring 2023,Fall 2026
+DANC,A107,Conditioning for Dance,Fall 2023,Fall 2025
+DANC,A108,Pilates Mat Work,Intersession/Spring 2023,Fall 2026
+DANC,A110,Ballet 1,Intersession/Spring 2023,Fall 2026
+DANC,A111,Ballet 2,Intersession/Spring 2023,Fall 2026
+DANC,A113,Pointe Work,Fall 2026,Fall 2026
+DANC,A115,Yoga for Dancers,Intersession/Spring 2023,Fall 2026
+DANC,A116,Latin Dance Styles I,Intersession/Spring 2023,Fall 2025
+DANC,A118,Movement for Longevity,Intersession/Spring 2023,Fall 2026
+DANC,A119,Kinesiology for Dance,Fall 2023,Fall 2026
+DANC,A120,Jazz Dance 1,Intersession/Spring 2023,Fall 2026
+DANC,A121,Jazz Dance 2,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A125,Tap 1,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A126,Tap 2,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A129,Pilates Methodology 1,Fall 2023,Fall 2026
+DANC,A130,Mid-Eastern Dance 1,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A135,Flamenco Dance 1,Intersession/Spring 2023,Fall 2023
+DANC,A138,African Dance and Drumming I,Intersession/Spring 2023,Fall 2026
+DANC,A139,Gyrokinesis,Summer 2024,Summer 2026
+DANC,A143,Jazz Dance III,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A144,Ballet III,Intersession/Spring 2023,Fall 2026
+DANC,A145,Modern Dance III,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A146,Tap III,Intersession/Spring 2023,Fall 2026
+DANC,A147,Flamenco Dance 2,Intersession/Spring 2023,Fall 2023
+DANC,A148,Mid-Eastern Dance 2,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A149,Hip-Hop Dance I,Intersession/Spring 2023,Fall 2026
+DANC,A150,Dance Improvisation I,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A151,Pilates as a Profession,Intersession/Spring 2023,Fall 2026
+DANC,A152,Pilates Apparatus 1,Intersession/Spring 2023,Fall 2026
+DANC,A153,Pilates Apparatus 2,Intersession/Spring 2023,Fall 2026
+DANC,A154,Contemp Commercial Dance,Intersession/Spring 2023,Fall 2026
+DANC,A155,Latin Dance Styles II,Intersession/Spring 2023,Fall 2025
+DANC,A156,Polynesian Dance,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A157,Polynesian Dance 2,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A158,African Dance and Drumming II,Intersession/Spring 2023,Fall 2026
+DANC,A159,Hip-Hop Dance II,Intersession/Spring 2023,Fall 2026
+DANC,A160,Dance Comp/Choreography I,Fall 2023,Fall 2026
+DANC,A162,Dance Composition/Choreog II,Fall 2023,Fall 2026
+DANC,A165,Latin Dance Styles III,Intersession/Spring 2023,Fall 2025
+DANC,A168,African Dance and Drumming III,Intersession/Spring 2023,Fall 2026
+DANC,A169,Hip-Hop Dance III,Intersession/Spring 2023,Fall 2026
+DANC,A170,Music for Dancers,Intersession/Spring 2023,Fall 2026
+DANC,A171,Modern Dance Basics,Intersession/Spring 2023,Fall 2026
+DANC,A172,Ballet Dance Basics,Intersession/Spring 2023,Fall 2026
+DANC,A173,Jazz Dance Basics,Intersession/Spring 2023,Fall 2026
+DANC,A174,Tap Dance Basics,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A175,Mexican FolklÃ³rico Dance 1,Fall 2024,Fall 2026
+DANC,A176,Mexican FolklÃ³rico Dance 2,Winter/Spring 2025,Fall 2026
+DANC,A180,Dance Wellness & Injury Prev,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A191,Classical Technique/Variation,Intersession/Spring 2023,Fall 2026
+DANC,A199,Current Topics in Dance,Winter/Spring 2025,Fall 2026
+DANC,A200,Appreciation of Dance,Intersession/Spring 2023,Fall 2026
+DANC,A201,Rehearsal & Performance I,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A202,Rehearsal and Performance II,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A203,Performing Dance Ensemble I,Intersession/Spring 2023,Fall 2026
+DANC,A204,Rehearsal and Performance III,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A205,Danc Profession Seminar,Fall 2024,Fall 2024
+DANC,A206,Movement and the Camera,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A207,Rehearsal and Performance IV,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A208,Pilates 3-4,Intersession/Spring 2023,Summer 2026
+DANC,A209,Pilates Mat Work 2,Fall 2023,Fall 2026
+DANC,A210,Dance Methodology,Fall 2023,Fall 2026
+DANC,A211,Repertoire I,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A212,Repertoire II,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A213,Repertoire III,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A214,Repertoire IV,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A215,Pilates Research Practicum,Intersession/Spring 2023,Fall 2026
+DANC,A217,Pilates Teaching Practicum,Intersession/Spring 2023,Fall 2026
+DANC,A218,World Dance Internship I,Intersession/Spring 2023,Fall 2026
+DANC,A219,World Dance Internship II,Intersession/Spring 2023,Fall 2026
+DANC,A220,Dance Internship I,Intersession/Spring 2023,Fall 2026
+DANC,A221,Dance Internship II,Intersession/Spring 2023,Fall 2026
+DANC,A223,Performing Dance Ensemble II,Intersession/Spring 2023,Fall 2026
+DANC,A225,Yoga for Dancers 2,Fall 2023,Fall 2026
+DANC,A229,Pilates Methodology 2,Intersession/Spring 2024,Fall 2026
+DANC,A230,World Dance and Culture,Fall 2023,Fall 2026
+DANC,A233,Performing Dance Ensemble III,Intersession/Spring 2023,Fall 2026
+DANC,A243,Jazz IV,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A244,Ballet IV,Intersession/Spring 2023,Fall 2026
+DANC,A245,Modern IV,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A246,Tap IV,Intersession/Spring 2023,Fall 2026
+DANC,A247,Flamenco Dance 3,Intersession/Spring 2023,Fall 2023
+DANC,A248,Mid-Eastern Dance 3,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A250,Dance Improvisation II,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A253,Prep for Audition - Jazz,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A254,Prep for Audition - Ballet,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A255,Prep for Audition - Modern,Intersession/Spring 2023,Winter/Spring 2025
+DANC,A256,Preparation for Audition - Tap,Intersession/Spring 2023,Fall 2026
+DANC,A257,Contemp Commercial Dance 2,Intersession/Spring 2023,Fall 2026
+DANC,A262,Dance Comp/Choreography III,Fall 2023,Fall 2026
+DANC,A263,Performing Dance Ensemble IV,Intersession/Spring 2023,Fall 2026
+DANC,A264,Mid-Eastern Dance 4,Intersession/Spring 2023,Winter/Spring 2026
+DANC,A267,Flamenco Dance 4,Intersession/Spring 2023,Fall 2023
+DANC,A269,Hip Hop 4,Intersession/Spring 2023,Fall 2026
+DMAD,A115,Typography,Intersession/Spring 2023,Fall 2026
+DMAD,A116,Typography & Branding,Intersession/Spring 2023,Fall 2026
+DMAD,A117,Rapid Illustration Tech,Intersession/Spring 2023,Fall 2026
+DMAD,A151,History of Graphic Dsgn,Intersession/Spring 2023,Fall 2026
+DMAD,A181,Intro to Computer Graphics,Intersession/Spring 2023,Fall 2026
+DMAD,A182,Graphic Design,Intersession/Spring 2023,Fall 2026
+DMAD,A183,InDesign for Design,Intersession/Spring 2023,Fall 2026
+DMAD,A190,Illustrator for Design,Intersession/Spring 2023,Fall 2026
+DMAD,A193,Photoshop for Design,Intersession/Spring 2023,Fall 2026
+DMAD,A200,Designing for Screens,Intersession/Spring 2023,Fall 2026
+DMAD,A202,Design Industry Preparation,Intersession/Spring 2023,Winter/Spring 2026
+DMAD,A203,UX/UI Design,Intersession/Spring 2023,Fall 2026
+DMAD,A212,Advanced Studio Internship,Intersession/Spring 2023,Fall 2024
+DMAD,A263,Motion Graphics w/AfterEffects,Intersession/Spring 2023,Fall 2026
+DMAD,A280,2D Animation,Intersession/Spring 2023,Fall 2026
+DMAD,A281,3D Computer Graphics Animation,Intersession/Spring 2023,Fall 2026
+DMAD,A288,Digital Portfolio Development,Intersession/Spring 2023,Fall 2026
+DMS,A110,Introduction to Sonography,Intersession/Spring 2023,Fall 2026
+DMS,A123,Sectional Anatomy/Med Imaging,Fall 2023,Fall 2026
+DMS,A126,OB/GYN Sonography,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A150,Sono Physics Instrument/DMS,Fall 2023,Fall 2026
+DMS,A155,Intro Vascular Ultrasnd,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A161,Pathophysiology,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A165,Intro Scanning Practice,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A166,DMS Clinical Expernce 1,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A167,Clinical Experience 2,Summer 2023,Summer 2026
+DMS,A255,Adv Vascular Ultrasound,Fall 2023,Fall 2026
+DMS,A271,Clinical Experience 3,Fall 2023,Fall 2026
+DMS,A274,Abdominal Sonography,Fall 2023,Fall 2026
+DMS,A275,Sonographic Review,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A276,Clinical Experience 4,Intersession/Spring 2023,Winter/Spring 2026
+DMS,A281,Clinical Experience 5,Intersession/Spring 2023,Winter/Spring 2026
+DVP,A180,Intro To Display & VP,Fall 2023,Fall 2023
+ECON,A100,Econ: General Concepts,Intersession/Spring 2023,Fall 2026
+ECON,A110,Economics of Consumer Finance,Intersession/Spring 2023,Fall 2026
+ECON,A170,Principles of Microeconomics,Intersession/Spring 2023,Fall 2026
+ECON,A170H,Honors Microeconomics,Fall 2023,Fall 2026
+ECON,A175,Principles of Macroeconomics,Intersession/Spring 2023,Fall 2026
+ECON,A175H,Macroeconomics Honors,Intersession/Spring 2023,Winter/Spring 2026
+ELEC,A100,Electronic Problem Solving,Intersession/Spring 2023,Fall 2026
+ELEC,A102,"Safety, Maint, Calibration",Intersession/Spring 2024,Winter/Spring 2025
+ELEC,A111,D.C. Circuits,Intersession/Spring 2023,Fall 2026
+ELEC,A112,A.C. Circuits,Intersession/Spring 2023,Winter/Spring 2026
+ELEC,A121,Robotics 1 Mech/Design,Fall 2023,Fall 2026
+ELEC,A122,Robotics 2,Intersession/Spring 2023,Winter/Spring 2026
+ELEC,A131,Automatn 1- Industrial Control,Fall 2023,Fall 2026
+ELEC,A135,Symbolic Logic/Digital Apps,Fall 2025,Fall 2025
+ELEC,A172,Electronics Laboratory 2,Summer 2025,Summer 2025
+ELEC,A223,Embedded Control Systems,Intersession/Spring 2024,Winter/Spring 2026
+ELEC,A224,Digital Communication Systems,Summer 2024,Fall 2025
+ELEC,A232,Automation 2 Progrm Logic Ctrl,Intersession/Spring 2023,Winter/Spring 2026
+ELEC,A290,Electronic Trblshooting,Summer 2024,Summer 2026
+ELL,A006N,Basic Literacy,Fall 2024,Fall 2026
+ELL,A016N,ELL Beginning A,Intersession/Spring 2023,Fall 2026
+ELL,A017N,Beg Grammar Review 1,Fall 2024,Fall 2026
+ELL,A020N,ELL for US Citizenship,Intersession/Spring 2023,Fall 2026
+ELL,A021N,ELL for US Citizenship 2,Intersession/Spring 2023,Winter/Spring 2025
+ELL,A025N,Beginning Pronunciation,Intersession/Spring 2023,Fall 2026
+ELL,A026N,ELL Beginning B,Intersession/Spring 2023,Fall 2026
+ELL,A027N,Beginning Grammar Review 2,Intersession/Spring 2023,Fall 2026
+ELL,A028N,Speaking About U.S. Culture 1,Fall 2026,Fall 2026
+ELL,A030N,ELL for Parents: Elem School,Fall 2023,Fall 2025
+ELL,A034N,Intro US Healthcare for ELL,Intersession/Spring 2023,Fall 2026
+ELL,A035N,Intermediate Pronunciation,Intersession/Spring 2023,Fall 2026
+ELL,A036N,ELL Intermediate A,Intersession/Spring 2023,Fall 2026
+ELL,A037N,Intermediate Grammar Review,Intersession/Spring 2023,Summer 2026
+ELL,A043N,ELL for the Workplace,Intersession/Spring 2023,Fall 2026
+ELL,A044N,Int Eng Skills for Career Adv,Intersession/Spring 2024,Intersession/Spring 2024
+ELL,A045N,Intermediate Grammar Review 2,Fall 2026,Fall 2026
+ELL,A046N,ELL Intermediate B,Intersession/Spring 2023,Fall 2026
+ELL,A047N,Advanced Grammar Review 1,Fall 2023,Fall 2026
+ELL,A048N,Speaking About U.S. Culture 2,Intersession/Spring 2023,Fall 2026
+ELL,A049N,Speaking About U.S. Culture 3,Fall 2026,Fall 2026
+ELL,A055N,Advanced Pronunciation,Intersession/Spring 2023,Fall 2026
+ELL,A056N,ELL Advanced,Intersession/Spring 2023,Fall 2026
+ELL,A057N,Advanced Grammar Review 2,Intersession/Spring 2023,Winter/Spring 2026
+ELL,A058N,Adv Listen & Speak Trans Acad,Intersession/Spring 2023,Summer 2026
+ELL,A059N,Adv Read & Write Tran Acad,Intersession/Spring 2023,Summer 2026
+ELL,A061N,ELL Support for Prep ALH,Intersession/Spring 2024,Winter/Spring 2026
+ELL,A064N,Adv Academic Reading &Writing,Intersession/Spring 2023,Fall 2026
+EMS,A100,Emergency Medical Responder,Intersession/Spring 2023,Fall 2026
+EMS,A150,Emergency Medical Technician,Intersession/Spring 2023,Fall 2026
+EMS,A150L,Emergency Medical Tech Lab,Intersession/Spring 2023,Fall 2026
+EMS,A151,EMT Clinical,Intersession/Spring 2023,Fall 2026
+EMS,A160,EMT-1 Recertification,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A001N,Grammar Within Reach - NC,Intersession/Spring 2023,Summer 2024
+ENGL,A002N,Reading for Success - NC Corequisite: ENGL A004N,Intersession/Spring 2023,Summer 2026
+ENGL,A003N,Perfecting Paragraphs - NC,Intersession/Spring 2023,Intersession/Spring 2024
+ENGL,A004N,Building A College Essay -NC Corequisite: ENGL A002N,Intersession/Spring 2023,Summer 2026
+ENGL,A006N,Support Skills for English Com,Intersession/Spring 2023,Fall 2024
+ENGL,A011,Intro to Literary Magazine Prd,Winter/Spring 2025,Winter/Spring 2026
+ENGL,A099,Confidence in Writing,Intersession/Spring 2023,Fall 2023
+ENGL,A100,Academic Reading and Writing,Intersession/Spring 2023,Fall 2026
+ENGL,A101,Critical Thinking/Writing: Lit,Intersession/Spring 2023,Fall 2026
+ENGL,A101H,Crit. Thinking/Writing: Lit(H),Intersession/Spring 2023,Fall 2026
+ENGL,A102,Critical Thinking and Writing,Intersession/Spring 2023,Fall 2026
+ENGL,A102H,Critical Thinking Writing-Hon,Intersession/Spring 2023,Fall 2026
+ENGL,A109,Crit Reasoning/Science/Tech,Intersession/Spring 2023,Fall 2026
+ENGL,A117,Narrative Journalism,Intersession/Spring 2023,Fall 2024
+ENGL,A119,Intro to Creative Writing,Intersession/Spring 2023,Fall 2026
+ENGL,A121,Short Story Writing I,Fall 2023,Fall 2026
+ENGL,A122,Novel Writing I,Intersession/Spring 2023,Fall 2026
+ENGL,A123,Writing for Social Media,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A126,Poetry Writing I,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A127,Scriptwriting I,Intersession/Spring 2023,Fall 2026
+ENGL,A140,Introduction to Literature,Fall 2026,Fall 2026
+ENGL,A140H,Intro to Literature Honors,Fall 2026,Fall 2026
+ENGL,A141,The Bible As Literature,Intersession/Spring 2024,Fall 2025
+ENGL,A141H,Bible As Lit Honors,Intersession/Spring 2024,Fall 2025
+ENGL,A143,Children's Literature,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A143H,Children's Literature Honors,Intersession/Spring 2024,Winter/Spring 2025
+ENGL,A147,Intro To Science Fictn,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A147H,Intro Science Fiction Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A148,Film As Literature,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A148H,Film As Lit Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A150,American Lit Before 20th Cent,Fall 2023,Fall 2026
+ENGL,A150H,Am Lit Before 20th Century Hon,Fall 2023,Fall 2026
+ENGL,A151,American Lit in 20th Century,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A151H,Am Lit After 1900 Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A152,Race and Culture in Lit,Fall 2023,Fall 2026
+ENGL,A152H,Race and Culture in Lit Honors,Fall 2023,Fall 2026
+ENGL,A156,California Literature,Intersession/Spring 2024,Intersession/Spring 2024
+ENGL,A156H,California Lit Honors,Intersession/Spring 2024,Intersession/Spring 2024
+ENGL,A160,World Lit Through Renaissance,Fall 2023,Winter/Spring 2026
+ENGL,A160H,World Lit. through Renais. Hon,Fall 2023,Winter/Spring 2026
+ENGL,A161,World Lit from Renaissance,Intersession/Spring 2023,Fall 2026
+ENGL,A161H,World Lit. from Renais. Hon,Intersession/Spring 2023,Fall 2026
+ENGL,A168,Popular Fiction,Fall 2025,Fall 2025
+ENGL,A170,Contemporary Literature,Winter/Spring 2025,Winter/Spring 2025
+ENGL,A170H,Contemporary Literature Honors,Winter/Spring 2025,Winter/Spring 2025
+ENGL,A173,Women Writers,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A173H,Women Writers Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A176,World Mythology,Intersession/Spring 2024,Fall 2026
+ENGL,A176H,World Mythology Honors,Intersession/Spring 2024,Intersession/Spring 2024
+ENGL,A179,Gender/Sexuality in Lit&Film,Fall 2023,Fall 2026
+ENGL,A179H,Gendr/Sexuality Lit&Film Honor,Fall 2023,Fall 2026
+ENGL,A181,Shakespeare,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A181H,Shakespeare Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A187,Intro Literary Theory,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A187H,Intro Literary Theory Honors,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A222,Novel Writing II,Intersession/Spring 2023,Fall 2026
+ENGL,A226,Poetry Writing II,Winter/Spring 2025,Winter/Spring 2026
+ENGL,A227,Scriptwriting II,Intersession/Spring 2023,Fall 2026
+ENGL,A232,Novel Writing III,Intersession/Spring 2023,Fall 2026
+ENGL,A236,Poetry Writing III,Winter/Spring 2026,Winter/Spring 2026
+ENGL,A237,Scriptwriting III,Intersession/Spring 2023,Fall 2026
+ENGL,A242,Novel Writing IV,Intersession/Spring 2023,Fall 2026
+ENGL,A247,Scriptwriting IV,Intersession/Spring 2023,Fall 2026
+ENGL,A270,Survey British Lit Before 1800,Fall 2023,Fall 2026
+ENGL,A270H,Survey Brit Lit Befor 1800 Hon,Fall 2023,Fall 2026
+ENGL,A275,Survey Brit Lit After 1800,Intersession/Spring 2023,Winter/Spring 2026
+ENGL,A275H,Survey Brit Lit After 1800 Hon,Intersession/Spring 2023,Winter/Spring 2026
+ENGR,A110,Intro to Engineering & Design,Intersession/Spring 2023,Fall 2026
+ENGR,A180,Engineering Graphics,Intersession/Spring 2023,Fall 2026
+ENGR,A199,Current Topics in Engineering,Summer 2023,Fall 2026
+ENGR,A210,Engineering Materials,Fall 2024,Fall 2026
+ENGR,A220,Prog & Prob Solv MATLAB,Intersession/Spring 2023,Fall 2026
+ENGR,A230,Dynamics,Summer 2023,Winter/Spring 2025
+ENGR,A240,Mechanics of Materials,Intersession/Spring 2023,Winter/Spring 2026
+ENGR,A280,Statics,Intersession/Spring 2023,Fall 2026
+ENGR,A285,Engineering Circuits,Intersession/Spring 2023,Winter/Spring 2026
+ESEC,A100,Intro to Environmental Science,Intersession/Spring 2023,Fall 2026
+ESEC,A100H,Intro Environmental Sci Honors,Intersession/Spring 2023,Fall 2026
+ESEC,A110,Island Ecology,Fall 2023,Fall 2026
+ESEC,A121,Marine Intertidal Ecology,Fall 2023,Fall 2025
+ESEC,A124,Ecology of the Gray Whale,Intersession/Spring 2023,Winter/Spring 2026
+ESEC,A140,Mediterranean Biome Ecology,Intersession/Spring 2024,Intersession/Spring 2024
+ESEC,A141,Desert Ecology,Fall 2023,Winter/Spring 2026
+ESEC,A210,Wetlands Ecology and Managemnt,Intersession/Spring 2023,Intersession/Spring 2023
+ESL,A022,"Grammar, Reading and Writing 2",Intersession/Spring 2023,Winter/Spring 2025
+ESL,A024,Listening and Speaking 2,Intersession/Spring 2023,Winter/Spring 2025
+ESL,A032,"Grammar, Reading and Writing 3",Intersession/Spring 2023,Fall 2026
+ESL,A034,Listening and Speaking 3,Intersession/Spring 2023,Fall 2026
+ESL,A043N,ESL Supp Freshman Comp: Paragr,Fall 2025,Fall 2026
+ESL,A044N,ESL Supp Fresh Comp: Essays,Fall 2025,Winter/Spring 2026
+ESL,A045N,ESL Supp Fresh Comp:Read/Vocab,Intersession/Spring 2023,Winter/Spring 2026
+ESL,A046N,ESL Supp Fresh Comp: Sentence,Intersession/Spring 2023,Fall 2026
+ESL,A047N,ESL Supp Fresh Comp: Spelling,Intersession/Spring 2023,Winter/Spring 2026
+ESL,A048N,ESL Supp Fresh Comp: Pronunc,Intersession/Spring 2023,Winter/Spring 2026
+ESL,A049N,ESL Supp Fresh Comp: Grammar,Intersession/Spring 2023,Fall 2026
+ESL,A052,Adv Academic Read and Write 1,Intersession/Spring 2023,Fall 2026
+ESL,A054,Listening and Speaking 4,Intersession/Spring 2023,Fall 2026
+ESL,A100,ESL College Composition,Intersession/Spring 2023,Fall 2026
+ESL,A162,Adv Academic Read and Write 2,Intersession/Spring 2023,Fall 2026
+ESL,A192,Adv Acad Rdng Resrch Wrtng Hum,Intersession/Spring 2023,Fall 2026
+ETHS,A100,Contemp Ethnic America,Intersession/Spring 2023,Fall 2026
+ETHS,A110,Intro to LatinX Studies,Intersession/Spring 2023,Fall 2026
+ETHS,A115,Into to Asian Am & Pac Isl Stu,Intersession/Spring 2023,Fall 2026
+ETHS,A120,Intro to Black Studies,Fall 2025,Fall 2025
+ETHS,A150,Ethnic Groups in the U.S.,Intersession/Spring 2023,Fall 2026
+ETHS,A190,The Ethnic Family,Intersession/Spring 2024,Fall 2026
+FASH,A050,Sewing Lab,Intersession/Spring 2023,Winter/Spring 2025
+FASH,A100,Beginning Clothing Techniques,Intersession/Spring 2023,Fall 2026
+FASH,A102,Industrial Sewing Techniques,Summer 2023,Fall 2026
+FASH,A110,Applied Textiles and Design,Intersession/Spring 2023,Fall 2026
+FASH,A115,Intro to the Fashion Industry,Intersession/Spring 2023,Fall 2026
+FASH,A116,Fashion Styling,Intersession/Spring 2023,Fall 2026
+FASH,A117,Creative Production,Winter/Spring 2025,Winter/Spring 2026
+FASH,A118,Trend Forecasting,Intersession/Spring 2023,Fall 2026
+FASH,A119,Intro To Display & VP,Fall 2024,Fall 2026
+FASH,A120,History of Fashion,Intersession/Spring 2023,Fall 2026
+FASH,A121,Street Style,Intersession/Spring 2023,Fall 2026
+FASH,A130,Tailoring,Intersession/Spring 2023,Fall 2025
+FASH,A135,Design Thinking,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A137,Alterations,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A145,Fashion Reporting and Analysis,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A150,Flat Pattern Techniques,Intersession/Spring 2023,Fall 2026
+FASH,A155,Technical Packages(Tech-Packs),Intersession/Spring 2023,Fall 2026
+FASH,A170,"Culture, Dress & Selection",Intersession/Spring 2023,Fall 2026
+FASH,A175,Appl Color/Dsgn Theory,Intersession/Spring 2023,Fall 2026
+FASH,A177,Fash Merchandz Concepts,Intersession/Spring 2023,Fall 2026
+FASH,A180,Prin of Clothing Const 1,Fall 2023,Fall 2026
+FASH,A181,Fashion Internship,Intersession/Spring 2023,Fall 2026
+FASH,A182,Professional Practices,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A183,Fund Princ Clothing Const 2,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A190,Apparel Ind Sustainability,Intersession/Spring 2023,Fall 2026
+FASH,A191,Sust & Resp-Apparel Industry,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A192,R&D Apparel Indstry Sustain,Summer 2023,Winter/Spring 2026
+FASH,A199,Current Issues in Fash,Fall 2023,Fall 2023
+FASH,A200,Fashion Internship Lecture,Intersession/Spring 2023,Fall 2026
+FASH,A210,Intro to E-Commerce,Fall 2024,Fall 2026
+FASH,A215,Retail E-Commerce Merchandisin,Winter/Spring 2025,Winter/Spring 2026
+FASH,A220,Retail Buying,Fall 2024,Fall 2026
+FASH,A225,"Media, Events, and Promotions",Intersession/Spring 2023,Winter/Spring 2026
+FASH,A233,Couture Techniques,Intersession/Spring 2024,Fall 2026
+FASH,A235,Draping,Fall 2023,Fall 2026
+FASH,A255,Fashion Illustrating Techniq 1,Intersession/Spring 2023,Fall 2026
+FASH,A256,Fashion Illustrating Techniq 2,Intersession/Spring 2023,Winter/Spring 2026
+FASH,A260,Fashn Dsgn/Prd Process,Winter/Spring 2025,Winter/Spring 2026
+FASH,A263,3D Clothing Design,Fall 2024,Winter/Spring 2026
+FASH,A266,Computerized Pattrn Sys,Fall 2023,Fall 2026
+FBM,A100,Intro to Hospitality,Fall 2023,Fall 2026
+FBM,A102,Sanitation and Safety,Fall 2023,Fall 2026
+FBM,A115,Fundamentals Food Production,Fall 2023,Fall 2026
+FBM,A140,Bar Management & Profit,Fall 2023,Fall 2026
+FBM,A145,Introduction to Wines,Fall 2023,Fall 2026
+FBM,A146,Intro to Fermented Beverages,Winter/Spring 2025,Winter/Spring 2026
+FBM,A147,Distilled Spirits & Mixology,Fall 2024,Fall 2026
+FBM,A175,Food Law and Policy,Intersession/Spring 2024,Fall 2026
+FBM,A190,Buffet and Catering Service,Fall 2023,Fall 2026
+FBM,A195,Dining Room Service,Fall 2023,Fall 2026
+FBM,A215,Foodservice Ops Mgmt,Fall 2023,Fall 2026
+FBM,A220,Food and Beverage Cost Control,Fall 2023,Fall 2026
+FBM,A221,Menu Planning and Purchasing,Fall 2023,Fall 2026
+FBM,A222,Mgmt Leadership and Training,Fall 2023,Fall 2026
+FBM,A245,Advanced Wine Studies,Winter/Spring 2026,Winter/Spring 2026
+FBM,A270,Food Systems & Social Change,Fall 2023,Fall 2026
+FBM,A280,Directed Practice for FBM 1,Intersession/Spring 2024,Fall 2026
+FBM,A285,Directed Practice for FBM 2,Fall 2023,Fall 2023
+FILM,A100,History & Apprec of the Cinema,Intersession/Spring 2023,Fall 2026
+FILM,A100H,Hist & Apprec of Cinema Honors,Intersession/Spring 2023,Fall 2026
+FILM,A102,Business of Film/Television,Intersession/Spring 2023,Fall 2026
+FILM,A104,Great Directors of the Cinema,Fall 2024,Fall 2026
+FILM,A106,Introduction to Media Writing,Intersession/Spring 2023,Fall 2026
+FILM,A107,History of Video Games,Intersession/Spring 2023,Summer 2026
+FILM,A107H,History of Video Games Honors,Intersession/Spring 2023,Winter/Spring 2026
+FILM,A108,Television Sitcom Genre,Intersession/Spring 2023,Intersession/Spring 2024
+FILM,A109,Science Fiction Film,Fall 2023,Fall 2026
+FILM,A109H,Science Fiction Film Honors,Fall 2023,Fall 2026
+FILM,A110,Film Production 1,Intersession/Spring 2023,Fall 2026
+FILM,A111,Film & TV Genres for Writers,Fall 2026,Fall 2026
+FILM,A113,Audio Workshop,Fall 2023,Fall 2026
+FILM,A117,One-Hour Drama Writing for TV,Fall 2024,Fall 2024
+FILM,A150,History of Radio & Television,Intersession/Spring 2023,Fall 2026
+FILM,A151,Broadcast Journalism,Fall 2023,Fall 2024
+FILM,A155,Television Production 1,Intersession/Spring 2023,Fall 2026
+FILM,A193,Sound Design for Film & TV,Intersession/Spring 2023,Fall 2026
+FILM,A194,Editing 1,Intersession/Spring 2023,Fall 2026
+FILM,A196,Introduction to Visual Effects,Intersession/Spring 2023,Fall 2026
+FILM,A198,Avid Media Composer,Summer 2023,Summer 2026
+FILM,A205,Remote Broadcasting,Intersession/Spring 2023,Winter/Spring 2026
+FILM,A210,Production Management,Summer 2024,Summer 2026
+FILM,A219,Editing 2,Intersession/Spring 2023,Fall 2026
+FILM,A220,Intro to Immersive Media(ARVR),Fall 2023,Fall 2025
+FILM,A222,Intro to Performance Capture,Intersession/Spring 2023,Fall 2026
+FILM,A223,Immersive Video Game Devel 1,Intersession/Spring 2023,Fall 2026
+FILM,A225,360 Spatial Audio Immrsv Media,Summer 2023,Summer 2023
+FILM,A226,Coding Basics Immers Media App,Fall 2023,Fall 2024
+FILM,A231,Immersive Media Devel Lab 1,Intersession/Spring 2023,Fall 2024
+FILM,A234,3D Modeling for Immersive Apps,Fall 2023,Fall 2025
+FILM,A240,Film Production 2,Intersession/Spring 2023,Fall 2026
+FILM,A253,Directing Theory,Winter/Spring 2025,Fall 2026
+FILM,A261,Television Studio Operations,Intersession/Spring 2023,Fall 2026
+FILM,A262,Cinematography,Intersession/Spring 2023,Fall 2026
+FILM,A264,Editing 3,Intersession/Spring 2023,Winter/Spring 2026
+FILM,A265,Documentary Production,Fall 2023,Fall 2026
+FILM,A270,Film Production 3,Intersession/Spring 2023,Winter/Spring 2026
+FILM,A271,Portfolio Development,Summer 2023,Summer 2026
+FN,A100,Careers-Dietetics/FDSCI,Intersession/Spring 2023,Fall 2026
+FN,A125,Plant-based Nutrition,Intersession/Spring 2023,Winter/Spring 2026
+FN,A136,Nutrition/Fitness/Performance,Intersession/Spring 2023,Fall 2026
+FN,A140,Intro Nutrition Concept,Intersession/Spring 2023,Fall 2026
+FN,A144,Life Cycle Nutrition,Fall 2023,Fall 2026
+FN,A170,Nutrition,Intersession/Spring 2023,Fall 2026
+FN,A171,Applied Nutrition,Fall 2023,Fall 2026
+FN,A180,Principles of Foods,Intersession/Spring 2023,Fall 2026
+FN,A185,Food and Culture,Fall 2023,Fall 2026
+FN,A195,Food Science,Intersession/Spring 2023,Fall 2026
+FN,A286,Dir Practice Food Science,Fall 2023,Winter/Spring 2026
+FREN,A180,Elementary French 1,Intersession/Spring 2023,Fall 2026
+FREN,A180H,Elementary French 1 Honors,Intersession/Spring 2023,Fall 2025
+FREN,A185,Elementary French 2,Intersession/Spring 2023,Winter/Spring 2026
+FREN,A185H,Elementary French 2 Honors,Intersession/Spring 2023,Fall 2025
+FREN,A190,Conversational French,Summer 2023,Summer 2023
+FREN,A199,Current Topics-French,Summer 2023,Summer 2023
+FREN,A280,Intermediate French 1,Intersession/Spring 2023,Fall 2025
+FREN,A280H,Intermediate French 1 Honors,Intersession/Spring 2023,Fall 2025
+FREN,A285,Intermediate French 2,Intersession/Spring 2023,Fall 2025
+FREN,A285H,Intermediate French 2 Honors,Intersession/Spring 2023,Fall 2025
+FSM,A100,Intro Hospitality Indus,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A150,Fundamentals of Food Prod,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A151,Food Production Mgmt,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A160,Sanitation & Safety,Intersession/Spring 2023,Summer 2023
+FSM,A170,Sustainable Food Systems,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A187,Introduction to Wines,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A190,Dining Room Service,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A240,Food & Bev Cost Control,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A250,Menu Planning/Purchasng,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A260,Supervision & Trng Tech,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A275,Bar Management,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A283,Directed Practice in FSM 1,Intersession/Spring 2023,Intersession/Spring 2023
+FSM,A285,Restaurant Management,Intersession/Spring 2023,Fall 2023
+GEOG,A100,World Regional Geography,Intersession/Spring 2023,Fall 2026
+GEOG,A100H,World Regional Geog Honors,Fall 2023,Fall 2026
+GEOG,A130,Intro to Weather & Climate,Intersession/Spring 2023,Winter/Spring 2026
+GEOG,A150,California Geography,Fall 2023,Fall 2026
+GEOG,A180,Physical Geography,Intersession/Spring 2023,Fall 2026
+GEOG,A180H,Physical Geography Honors,Intersession/Spring 2023,Winter/Spring 2026
+GEOG,A180L,Physical Geography Lab,Intersession/Spring 2023,Fall 2026
+GEOG,A185,Cultural Geography,Intersession/Spring 2023,Fall 2026
+GEOG,A190,Digital Mapping: Intro to GIS,Intersession/Spring 2023,Winter/Spring 2026
+GEOL,A105,General Geology,Intersession/Spring 2023,Fall 2026
+GEOL,A105H,General Geology Honors,Intersession/Spring 2023,Fall 2026
+GEOL,A105L,General Geology Lab,Intersession/Spring 2023,Fall 2026
+GEOL,A105M,General Geology Lab Honors,Intersession/Spring 2023,Fall 2026
+GEOL,A110,Physical Geology,Intersession/Spring 2023,Fall 2026
+GEOL,A115,California Geology,Winter/Spring 2025,Winter/Spring 2025
+GEOL,A132,Death Valley Field Study,Intersession/Spring 2023,Winter/Spring 2026
+GEOL,A134,Cascade Range Field Study,Summer 2026,Summer 2026
+GEOL,A135,Geol Natl Parks/Monumnt,Intersession/Spring 2024,Intersession/Spring 2024
+GEOL,A136,San Andreas Fault Field Study,Fall 2023,Fall 2023
+GEOL,A138,Yosemite Field Study,Fall 2025,Fall 2025
+GEOL,A139,East Sierra Nevada Field Study,Fall 2024,Fall 2026
+GEOL,A185,Evolution of the Earth,Intersession/Spring 2023,Winter/Spring 2026
+GEOL,A185H,Evolution of the Earth Honors,Intersession/Spring 2023,Winter/Spring 2026
+GEOL,A185L,Evolution of the Earth Lab,Intersession/Spring 2023,Winter/Spring 2026
+GEOL,A185M,Evolution of the Earth Lab Hon,Intersession/Spring 2023,Winter/Spring 2026
+GLST,A101,Introduction to Global Studies,Intersession/Spring 2023,Fall 2026
+GLST,A102,Global Issues,Intersession/Spring 2023,Fall 2025
+GNDR,A100,Introduction to Gender Studies,Intersession/Spring 2023,Fall 2026
+GNDR,A130,"Women, Politics, & Inequality",Intersession/Spring 2023,Winter/Spring 2026
+GNDR,A165,Gender Communication,Intersession/Spring 2023,Fall 2026
+GRMN,A180,Elementary German 1,Intersession/Spring 2023,Fall 2026
+GRMN,A185,Elementary German 2,Intersession/Spring 2023,Winter/Spring 2025
+HIST,A101,Afro-American History,Intersession/Spring 2023,Intersession/Spring 2024
+HIST,A144,History of Latin America,Fall 2025,Fall 2026
+HIST,A145,History of Mexico,Fall 2023,Winter/Spring 2026
+HIST,A150,Ethnic Groups of the U.S.,Intersession/Spring 2023,Intersession/Spring 2023
+HIST,A161,World History 1,Intersession/Spring 2023,Fall 2026
+HIST,A161H,World History 1 Honors,Intersession/Spring 2023,Fall 2025
+HIST,A162,World History 2,Intersession/Spring 2023,Fall 2026
+HIST,A162H,World History 2 Honors,Intersession/Spring 2024,Winter/Spring 2025
+HIST,A170,History of U.S. to 1877,Intersession/Spring 2023,Fall 2026
+HIST,A170H,History U.S. to 1877 Honors,Fall 2023,Fall 2026
+HIST,A175,U.S. History since 1865,Intersession/Spring 2023,Fall 2026
+HIST,A175H,History US from 1876 Honors,Intersession/Spring 2023,Winter/Spring 2026
+HIST,A176,Women In U.S. History,Fall 2023,Fall 2026
+HIST,A180,Western Civilization 1,Intersession/Spring 2023,Fall 2026
+HIST,A180H,Western Civilization 1 Honors,Fall 2023,Fall 2026
+HIST,A185,Western Civilization 2,Intersession/Spring 2023,Fall 2026
+HIST,A185H,Western Civilization 2 Honors,Intersession/Spring 2023,Winter/Spring 2026
+HIST,A187,Women in History,Intersession/Spring 2023,Winter/Spring 2026
+HIST,A195,Hist of England/Britain,Intersession/Spring 2023,Winter/Spring 2026
+HIST,A198,The World at War,Fall 2026,Fall 2026
+HLED,A100,Personal Health,Intersession/Spring 2023,Winter/Spring 2025
+HLED,A122,"Drugs, Health & Society",Intersession/Spring 2023,Fall 2024
+HLED,A160,Peer Health Educator - Level 1,Intersession/Spring 2023,Fall 2024
+HLED,A200,Introduction to Public Health,Intersession/Spring 2023,Fall 2024
+HLED,A260,Peer Health Educator - Level 2,Intersession/Spring 2023,Fall 2024
+HLED,A270,Fitness & Health,Intersession/Spring 2023,Fall 2024
+HORT,A100,Horticultural Science,Intersession/Spring 2023,Fall 2026
+HORT,A101,Current Topics in Horticulture,Summer 2023,Fall 2025
+HORT,A105,Botany for Gardeners,Fall 2023,Fall 2026
+HORT,A109,Knowing Your Soils,Fall 2023,Fall 2026
+HORT,A111,Landscape Drafting Technique,Summer 2024,Fall 2025
+HORT,A115,Landscape Graphics,Fall 2023,Winter/Spring 2025
+HORT,A116,Digital Design,Intersession/Spring 2023,Summer 2026
+HORT,A146,Introduction to Aquaponics,Winter/Spring 2026,Winter/Spring 2026
+HORT,A150,Landscape Maintenance,Intersession/Spring 2023,Winter/Spring 2025
+HORT,A151,Introduction to Tree Care,Fall 2023,Fall 2026
+HORT,A170,Pest Cntrol Apps/PCO Cert,Winter/Spring 2025,Winter/Spring 2025
+HORT,A181,Ornamental Trees,Fall 2023,Fall 2026
+HORT,A182,Ornamental Shrubs,Intersession/Spring 2023,Winter/Spring 2026
+HORT,A183,Plant Propagation,Intersession/Spring 2023,Winter/Spring 2026
+HORT,A184,Greenhouse and Nursery Science,Fall 2023,Fall 2026
+HORT,A185,Plant Diseases,Fall 2025,Fall 2025
+HORT,A186,Pests of Ornamentals,Intersession/Spring 2024,Winter/Spring 2026
+HORT,A189,Weeds and Their Control,Intersession/Spring 2024,Winter/Spring 2025
+HORT,A190,Calif Friendly Landscape,Intersession/Spring 2023,Winter/Spring 2025
+HORT,A191,Cacti and Succulents,Intersession/Spring 2023,Winter/Spring 2026
+HORT,A200,Chronicles of Garden Design,Intersession/Spring 2024,Intersession/Spring 2024
+HORT,A283,Therapeutic Gardens: Design,Intersession/Spring 2023,Intersession/Spring 2023
+HORT,A285,Intro to Landscape Design,Fall 2023,Winter/Spring 2026
+HORT,A286,Landscape Design Elements,Fall 2024,Fall 2026
+HORT,A287,Planting Design,Intersession/Spring 2024,Fall 2026
+HORT,A288,Sprinkler Irrigation Syst Dsgn,Intersession/Spring 2024,Winter/Spring 2026
+HORT,A289,Installing Resident Irrig Syst,Intersession/Spring 2024,Winter/Spring 2026
+HORT,A297,"Gardn Pool, Fountn & Waterfall",Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A003N,Careers Hospitality/Tourism NC,Intersession/Spring 2023,Fall 2026
+HTT,A105,Passport to Success,Intersession/Spring 2023,Fall 2026
+HTT,A110,Hotel Front Office Operations,Fall 2023,Fall 2025
+HTT,A118,Hospitality Accounting,Intersession/Spring 2023,Fall 2026
+HTT,A125,Destination the Americas,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A127,Destination Europe,Fall 2023,Fall 2026
+HTT,A128,Destination Africa/Pacific,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A130,Cultural Tourism,Fall 2023,Fall 2026
+HTT,A131,Computer Reserv-SABRE,Intersession/Spring 2023,Fall 2026
+HTT,A135,Homeland Security,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A138,Sharing the Travel Experience,Fall 2023,Fall 2025
+HTT,A140,Revenue Management,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A150,Travel Tourism Career Dvlpmnt,Fall 2023,Fall 2026
+HTT,A157,Tour Escorting & Group Travel,Intersession/Spring 2023,Intersession/Spring 2024
+HTT,A158,Luxury Incentive Corp Travel,Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A180,Enhancing Guest Service,Intersession/Spring 2023,Fall 2026
+HTT,A185,Interview & Prof Development,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A221,Meeting/Event Mgmt Internship,Intersession/Spring 2023,Fall 2026
+HTT,A225,Travel/Tourism Internship,Intersession/Spring 2023,Fall 2026
+HTT,A226,Airline Internship,Intersession/Spring 2023,Fall 2026
+HTT,A227,Hotel Internship,Intersession/Spring 2023,Fall 2026
+HTT,A240,Hospitality &Tourism Marketing,Fall 2023,Fall 2026
+HTT,A265,Prin Evnt/Meeting Management,Fall 2023,Fall 2025
+HTT,A266,Organize/Manage Events,Fall 2023,Fall 2025
+HTT,A267,Managing Business Risks,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A269,Destination Management,Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A270,Mtg & Event Marketing & Sales,Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A273,Sport Event Management,Fall 2024,Fall 2024
+HTT,A274,Establsh/Operate Event Busines,Fall 2024,Fall 2025
+HTT,A275,Event Fund-Raising & Sponsorsh,Intersession/Spring 2023,Fall 2025
+HTT,A276,Expo/Trade Show Mgmt Promotion,Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A277,Wedding Planning as a Business,Intersession/Spring 2023,Winter/Spring 2025
+HTT,A279,Spa Internship,Intersession/Spring 2023,Intersession/Spring 2023
+HTT,A284,Leadership and Strategic Mgmt,Fall 2023,Fall 2026
+HTT,A285,Hospitality Operations,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A286,Hosp/Travel/Tour Law,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A288,Human Resource Managemt,Intersession/Spring 2023,Winter/Spring 2026
+HTT,A299,Certified Travel Associate,Intersession/Spring 2023,Fall 2026
+HUM,A100,Introduction to the Humanities,Intersession/Spring 2023,Fall 2026
+HVAC,A100,Air Cond/Refrigeratn Princpl,Intersession/Spring 2023,Fall 2026
+HVAC,A101,Basic Electrical for HVAC-R,Intersession/Spring 2023,Fall 2026
+HVAC,A102,Refrigeration Service,Intersession/Spring 2023,Fall 2026
+HVAC,A103,Air Conditioning Service,Intersession/Spring 2023,Fall 2026
+HVAC,A104,Air Balance,Intersession/Spring 2023,Winter/Spring 2026
+HVAC,A105,Air Cond & Refrig Controls,Intersession/Spring 2023,Fall 2026
+HVAC,A106,Non-Res Applications for HVAC,Fall 2023,Fall 2026
+HVAC,A110,Pneumatic Controls,Intersession/Spring 2023,Fall 2026
+HVAC,A111,Ice Machine Service & Repair,Fall 2023,Fall 2026
+HVAC,A112,EPA 608,Summer 2025,Fall 2026
+HVAC,A140,Building Automation,Intersession/Spring 2023,Fall 2026
+ID,A001N,Design Communication CAD 2D NC,Winter/Spring 2025,Fall 2026
+ID,A002N,Design Comm Digital Visual NC,Winter/Spring 2026,Fall 2026
+ID,A003N,BIM for Interior Design NC,Summer 2026,Fall 2026
+ID,A050,Interior Design Lab,Intersession/Spring 2023,Intersession/Spring 2023
+ID,A100,Fund of Interior Design,Intersession/Spring 2023,Fall 2026
+ID,A105,Interior Dsgn Studio 1,Intersession/Spring 2023,Fall 2026
+ID,A110,Design Comm 1: Design Graphics,Intersession/Spring 2023,Fall 2026
+ID,A120,Interior Design Careers,Intersession/Spring 2023,Fall 2026
+ID,A130,Desgn Communication 2:CAD 2-D,Intersession/Spring 2023,Fall 2026
+ID,A150,Interior Materials & Products,Intersession/Spring 2023,Fall 2026
+ID,A170,Space Planning,Intersession/Spring 2023,Fall 2026
+ID,A175,Appl Color/Dsgn Theory,Intersession/Spring 2023,Fall 2026
+ID,A180,Hist Arch & Furnishng 1,Intersession/Spring 2023,Fall 2026
+ID,A190,Hist Arch/Furnishings 2,Intersession/Spring 2023,Fall 2026
+ID,A199,Current Issues/Interior Design,Intersession/Spring 2023,Intersession/Spring 2023
+ID,A200,Design Comm 3: Illustration,Fall 2023,Fall 2026
+ID,A210,Fundamentals of Lightng,Fall 2023,Fall 2026
+ID,A215,Interior Dsgn Studio 2,Intersession/Spring 2023,Fall 2026
+ID,A220,Int Design Construction Docs,Intersession/Spring 2023,Winter/Spring 2026
+ID,A230,Business/Prof Practice,Intersession/Spring 2023,Winter/Spring 2026
+ID,A240,Interior Design Internship,Intersession/Spring 2023,Fall 2026
+ID,A245,Portfolio Development,Intersession/Spring 2023,Winter/Spring 2026
+ID,A250,Codes and Building Systems,Fall 2023,Fall 2026
+ID,A260,Dsgn Comm 4:Digital Visualiztn,Intersession/Spring 2023,Fall 2026
+ID,A265,Studio Project Specializn,Intersession/Spring 2023,Fall 2026
+ID,A280,Interior Design Studio-Bath,Intersession/Spring 2023,Intersession/Spring 2023
+ID,A285,Interior Design Studio-Kitchen,Fall 2023,Winter/Spring 2025
+ID,A290,Building Info Modeling for ID,Intersession/Spring 2023,Fall 2026
+IMVR,A120,Intro to Immersive Media AR/VR,Fall 2024,Fall 2026
+IMVR,A130,Immersive Game Dev I,Winter/Spring 2026,Winter/Spring 2026
+IMVR,A210,Coding for Immersive Media,Fall 2024,Fall 2024
+IMVR,A240,AI for Creative Developers,Fall 2026,Fall 2026
+INHL,A100,IHC Principles & Practice I,Fall 2023,Fall 2023
+INHL,A115,Clinical Skills for the IHC,Fall 2023,Intersession/Spring 2024
+INHL,A200,Principles & Practice II,Intersession/Spring 2023,Intersession/Spring 2024
+INHL,A210,Navigate U.S. Healthcare,Intersession/Spring 2023,Fall 2024
+INHL,A220,Tech and Topics in Health Ed,Fall 2023,Fall 2023
+INHL,A225,Intro to CAM,Intersession/Spring 2023,Intersession/Spring 2024
+INHL,A250,IHC Supervised Practice,Summer 2023,Fall 2024
+IT,A110,PC A+ Certificate Prep,Intersession/Spring 2023,Fall 2025
+IT,A191,Network/Comm Technologies,Intersession/Spring 2023,Winter/Spring 2025
+ITAL,A180,Elementary Italian 1,Intersession/Spring 2023,Fall 2026
+ITAL,A185,Elementary Italian 2,Intersession/Spring 2023,Summer 2025
+ITAL,A280,Intermediate Italian 1,Summer 2023,Summer 2023
+ITAL,A285,Intermediate Italian 2,Summer 2023,Summer 2023
+JAPN,A180,Elementary Japanese 1,Intersession/Spring 2023,Fall 2026
+JAPN,A180H,Elementary Japanese 1 Honors,Intersession/Spring 2023,Fall 2026
+JAPN,A185,Elementary Japanese 2,Intersession/Spring 2023,Fall 2026
+JAPN,A185H,Elementary Japanese 2 Honors,Intersession/Spring 2023,Fall 2026
+JAPN,A280,Intermediate Japanese 1,Intersession/Spring 2023,Fall 2026
+JAPN,A285,Intermediate Japanese 2,Intersession/Spring 2023,Fall 2026
+JOUR,A110,News Writing/Reporting,Intersession/Spring 2023,Fall 2026
+JOUR,A113,Social Media Journalism,Intersession/Spring 2023,Winter/Spring 2026
+JOUR,A115,Student Newspaper I,Intersession/Spring 2023,Fall 2026
+JOUR,A116,Multi-Mdia Rprt/Prducng,Intersession/Spring 2023,Fall 2026
+JOUR,A117,Feature Writing,Intersession/Spring 2023,Fall 2024
+JOUR,A123,Social Media Journalism II,Intersession/Spring 2023,Intersession/Spring 2024
+JOUR,A125,Student Newspaper II,Intersession/Spring 2023,Fall 2026
+JOUR,A133,Social Media Journalism III,Intersession/Spring 2023,Intersession/Spring 2024
+JOUR,A135,Student Newspaper III,Intersession/Spring 2023,Fall 2026
+JOUR,A143,Social Media Journalism IV,Intersession/Spring 2023,Intersession/Spring 2024
+JOUR,A145,Student Newspaper IV,Intersession/Spring 2023,Fall 2026
+JOUR,A185,Photojournalism,Intersession/Spring 2023,Fall 2026
+JOUR,A215,Coast Report Ed Brd Level 1,Intersession/Spring 2023,Fall 2026
+JOUR,A225,Coast Report Ed Brd Level 2,Intersession/Spring 2023,Fall 2026
+JOUR,A235,Coast Report Ed Brd Level 3,Intersession/Spring 2023,Fall 2026
+JOUR,A245,Coast Report Ed Brd Level 4,Intersession/Spring 2023,Fall 2026
+KIN,A001N,"Lifeguard Training,Prof Res NC Corequisite: KIN A002N",Summer 2023,Summer 2026
+KIN,A002N,Aqua Fst Aid/CPR/AED Lifgrd NC Corequisite: KIN A001N,Summer 2023,Summer 2026
+KIN,A102,Medical Terminology,Fall 2023,Fall 2026
+KIN,A105,Cardiovascular Fitness,Intersession/Spring 2023,Fall 2026
+KIN,A106,Weight Training Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A109,Cardio Train & Strength Dev 1,Intersession/Spring 2023,Fall 2025
+KIN,A110,Walking for Fitness Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A114,Cardio-Kick Boxing Level 1,Fall 2023,Fall 2026
+KIN,A115,Cross Training Level 1,Summer 2025,Fall 2026
+KIN,A119,Cardio Train & Strngth Devel 2,Intersession/Spring 2023,Fall 2025
+KIN,A124,Hiking,Fall 2024,Fall 2026
+KIN,A125,Self Defense for Women,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A128,Hatha Yoga - Level I,Intersession/Spring 2023,Fall 2026
+KIN,A131,Swimming for Fitness Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A132,Swimming Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A136,Introduction to Sailing,Intersession/Spring 2023,Fall 2026
+KIN,A137,Intmd Sailing/Intro Keel Boats,Intersession/Spring 2023,Fall 2026
+KIN,A141,Surfing and Ocean Safety Lev 1,Intersession/Spring 2023,Fall 2026
+KIN,A142,Snowboarding Level 1,Intersession/Spring 2024,Winter/Spring 2025
+KIN,A143,Snowboarding Level 2,Intersession/Spring 2024,Winter/Spring 2025
+KIN,A145,Badminton Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A146,Tennis Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A147,Table Tennis Level 1,Fall 2023,Fall 2024
+KIN,A148,Pickleball,Fall 2023,Fall 2026
+KIN,A149,Snorkeling,Fall 2023,Fall 2023
+KIN,A150,Basketball,Intersession/Spring 2023,Fall 2026
+KIN,A151,Futsal/Indoor Soccer Level 1,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A152,Soccer Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A154,Volleyball Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A156,Rock Climbing Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A157,Sand Volleyball,Fall 2023,Fall 2023
+KIN,A158,Flag Football level 1,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A170,Adapted Strength Train,Intersession/Spring 2023,Fall 2026
+KIN,A172,Adapted Aquatics,Intersession/Spring 2023,Fall 2026
+KIN,A173,Adapted Strength & Balance,Intersession/Spring 2023,Fall 2026
+KIN,A174,Adapted Cardio Fitness,Intersession/Spring 2023,Fall 2026
+KIN,A177,Adapted Yoga,Intersession/Spring 2023,Fall 2026
+KIN,A202,Introduction to Kinesiology,Intersession/Spring 2023,Fall 2026
+KIN,A203,First Aid and CPR,Intersession/Spring 2023,Fall 2026
+KIN,A204,Techniques and Theory Coaching,Intersession/Spring 2023,Fall 2026
+KIN,A205,Coaching Internship,Intersession/Spring 2024,Summer 2026
+KIN,A206,Weight Training Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A210,Walking for Fitness Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A214,Cardio Kickboxing Level 2,Fall 2023,Fall 2026
+KIN,A215,Cross Training Level 2,Summer 2026,Fall 2026
+KIN,A225,Self Defense for Women Level 2,Winter/Spring 2025,Winter/Spring 2026
+KIN,A228,Hatha Yoga - Level II,Intersession/Spring 2023,Fall 2026
+KIN,A231,Swimming for Fitness Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A232,Swimming Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A241,Surfing and Ocean Safety 2,Intersession/Spring 2023,Fall 2026
+KIN,A245,Badminton Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A246,Tennis Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A247,Table Tennis - Level 2,Fall 2023,Fall 2024
+KIN,A251,Fust/Indoor Soccer Level 2,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A252,Soccer Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A254,Volleyball Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A256,Rock Climbing Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A257,Surfing and Ocean Safety 3,Winter/Spring 2025,Fall 2026
+KIN,A258,Flag Football Level 2,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A270,Fitness & Health,Intersession/Spring 2023,Fall 2026
+KIN,A271,Drugs & Sports,Fall 2023,Fall 2026
+KIN,A272,Movement Analysis,Intersession/Spring 2023,Fall 2026
+KIN,A273,Sports Medicine,Intersession/Spring 2023,Fall 2025
+KIN,A274,Athletic Taping and Modalities,Fall 2023,Fall 2026
+KIN,A275,Sports Med Practicum Level 1,Intersession/Spring 2023,Fall 2026
+KIN,A276,Sports Med Practicum Level 2,Intersession/Spring 2023,Fall 2026
+KIN,A277,Sports Med Practicum Level 3,Intersession/Spring 2023,Fall 2026
+KIN,A278,Sports Med Practicum Level 4,Intersession/Spring 2023,Fall 2026
+KIN,A279,Sports Management,Intersession/Spring 2023,Fall 2026
+KIN,A280,Strength & Conditioning Theory,Intersession/Spring 2023,Fall 2026
+KIN,A282,Intro to Exercise Physiology,Intersession/Spring 2023,Fall 2026
+KIN,A282H,Intro to Exercise Phys Honors,Fall 2023,Fall 2026
+KIN,A283,Nutrition Fitness Performance,Intersession/Spring 2023,Fall 2026
+KIN,A284,Theory of Yoga,Fall 2023,Fall 2026
+KIN,A285,Yoga Methodology,Fall 2023,Fall 2026
+KIN,A286,Yoga Methodology 2,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A287,Yoga Practicum Level 1,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A288,Stress Mgmt Theory & Applic,Intersession/Spring 2023,Fall 2026
+KIN,A289,Sport and Exercise Psychology,Intersession/Spring 2023,Fall 2026
+KIN,A290,Sport and Society,Fall 2023,Fall 2023
+KIN,A296,Personal Trainer,Intersession/Spring 2023,Winter/Spring 2026
+KIN,A297,Fitness Specialist Practicum,Intersession/Spring 2023,Fall 2026
+KIN,A298,Fitness Specialist Internship,Intersession/Spring 2023,Fall 2026
+LEAD,A180,Personal Leadership,Fall 2023,Fall 2026
+LEAD,A200,Organizatonl Leadership,Intersession/Spring 2023,Intersession/Spring 2024
+LIBR,A100,Library Research/Info Comp,Intersession/Spring 2023,Fall 2026
+LIBR,A100H,Library Research/Info Comp Hon,Intersession/Spring 2023,Fall 2026
+LIBR,A103,College Research Skills,Intersession/Spring 2023,Fall 2026
+LRNG,A001,Basc Skills Remediation,Intersession/Spring 2023,Intersession/Spring 2024
+LRNG,A010,Life Skills Disabled Student A,Fall 2023,Intersession/Spring 2024
+LRNG,A020,Life Skills Disabled Student B,Fall 2023,Fall 2026
+LRNG,A040,Learning Skills-Writing,Fall 2024,Fall 2026
+LRNG,A041N,Learning Skills-Writing Lab,Fall 2024,Fall 2026
+LRNG,A050,Learning Strat for Math,Fall 2024,Fall 2026
+LRNG,A051N,Learning Strat for Math - Lab,Fall 2024,Fall 2026
+MA,A150,Medical Assisting Core,Fall 2023,Fall 2026
+MA,A175,Admin Medical Assisting I,Fall 2023,Fall 2026
+MA,A181,Clinical Medical Assisting 1,Intersession/Spring 2023,Fall 2026
+MA,A205,Administrative Medical Asstg 2,Intersession/Spring 2023,Winter/Spring 2026
+MA,A281,Med Asstg Clinical Experience,Intersession/Spring 2023,Winter/Spring 2026
+MA,A289,Clinical MA 2 Specialty Proced,Intersession/Spring 2023,Winter/Spring 2026
+MACH,A100,Intro to Machine Shop,Intersession/Spring 2023,Fall 2026
+MACH,A105,Lathe,Intersession/Spring 2023,Fall 2026
+MACH,A110,Milling Machine,Intersession/Spring 2023,Fall 2026
+MACH,A115,Production Maching Techniques,Intersession/Spring 2023,Fall 2026
+MACH,A120,Measurement& Blueprint Reading,Intersession/Spring 2023,Fall 2026
+MACH,A121,Computat for Machinists,Intersession/Spring 2023,Fall 2026
+MACH,A122,Machine Shop Inspection,Intersession/Spring 2023,Summer 2026
+MACH,A125,CNC Machine Operation 1,Intersession/Spring 2023,Fall 2026
+MACH,A126,CNC Machine Operation 2,Intersession/Spring 2023,Winter/Spring 2026
+MACH,A130,Intro CNC & Manual Prog,Intersession/Spring 2023,Fall 2026
+MACH,A133,CNC Program-Mastercam 1,Intersession/Spring 2023,Fall 2026
+MACH,A134,CNC Program-Mastercam 2,Intersession/Spring 2023,Fall 2026
+MACH,A141,Mastercam Lathe,Fall 2023,Fall 2026
+MACH,A142,Mastercam Solids,Intersession/Spring 2023,Winter/Spring 2026
+MACH,A146,Machining with MasterCAM,Summer 2023,Summer 2026
+MACH,A147,Intro to 5 Axis Machining,Summer 2023,Winter/Spring 2026
+MACH,A148,Adv Multi Axis Programming,Fall 2024,Fall 2026
+MACH,A152,Introduction to SolidWorks,Intersession/Spring 2023,Fall 2026
+MACH,A158,Additive Manufctrg/3D Printing,Intersession/Spring 2023,Winter/Spring 2025
+MACH,A175,Dimensioning & Tolerancing,Intersession/Spring 2023,Fall 2026
+MACH,A190,Elementary Metallurgy,Fall 2023,Winter/Spring 2026
+MACH,A199,Current Topics in Machine Tech,Fall 2023,Fall 2023
+MACH,A200,Tooling,Summer 2025,Summer 2025
+MARA,A136,Introduction to Sailing,Intersession/Spring 2023,Fall 2026
+MARA,A137,Intmd Sail - Intro Keel Boats,Intersession/Spring 2023,Fall 2026
+MARA,A150,Coastal Navigation,Intersession/Spring 2023,Fall 2026
+MARA,A151,Maritime Industry,Fall 2023,Fall 2026
+MARA,A152,Boat Handling and Seamanship,Intersession/Spring 2023,Winter/Spring 2026
+MARA,A153,Marine Basic Safety Training,Intersession/Spring 2023,Winter/Spring 2026
+MARA,A154,Vessel & Engine Maint,Intersession/Spring 2023,Winter/Spring 2026
+MARA,A156,Maritime Environment,Fall 2023,Fall 2026
+MARA,A157,Radar Observer,Intersession/Spring 2023,Fall 2026
+MARA,A200,Professional Mariner Internshp,Intersession/Spring 2023,Fall 2026
+MARA,A201,Prof Mariner Internship Lectur,Intersession/Spring 2023,Fall 2026
+MARA,A210,USCG License Exam Preparation,Intersession/Spring 2023,Winter/Spring 2025
+MARA,A215,Rating Form Nav Watch (RFPNW),Fall 2023,Fall 2026
+MATH,A004N,Math Jam Basic Comp Skills NC,Intersession/Spring 2023,Intersession/Spring 2023
+MATH,A008,Pre-Algebra,Intersession/Spring 2023,Intersession/Spring 2023
+MATH,A010,Elementary Algebra,Intersession/Spring 2023,Intersession/Spring 2023
+MATH,A030,Intermediate Algebra,Intersession/Spring 2023,Summer 2023
+MATH,A045,Elementary & Intermed Algebra,Intersession/Spring 2023,Intersession/Spring 2023
+MATH,A060N,Math Skills Lib Art Math/Stats,Fall 2024,Fall 2026
+MATH,A061N,Math Skills College Algebra,Fall 2024,Fall 2026
+MATH,A062N,Math Skills for Trigonometry,Fall 2024,Fall 2026
+MATH,A064N,Math Skills Business Calculus,Fall 2024,Fall 2026
+MATH,A067N,Math Skills for Precalculus,Fall 2024,Fall 2026
+MATH,A068N,Math Skills for Calculus,Fall 2024,Fall 2026
+MATH,A082N,Math Jam for STEM Pathway NC Corequisite: MATH A140,Intersession/Spring 2024,Intersession/Spring 2024
+MATH,A090,Support for Liberal Arts Math Corequisite: MATH A100,Intersession/Spring 2023,Fall 2026
+MATH,A091,Support for College Algebra Corequisite: MATH A115,Intersession/Spring 2023,Fall 2026
+MATH,A092,Support for Trigonometry Corequisite: MATH A120,Intersession/Spring 2023,Fall 2026
+MATH,A094,Support for Business Calculus Corequisite: MATH A140,Fall 2024,Fall 2026
+MATH,A096,Support for Intro Statistics Corequisite: STAT C1000,Intersession/Spring 2023,Fall 2026
+MATH,A100,Liberal Arts Mathematics Corequisite: MATH A090,Intersession/Spring 2023,Fall 2026
+MATH,A104,Mathematics for Elem Teachers,Intersession/Spring 2023,Fall 2026
+MATH,A115,College Algebra Corequisite: MATH A091,Intersession/Spring 2023,Fall 2026
+MATH,A120,Trigonometry Corequisite: MATH A092,Intersession/Spring 2023,Fall 2026
+MATH,A140,Business Calculus Corequisite: MATH A094,Intersession/Spring 2023,Fall 2026
+MATH,A155,Finite Math with Applications,Intersession/Spring 2023,Intersession/Spring 2024
+MATH,A160,Introduction to Statistics,Intersession/Spring 2023,Summer 2025
+MATH,A170,Precalculus,Intersession/Spring 2023,Fall 2026
+MATH,A180,Calculus 1,Intersession/Spring 2023,Fall 2026
+MATH,A180H,Calculus 1 Honors,Intersession/Spring 2023,Fall 2026
+MATH,A185,Calculus 2,Intersession/Spring 2023,Fall 2026
+MATH,A185H,Calculus 2 Honors,Intersession/Spring 2023,Fall 2026
+MATH,A220,Intro to Symbolic Logic,Intersession/Spring 2023,Fall 2026
+MATH,A230,Intro to Discrete Mathematics,Fall 2023,Fall 2026
+MATH,A235,Applied Linear Algebra,Intersession/Spring 2023,Winter/Spring 2026
+MATH,A280,Calculus 3,Intersession/Spring 2023,Fall 2026
+MATH,A280H,Calculus 3 Honors,Intersession/Spring 2023,Fall 2026
+MATH,A285,Intro Linear Alg Diffrl Equatn,Intersession/Spring 2023,Fall 2026
+MATH,A285H,Intro Lin Alg & Diffl Equa Hon,Intersession/Spring 2023,Fall 2026
+MATH,A287,Intro to Abstract Mathematics,Winter/Spring 2025,Winter/Spring 2026
+MGMT,A100,Applied Management,Intersession/Spring 2023,Fall 2026
+MGMT,A115,Human Relations & Supv,Intersession/Spring 2023,Fall 2026
+MGMT,A239,Professionl Communicatn,Intersession/Spring 2023,Fall 2026
+MKTG,A100,Intro to Marketing,Intersession/Spring 2023,Fall 2026
+MKTG,A110,Professional Selling,Intersession/Spring 2023,Fall 2026
+MKTG,A130,Principle of Advertisng,Intersession/Spring 2023,Fall 2026
+MKTG,A142,Direct Marketing,Fall 2023,Fall 2023
+MKTG,A150,International Marketing,Intersession/Spring 2024,Fall 2026
+MKTG,A150H,International Marketing Honors,Intersession/Spring 2024,Fall 2026
+MKTG,A200,Retail E-Commerce Mgmt,Fall 2023,Intersession/Spring 2024
+MKTG,A220,Retail Buying,Intersession/Spring 2023,Fall 2023
+MRSC,A020N,Aquarium and Aquaculture Exp,Fall 2025,Fall 2026
+MRSC,A100,Oceanography,Intersession/Spring 2023,Fall 2026
+MRSC,A100H,Oceanography Honors,Intersession/Spring 2023,Fall 2024
+MRSC,A100L,Oceanography Lab,Intersession/Spring 2023,Fall 2026
+MRSC,A100M,Oceanography Lab Honors,Intersession/Spring 2023,Intersession/Spring 2023
+MRSC,A119,Ocean Conservation & Comm Sci,Fall 2023,Fall 2026
+MRSC,A120,Marine Aquarium Science,Intersession/Spring 2023,Fall 2026
+MRSC,A121,Marine Intertidal Ecology,Fall 2023,Fall 2025
+MRSC,A124,Ecology of the Gray Whale,Intersession/Spring 2023,Winter/Spring 2026
+MRSC,A125,Field Studies-Gray Whale Ecol,Intersession/Spring 2023,Winter/Spring 2026
+MRSC,A130,Husbandry of Aquatic Organisms,Fall 2023,Fall 2026
+MRSC,A135,Aquarium Water Quality,Fall 2023,Fall 2026
+MRSC,A140,Aquarium Life Support Op&Maint,Intersession/Spring 2023,Fall 2026
+MRSC,A145,Introduction to Aquaculture,Fall 2025,Fall 2026
+MRSC,A146,Introduction to Aquaponics,Winter/Spring 2026,Winter/Spring 2026
+MRSC,A180,Marine Biology,Intersession/Spring 2023,Fall 2026
+MRSC,A180L,Marine Biology Lab,Intersession/Spring 2023,Fall 2026
+MRSC,A185,Coastal Oceanography,Intersession/Spring 2023,Fall 2026
+MRSC,A185L,Coastal Oceanography Lab,Fall 2023,Fall 2026
+MRSC,A187,Marine Mammals,Intersession/Spring 2023,Fall 2026
+MRSC,A188,Marine Mammal Field Studies,Summer 2023,Summer 2026
+MRSC,A190,Marine Research & Monitor,Intersession/Spring 2023,Winter/Spring 2026
+MRSC,A195,Marine Policy and Conservation,Fall 2024,Fall 2026
+MRSC,A199,Special Topics in Marine Scien,Intersession/Spring 2023,Summer 2024
+MRSC,A220,Aquarium Science Management 1,Intersession/Spring 2023,Fall 2026
+MRSC,A221,Aquarium Science Management 2,Intersession/Spring 2023,Fall 2026
+MRSC,A222,Aquarium Science Management 3,Intersession/Spring 2023,Fall 2026
+MRSC,A223,Aquarium Science Management 4,Intersession/Spring 2023,Fall 2026
+MRSC,A245,Practical Exp in Aquaculture I,Fall 2025,Fall 2026
+MRSC,A246,Practical Exp Aquaculture II,Winter/Spring 2026,Fall 2026
+MRSC,A287,Marine Mammal Rescue & Rehab,Intersession/Spring 2023,Winter/Spring 2026
+MRSC,A288,Marine Mammal Research & Tech,Intersession/Spring 2023,Fall 2026
+MUS,A001N,Guitar Ensemble - Life Learner,Intersession/Spring 2023,Fall 2026
+MUS,A002N,Wind Ensemble - Life Learner,Intersession/Spring 2023,Fall 2026
+MUS,A003N,OCC Symphony - Life Learner,Intersession/Spring 2023,Fall 2026
+MUS,A012N,Choral Singing - Life Learner,Intersession/Spring 2023,Fall 2026
+MUS,A015N,Intermediate Orchestra for LL,Intersession/Spring 2023,Fall 2026
+MUS,A100,Hist & Appr of West Clas Music,Intersession/Spring 2023,Fall 2026
+MUS,A105,Music from Bach to Rock,Intersession/Spring 2023,Fall 2026
+MUS,A110,Computers in Music 1,Intersession/Spring 2023,Fall 2026
+MUS,A111,Computers in Music 2,Intersession/Spring 2023,Fall 2026
+MUS,A112,Computers in Music 3,Intersession/Spring 2023,Fall 2026
+MUS,A113,Computers in Music 4,Intersession/Spring 2023,Fall 2026
+MUS,A115,Fundamentals of Music,Intersession/Spring 2023,Fall 2026
+MUS,A116,Basic Guitar,Intersession/Spring 2023,Fall 2026
+MUS,A118,Popular Vocal Techniques 1,Intersession/Spring 2023,Fall 2026
+MUS,A119,Popular Vocal Techniques 2,Intersession/Spring 2023,Fall 2026
+MUS,A120,College Choir,Intersession/Spring 2023,Fall 2026
+MUS,A122,Chamber Singers,Intersession/Spring 2023,Fall 2026
+MUS,A129,Guitar Ensemble,Intersession/Spring 2023,Fall 2026
+MUS,A132,Wind Ensemble,Intersession/Spring 2023,Fall 2026
+MUS,A133,Orchestra,Intersession/Spring 2023,Fall 2026
+MUS,A139,History of Rock Music,Intersession/Spring 2023,Fall 2026
+MUS,A140,Beginning Instruments,Intersession/Spring 2023,Fall 2026
+MUS,A141,Piano 1,Intersession/Spring 2023,Fall 2026
+MUS,A142,Piano 2,Intersession/Spring 2023,Fall 2026
+MUS,A143,History of Jazz,Intersession/Spring 2023,Fall 2026
+MUS,A145,Voice 1,Intersession/Spring 2023,Intersession/Spring 2023
+MUS,A146,Voice 2,Intersession/Spring 2023,Intersession/Spring 2023
+MUS,A148,Classical Guitar 1,Intersession/Spring 2023,Fall 2026
+MUS,A149,Classical Guitar 2,Intersession/Spring 2023,Fall 2026
+MUS,A150,Intermed Band/Orchestra,Intersession/Spring 2023,Fall 2026
+MUS,A151,Studio Guitar 1,Intersession/Spring 2023,Fall 2026
+MUS,A152,Studio Guitar 2,Intersession/Spring 2023,Fall 2026
+MUS,A161,Voice 1,Fall 2023,Fall 2026
+MUS,A162,Voice 2,Fall 2023,Fall 2026
+MUS,A163,Voice 3,Fall 2023,Fall 2026
+MUS,A164,Voice 4,Intersession/Spring 2024,Fall 2026
+MUS,A180,Theory 1,Intersession/Spring 2023,Fall 2026
+MUS,A181,Musicianship 1,Intersession/Spring 2023,Fall 2026
+MUS,A185,Theory 2,Intersession/Spring 2023,Fall 2026
+MUS,A186,Musicianship 2,Intersession/Spring 2023,Fall 2026
+MUS,A213,Advanced Vocal Performance 1,Intersession/Spring 2023,Fall 2026
+MUS,A214,Advanced Vocal Performance 2,Intersession/Spring 2023,Fall 2026
+MUS,A215,Advanced Vocal Performance 3,Intersession/Spring 2023,Fall 2026
+MUS,A216,Advanced Vocal Performance 4,Intersession/Spring 2023,Fall 2026
+MUS,A218,Popular Vocal Techniques 3,Intersession/Spring 2023,Fall 2026
+MUS,A219,Popular Vocal Techniques 4,Intersession/Spring 2023,Fall 2026
+MUS,A223,Advanced Chamber Singers,Intersession/Spring 2023,Fall 2026
+MUS,A230,Jazz Improvisation,Intersession/Spring 2023,Fall 2026
+MUS,A233,Symph Chamber Orchestra,Intersession/Spring 2023,Fall 2026
+MUS,A240,Sophomore Recital,Intersession/Spring 2023,Fall 2026
+MUS,A241,Piano 3,Intersession/Spring 2023,Fall 2026
+MUS,A242,Piano 4,Intersession/Spring 2023,Fall 2026
+MUS,A248,Classical Guitar 3,Intersession/Spring 2023,Fall 2026
+MUS,A249,Classical Guitar 4,Intersession/Spring 2023,Fall 2026
+MUS,A261,Recordng Techniques 1,Intersession/Spring 2023,Fall 2026
+MUS,A262,Music as a Business,Intersession/Spring 2023,Fall 2026
+MUS,A265,Recordng Techniques 2,Intersession/Spring 2023,Fall 2026
+MUS,A267,Piano Master Class 1,Intersession/Spring 2023,Fall 2026
+MUS,A268,Piano Master Class 2,Intersession/Spring 2023,Fall 2026
+MUS,A271,Studio Guitar 3,Intersession/Spring 2023,Fall 2026
+MUS,A272,Studio Guitar 4,Intersession/Spring 2023,Fall 2026
+MUS,A277,Piano Master Class 3,Intersession/Spring 2023,Fall 2026
+MUS,A278,Piano Master Class 4,Intersession/Spring 2023,Fall 2026
+MUS,A280,Theory 3,Fall 2023,Fall 2026
+MUS,A281,Musicianship 3,Fall 2023,Fall 2026
+MUS,A285,Theory 4,Intersession/Spring 2023,Winter/Spring 2026
+MUS,A286,Musicianship 4,Intersession/Spring 2023,Winter/Spring 2026
+MUS,A290,Applied Music,Intersession/Spring 2023,Fall 2026
+NC,A100,Careers-Dietetics/FDSCI,Intersession/Spring 2023,Fall 2024
+NC,A175,Hlth Care Fld Exper,Intersession/Spring 2023,Winter/Spring 2026
+NC,A180,Intro Medi Nutr Therapy,Intersession/Spring 2023,Winter/Spring 2026
+NC,A280,Intermediate Nutrition Care,Fall 2023,Fall 2026
+NC,A281,Supervised Practice 1,Fall 2023,Fall 2026
+NC,A285,Advanced Nutrition Care,Intersession/Spring 2023,Winter/Spring 2026
+NC,A286,Supervised Practice 2,Intersession/Spring 2023,Winter/Spring 2026
+NDT,A110,Basic EEG,Fall 2024,Fall 2026
+NDT,A115,Advanced EEG,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A116,Clinical Experience 1,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A117,Clinical Experience 2,Summer 2023,Summer 2025
+NDT,A190,Intro Neuroanat & Phys,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A191,EEG Record Rev-Normal,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A200,NDT Lab Practice,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A279,Ped Electroencephalography,Intersession/Spring 2024,Winter/Spring 2026
+NDT,A280,Neurologic Disorders,Fall 2023,Fall 2025
+NDT,A282,NDT ABRET Registry Exam Prep,Intersession/Spring 2024,Winter/Spring 2026
+NDT,A284,Transcranial Doppler,Fall 2023,Fall 2025
+NDT,A285,Intr Nrve Cond Velocity,Fall 2023,Fall 2025
+NDT,A286,Clinical Experience 3,Fall 2023,Fall 2025
+NDT,A287,EEG Record Rev-Abnormal,Intersession/Spring 2023,Winter/Spring 2025
+NDT,A288,Evoked Potentials,Fall 2023,Fall 2025
+NDT,A289,Clinical Experience 4,Intersession/Spring 2024,Winter/Spring 2026
+NDT,A296,Introduction to IONM,Intersession/Spring 2024,Winter/Spring 2026
+NDT,A297,Microcomptr Appl in NDT,Intersession/Spring 2024,Winter/Spring 2026
+NDT,A298,Clinical Internship,Intersession/Spring 2024,Winter/Spring 2026
+NS,A195,Special Topic- Lunar Exploratn,Intersession/Spring 2023,Intersession/Spring 2024
+PHIL,A100,Introduction to Philosophy,Intersession/Spring 2023,Fall 2026
+PHIL,A115,Philosophy of Religion,Intersession/Spring 2023,Winter/Spring 2025
+PHIL,A118,Aesthetics/Phil of Art,Intersession/Spring 2024,Winter/Spring 2026
+PHIL,A120,Ethics,Intersession/Spring 2023,Fall 2026
+PHIL,A125,History of Ancient Phil,Fall 2024,Fall 2025
+PHIL,A131,Philosophy of the East,Fall 2026,Fall 2026
+PHIL,A140,History of Modern Philosophy,Fall 2023,Fall 2026
+PHIL,A150,Critical Reasoning & Writing,Intersession/Spring 2023,Fall 2026
+PHIL,A155,Introduction to Logic,Fall 2023,Fall 2026
+PHIL,A165,The Theory of Knowledge,Intersession/Spring 2023,Winter/Spring 2025
+PHIL,A220,Intro to Symbolic Logic,Intersession/Spring 2023,Fall 2026
+PHMT,A030N,Pharmacy Technician Foundation,Fall 2025,Fall 2026
+PHMT,A040N,Pharmacology & Medication Mgmt,Fall 2025,Fall 2026
+PHMT,A050N,Pharmacy Law and Ethics,Fall 2025,Fall 2026
+PHMT,A060N,Pharmacy Calculations,Fall 2025,Fall 2026
+PHMT,A070N,Pharmacy Ops & Distribution,Fall 2025,Fall 2026
+PHMT,A080N,Sterile & Non-Sterile Compound,Fall 2025,Fall 2026
+PHMT,A090N,Pharmacy Tech Cert Exam Prep,Fall 2025,Fall 2026
+PHOT,A101,Photography & Society,Intersession/Spring 2023,Fall 2026
+PHOT,A106,Smartphone Portrait Photo,Intersession/Spring 2023,Summer 2026
+PHOT,A107,Smartphone Street Photography,Intersession/Spring 2023,Intersession/Spring 2023
+PHOT,A108,Smartphone Food Photography,Intersession/Spring 2023,Summer 2026
+PHOT,A109,Smartphone Fashion Photography,Intersession/Spring 2023,Intersession/Spring 2023
+PHOT,A120,Introduction to Photography,Intersession/Spring 2023,Fall 2026
+PHOT,A123,Intro to Digital Photography,Intersession/Spring 2023,Fall 2026
+PHOT,A125,Imaging for Photographers I,Intersession/Spring 2023,Fall 2026
+PHOT,A127,Darkroom For Photo Majors,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A130,Hist & Appreciation Photo,Intersession/Spring 2023,Fall 2026
+PHOT,A141,Black & White Photo Lab 1,Fall 2023,Fall 2026
+PHOT,A142,Black & White Photo Lab 2,Fall 2023,Fall 2026
+PHOT,A143,Black & White Photo Lab 3,Fall 2023,Fall 2026
+PHOT,A161,Digital Photography Lab 1,Intersession/Spring 2024,Winter/Spring 2026
+PHOT,A162,Digital Photography Lab 2,Intersession/Spring 2024,Winter/Spring 2026
+PHOT,A180,Intro to Prof Photo,Intersession/Spring 2023,Fall 2026
+PHOT,A188,Commercial Photography,Fall 2023,Fall 2026
+PHOT,A225,Pro Digital Workflw/Color Mgmt,Fall 2023,Fall 2026
+PHOT,A230,Photography Since 1945,Summer 2024,Summer 2026
+PHOT,A241,Business Practices,Intersession/Spring 2024,Winter/Spring 2026
+PHOT,A260,Art Portfolio Development 1,Intersession/Spring 2023,Fall 2026
+PHOT,A261,Art Portfolio Development 2,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A262,Commercial Portfolio Devel 1,Intersession/Spring 2023,Fall 2026
+PHOT,A263,Commercial Portfolio Devel 2,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A264,Exhibition Preparation 1,Intersession/Spring 2023,Fall 2026
+PHOT,A265,Exhibition Preparation 2,Intersession/Spring 2023,Fall 2026
+PHOT,A266,Marketing/Self Promotion 1,Intersession/Spring 2023,Fall 2026
+PHOT,A267,Marketing/Self Promotion 2,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A280,Professnl Digital Techniques,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A282,Prof Portraiture,Intersession/Spring 2023,Winter/Spring 2025
+PHOT,A283,Art Photography,Intersession/Spring 2023,Winter/Spring 2026
+PHOT,A288,Lifestyle/Ad People Photo,Intersession/Spring 2024,Fall 2026
+PHOT,A289,Architectural Photo,Fall 2023,Fall 2023
+PHOT,A290,Advrtsg Illustration Photo,Fall 2024,Fall 2024
+PHYS,A110,Conceptual Physics,Intersession/Spring 2023,Fall 2026
+PHYS,A111,Introductory Physics Lab,Intersession/Spring 2024,Winter/Spring 2026
+PHYS,A120,Algebra-Based Physics 1,Intersession/Spring 2023,Fall 2026
+PHYS,A125,Algebra Based Physics 2,Intersession/Spring 2023,Fall 2026
+PHYS,A130,Univ Physics 1 Mechanics w/Lab,Fall 2023,Fall 2026
+PHYS,A135,Univ Physics 2 Elect/Mag w/Lab,Intersession/Spring 2023,Winter/Spring 2026
+PHYS,A185,Calculs Based Physics:Mech w/L,Intersession/Spring 2023,Fall 2026
+PHYS,A280,Calc Based Phys:Elec/Mag w/Lab,Intersession/Spring 2023,Fall 2026
+PHYS,A285,Calc Based Physics:Modern w/La,Intersession/Spring 2023,Fall 2026
+POLS,A180,American Government & Politics,Fall 2025,Fall 2026
+POLS,A180H,American Govrnmnt/Politics Hon,Winter/Spring 2026,Fall 2026
+PORT,A180,Elementary Portuguese 1,Intersession/Spring 2023,Fall 2026
+PSCI,A101,Survey of Current Issues,Intersession/Spring 2023,Fall 2026
+PSCI,A110,International Relations,Intersession/Spring 2023,Fall 2026
+PSCI,A180,American Government,Intersession/Spring 2023,Summer 2025
+PSCI,A180H,American Government Honors,Intersession/Spring 2023,Winter/Spring 2025
+PSCI,A185,Comparative Politics,Intersession/Spring 2023,Fall 2026
+PSCI,A188,Intro Political Theory,Intersession/Spring 2023,Fall 2026
+PSCI,A190,Intro Am Legal System,Fall 2024,Fall 2024
+PSG,A100,Polysomnography Basics,Intersession/Spring 2023,Winter/Spring 2026
+PSG,A140,Intro to Polysomnography,Fall 2023,Fall 2026
+PSG,A150,Intermediate Polysomnography,Intersession/Spring 2023,Winter/Spring 2025
+PSG,A155,Cardiac Rhythm Analysis,Intersession/Spring 2023,Winter/Spring 2025
+PSG,A160,Polysomnography Testing 1,Intersession/Spring 2023,Winter/Spring 2025
+PSG,A165,Polysomnography Clin 1,Intersession/Spring 2023,Summer 2025
+PSG,A170,PSG Practice,Intersession/Spring 2023,Winter/Spring 2025
+PSG,A175,Polysomnography Clin 2,Summer 2023,Fall 2025
+PSG,A190,Intro to PSG Anat/Physio,Summer 2023,Fall 2025
+PSG,A250,PSG Record Review,Fall 2023,Fall 2025
+PSG,A260,Advanced Polysomnography,Intersession/Spring 2023,Winter/Spring 2026
+PSG,A265,Polysomnography Clin 3,Intersession/Spring 2023,Winter/Spring 2026
+PSG,A270,Physician Lecture Series,Intersession/Spring 2023,Intersession/Spring 2023
+PSG,A280,Pediatric Sleep Medicine,Intersession/Spring 2023,Winter/Spring 2026
+PSG,A285,Polysomnography Intern,Intersession/Spring 2023,Winter/Spring 2026
+PSYC,A100,Introduction to Psychology,Intersession/Spring 2023,Fall 2026
+PSYC,A110,Psychology of Adjustmnt,Summer 2026,Summer 2026
+PSYC,A130,Life Span Dvelpmntl Psyc,Intersession/Spring 2023,Fall 2026
+PSYC,A160,Stats for Behavior Sci,Intersession/Spring 2023,Fall 2026
+PSYC,A185,Principles of Psychology,Intersession/Spring 2023,Fall 2024
+PSYC,A190,Cross-Cultural Psychology,Intersession/Spring 2023,Summer 2026
+PSYC,A190H,Cross-Cultural Psych Honors,Summer 2024,Summer 2026
+PSYC,A200,Positive Psychology,Summer 2024,Summer 2024
+PSYC,A220,Psychology of Personality,Intersession/Spring 2023,Fall 2026
+PSYC,A250,Psychobiology,Intersession/Spring 2023,Fall 2026
+PSYC,A255,Abnormal Psychology,Intersession/Spring 2023,Fall 2026
+PSYC,A260,Social Psychology,Intersession/Spring 2023,Fall 2026
+PSYC,A270,Psychology of Learning,Intersession/Spring 2023,Fall 2024
+PSYC,A280,Intro Expermntl Methods,Intersession/Spring 2023,Fall 2026
+PUBH,A001N,Community Health Worker I,Fall 2023,Fall 2026
+PUBH,A002N,Community Health Worker II,Intersession/Spring 2024,Winter/Spring 2026
+PUBH,A003N,Community Health Worker III,Intersession/Spring 2024,Summer 2026
+PUBH,A004N,Community Health Supervisor,Winter/Spring 2026,Winter/Spring 2026
+PUBH,A100,Personal Health,Intersession/Spring 2023,Fall 2026
+PUBH,A160,Peer Health Education Level 1,Intersession/Spring 2023,Fall 2026
+PUBH,A200,Introduction to Public Health,Intersession/Spring 2023,Fall 2026
+PUBH,A200H,Intro to Public Health Honors,Intersession/Spring 2023,Fall 2026
+PUBH,A202,"Drugs, Health, and Society",Intersession/Spring 2023,Fall 2026
+PUBH,A203,Health and Social Justice,Intersession/Spring 2023,Winter/Spring 2026
+PUBH,A205,Intro to Healthcare Careers,Winter/Spring 2026,Winter/Spring 2026
+PUBH,A206,Holistic Health,Winter/Spring 2026,Winter/Spring 2026
+PUBH,A208,Disease Outbreaks & Epidem,Fall 2024,Fall 2026
+PUBH,A209,Global Health,Fall 2024,Fall 2024
+PUBH,A210,Navigate U.S. Healthcare,Intersession/Spring 2023,Fall 2024
+PUBH,A220,Technique & Topic in Health Ed,Fall 2023,Fall 2026
+PUBH,A260,Peer Health Education Level 2,Intersession/Spring 2023,Fall 2026
+RADT,A100,Radiologic Physics,Summer 2023,Fall 2026
+RADT,A105,Radiation and Imaging Safety,Fall 2023,Fall 2026
+RADT,A165,Begin Radiologic Pract,Fall 2023,Fall 2026
+RADT,A170,Positioning & Critique 1,Fall 2023,Fall 2026
+RADT,A171,Clinical Lab 1,Fall 2023,Fall 2026
+RADT,A172,Clinical Lab 2,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A175,Positiong & Critique 2,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A176,Clinical Lab 3,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A177,Clinical Lab 4,Summer 2023,Summer 2026
+RADT,A180,Radiographic Imaging,Fall 2023,Fall 2026
+RADT,A185,Radiographic Pathology,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A195,Fluoroscopy,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A211,Adv Clinical Mammography Lab,Intersession/Spring 2023,Fall 2026
+RADT,A212,Advanced Clinical Lab CT,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A216,Advanced Patient Care,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A221,Topics in Mammography,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A222,Topics in Computed Tomography,Summer 2023,Summer 2026
+RADT,A265,Digitl Image/Comptr App,Fall 2023,Fall 2026
+RADT,A270,Positioning & Critique 3,Fall 2023,Fall 2026
+RADT,A271,Clinical Lab 5,Fall 2023,Fall 2026
+RADT,A275,Positioning & Critique 4,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A276,Clinical Lab 6,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A277,Clinical Lab 7,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A285,ARRT Board Prep,Intersession/Spring 2023,Winter/Spring 2026
+RADT,A290,Applied Physics & Quality Ctrl,Intersession/Spring 2023,Winter/Spring 2026
+RE,A110,R E Principles,Intersession/Spring 2023,Fall 2026
+RE,A120,Legal Aspects of R E,Intersession/Spring 2023,Fall 2026
+RE,A130,Real Estate Practice,Intersession/Spring 2023,Fall 2026
+RLST,A100,Introduction Religious Studies,Intersession/Spring 2023,Fall 2026
+RLST,A110,World Religion,Intersession/Spring 2023,Fall 2026
+RLST,A150,Philosophy of the East,Intersession/Spring 2023,Fall 2026
+RLST,A151,Early and Western Religions,Fall 2023,Fall 2023
+RSPC,A185,Resp Anatomy/Physiology,Fall 2023,Fall 2026
+RSPC,A190,Basic Resp C Equipment,Fall 2023,Fall 2026
+RSPC,A191,Clinical Lab 1,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A192,Clinical Lab 2,Summer 2023,Summer 2026
+RSPC,A195,Resp Pharmacology,Fall 2023,Fall 2026
+RSPC,A196,Intro Mechanical Ventilation,Summer 2023,Summer 2026
+RSPC,A212,Topics in Neonates,Intersession/Spring 2024,Fall 2025
+RSPC,A222,Adv Clinical Practice Neonates,Summer 2024,Winter/Spring 2026
+RSPC,A255,Home Care & Rehab,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A260,Arterial Blood Gases,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A265,Pulmonary Pathology,Fall 2023,Fall 2026
+RSPC,A270,Ventilators & Resp Mgmt,Fall 2023,Fall 2026
+RSPC,A275,Resp Care Procedures,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A276,Clinical Lab 3,Fall 2023,Fall 2026
+RSPC,A278,Pulmonary Case Assessmt,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A279,Physician Series 1,Fall 2023,Fall 2026
+RSPC,A280,Critical Care Monitorng,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A285,Pulmonary Func Testing,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A286,Clinical Lab 4,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A287,Clinical Internship,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A290,Neonatal Intensive Care,Intersession/Spring 2023,Winter/Spring 2026
+RSPC,A296,Resp Care Board Review,Intersession/Spring 2023,Winter/Spring 2026
+SJS,A102,Social Justice and Activism,Intersession/Spring 2023,Intersession/Spring 2023
+SLPA,A100,Intro to SLPA,Fall 2023,Fall 2026
+SLPA,A112,Intro Autism Spectrum & ABA,Intersession/Spring 2023,Winter/Spring 2026
+SLPA,A115,Spch-Lang Hearing Dev,Fall 2023,Fall 2026
+SLPA,A120,Admin Procedures,Fall 2023,Fall 2026
+SLPA,A140,Intro to Comm Disorders,Intersession/Spring 2023,Winter/Spring 2026
+SLPA,A150,Intro to Phonetics,Intersession/Spring 2023,Winter/Spring 2026
+SLPA,A180,Screen & Therapeutics,Fall 2023,Fall 2026
+SLPA,A190,SLPA Clinical 1,Fall 2023,Fall 2026
+SLPA,A200,Adult & Geriatric Dis,Intersession/Spring 2023,Winter/Spring 2026
+SLPA,A250,SLPA Clinical 2,Intersession/Spring 2023,Winter/Spring 2026
+SOC,A100,Introduction to Sociology,Intersession/Spring 2023,Fall 2026
+SOC,A100H,Intro to Sociology Honors,Fall 2023,Fall 2026
+SOC,A110,"Dating, Relationships,Marriage",Intersession/Spring 2023,Fall 2026
+SOC,A150,Introduction to Race/Ethnicity,Intersession/Spring 2023,Winter/Spring 2026
+SOC,A185,Analysis of Social Problems,Intersession/Spring 2023,Fall 2026
+SOC,A200,Intro to Research Methods,Intersession/Spring 2023,Winter/Spring 2026
+SPAN,A160,Spanish Heritage Speakers 1,Fall 2026,Fall 2026
+SPAN,A180,Elementary Spanish 1,Intersession/Spring 2023,Fall 2026
+SPAN,A180H,Elementary Spanish 1 Honors,Intersession/Spring 2023,Fall 2026
+SPAN,A185,Elementary Spanish 2,Intersession/Spring 2023,Fall 2026
+SPAN,A185H,Elementary Spanish 2 Honors,Intersession/Spring 2023,Fall 2026
+SPAN,A199,Current Topics-Spanish,Summer 2025,Summer 2026
+SPAN,A280,Intermediate Spanish 1,Intersession/Spring 2023,Fall 2026
+SPAN,A285,Intermediate Spanish 2,Intersession/Spring 2023,Summer 2026
+STAT,A160,Introduction to Statistics Corequisite: MATH A096,Fall 2025,Fall 2026
+THEA,A001N,Theater Perf. & Prod. Lifelong,Fall 2026,Fall 2026
+THEA,A100,Introduction to Theatre,Intersession/Spring 2023,Fall 2026
+THEA,A101,Intro to Hist & Lit of Theatre,Intersession/Spring 2023,Fall 2026
+THEA,A102,Script Analysis,Fall 2026,Fall 2026
+THEA,A103,Improvisation - Short Form,Intersession/Spring 2023,Fall 2025
+THEA,A104,Improvisation - Long Form,Intersession/Spring 2023,Fall 2025
+THEA,A105,Drama and Acting,Intersession/Spring 2023,Fall 2026
+THEA,A106,Acting Fundamentals,Intersession/Spring 2023,Fall 2026
+THEA,A107,Acting 2,Intersession/Spring 2023,Fall 2026
+THEA,A110,Theatre Laboratory Level 1,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A111,Theatre Laboratory Level 2,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A112,Theatre Laboratory Level 3,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A115,Act for Camera & Stage,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A120,Drama Rehearse/Perform Begin,Intersession/Spring 2023,Fall 2025
+THEA,A121,Drama Rehearse/Perform Int,Intersession/Spring 2023,Fall 2025
+THEA,A122,Drama Rehearse/Perform Adv,Intersession/Spring 2023,Fall 2025
+THEA,A123,Comedy Rehearse/Perform Begin,Intersession/Spring 2024,Fall 2026
+THEA,A124,Comedy Rehearse/Perform Int,Intersession/Spring 2024,Fall 2026
+THEA,A125,Comedy Rehearse/Perform Adv,Intersession/Spring 2024,Fall 2026
+THEA,A126,Mus Theatre Rehearse/Perf Beg,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A127,Mus Theatre Rehearse/Perf Int,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A128,Mus Theatre Rehearse/Perf Adv,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A129,Technical Theatre Practicum,Fall 2023,Fall 2026
+THEA,A131,OCC Theatre Repertory 1,Intersession/Spring 2023,Fall 2026
+THEA,A132,OCC Theatre Repertory 2,Intersession/Spring 2023,Fall 2026
+THEA,A133,OCC Theatre Repertory 3,Intersession/Spring 2023,Fall 2026
+THEA,A134,OCC Theatre Repertory 4,Intersession/Spring 2023,Fall 2026
+THEA,A144,Summer Theatre Festival,Summer 2026,Summer 2026
+THEA,A172,Elizabethan Wrkshp/Prod,Fall 2023,Fall 2023
+THEA,A176,Stage Lighting,Fall 2023,Fall 2026
+THEA,A177,Make-Up,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A178,Stage Costuming,Intersession/Spring 2023,Winter/Spring 2026
+THEA,A188,Body Movement,Fall 2024,Winter/Spring 2026
+THEA,A189,Stage Combat,Intersession/Spring 2023,Fall 2026
+THEA,A200,Voice & Articulation,Fall 2023,Winter/Spring 2025
+THEA,A206,Acting 3,Intersession/Spring 2023,Fall 2026
+THEA,A207,Acting 4,Intersession/Spring 2023,Fall 2026
+THEA,A275,Directing,Intersession/Spring 2023,Fall 2026
+THEA,A285,Advanced Directing,Intersession/Spring 2023,Fall 2026
+TUTR,A050N,Supervised Tutoring Noncredit,Intersession/Spring 2023,Fall 2026
+TUTR,A090N,Tutoring Skills 1 Noncredit,Intersession/Spring 2023,Winter/Spring 2026
+TUTR,A091N,Tutoring Skills 2 Noncredit,Intersession/Spring 2023,Winter/Spring 2026
+VIET,A180,Elementary Vietnamese 1,Intersession/Spring 2023,Fall 2026
+VIET,A185,Elementary Vietnamese 2,Intersession/Spring 2023,Intersession/Spring 2023
+WELD,A100,Arc & Oxy-acetylene,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A101,Arc & Oxy-acetylene,Intersession/Spring 2023,Fall 2026
+WELD,A102,Weld Test GMAW 1,Intersession/Spring 2023,Fall 2026
+WELD,A103,Weld Test GMAW 2,Intersession/Spring 2023,Fall 2026
+WELD,A104,Weld Test GTAW,Intersession/Spring 2023,Fall 2026
+WELD,A105,Weld Test Basic,Intersession/Spring 2023,Fall 2026
+WELD,A106,Weld Test Intermediate,Intersession/Spring 2023,Fall 2026
+WELD,A107,Weld Test Advanced 1,Intersession/Spring 2023,Fall 2026
+WELD,A108,Weld Test Advanced 2,Intersession/Spring 2023,Fall 2026
+WELD,A109,Weld Test FCAW 1,Intersession/Spring 2023,Fall 2026
+WELD,A110,Weld Test FCAW 2,Intersession/Spring 2023,Fall 2026
+WELD,A111,Weld Test Pipe,Intersession/Spring 2023,Fall 2026
+WELD,A115,Arc & Oxy Weld Pract Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A116,Arc/Oxyacetylene Weld Prac 2,Intersession/Spring 2023,Fall 2026
+WELD,A117,Arc/Oxyacetylene Weld Pract 3,Intersession/Spring 2023,Summer 2026
+WELD,A118,Arc/Oxyacetylen Weld Prac 4,Intersession/Spring 2023,Summer 2026
+WELD,A120,Math & Layout for Welders,Intersession/Spring 2024,Fall 2025
+WELD,A130,Gas Tungsten Arc Weld Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A131,Gas Tungsten Arc Weld Level 2,Intersession/Spring 2023,Fall 2026
+WELD,A140,Occupational Welding Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A141,Occupational Welding Level 2,Intersession/Spring 2023,Fall 2026
+WELD,A142,Occupational Welding Level 3,Intersession/Spring 2023,Fall 2026
+WELD,A143,Occupational Welding Level 4,Intersession/Spring 2023,Fall 2026
+WELD,A180,Blueprint Reading,Summer 2023,Summer 2026
+WELD,A200,Advanced Welding,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A201,Advanced Welding,Intersession/Spring 2023,Fall 2026
+WELD,A210,Weld Inspectn & Testing,Fall 2023,Fall 2026
+WELD,A211,GasMetalArc Weld Traing Levl 1,Intersession/Spring 2023,Summer 2026
+WELD,A212,GasMetalArc Weld Traing Levl 2,Intersession/Spring 2023,Summer 2026
+WELD,A215,Arc/Oxy Welding Lab Lvl 1,Intersession/Spring 2023,Fall 2026
+WELD,A216,Arc/Oxy Welding Lab Lvl 2,Intersession/Spring 2023,Fall 2026
+WELD,A217,Arc/Oxy Welding Lab Lvl 3,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A218,Arc/Oxy Welding Lab Lvl 4,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A220,Specifications & Codes,Summer 2023,Summer 2026
+WELD,A223,Advanced Welding Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A224,Advanced Welding Level 2,Intersession/Spring 2023,Fall 2026
+WELD,A225,Advanced Welding Level 3,Intersession/Spring 2023,Fall 2026
+WELD,A226,Advanced Welding Level 4,Intersession/Spring 2023,Fall 2026
+WELD,A230,Welding Metallurgy,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A250,Pipe Welding Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A251,Pipe Welding Level 2,Intersession/Spring 2023,Fall 2026
+WELD,A252,Pipe Welding Level 3,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A253,Pipe Welding Level 4,Intersession/Spring 2023,Winter/Spring 2026
+WELD,A255,Orbital Welding Level 1,Intersession/Spring 2023,Fall 2026
+WELD,A256,Orbital Welding Level 2,Intersession/Spring 2023,Fall 2026

@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 import { AutocompleteInput } from './AutocompleteInput';
+import { useSchool } from '../contexts/SchoolContext';
 
 export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: () => void }) {
 
   const { user } = useAuth();
+  const { currentSchool } = useSchool();
 
   const [professorInput, setProfessorInput] = useState('');
   const [selectedProfessorId, setSelectedProfessorId] = useState<string | null>(null);
@@ -34,6 +36,7 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
     const { data, error } = await supabase
       .from('professors')
       .select('id, name')
+      .eq('school_id', currentSchool!.id)
       .ilike('name', `%${query}%`)
       .order('name')
       .limit(10);
@@ -52,15 +55,18 @@ export default function ReviewForm({ onReviewSubmitted }: { onReviewSubmitted: (
   const searchCourses = async (query: string) => {
   const q = query.trim();
 
-  // ✅ 教授が選ばれて prefix が取れてたら、その科目カテゴリだけ出す
-  const pattern =
-    coursePrefix
-      ? (q ? `${coursePrefix}%${q}%` : `${coursePrefix}%`)
-      : (q ? `%${q}%` : "%");
+  const pattern = coursePrefix
+    ? (!q
+        ? `${coursePrefix}%`
+        : q.toUpperCase().startsWith(coursePrefix.toUpperCase())
+          ? `${q}%`
+          : `${coursePrefix}%${q}%`)
+    : (q ? `%${q}%` : '%');
 
   const { data, error } = await supabase
     .from("courses")
     .select("id, code")
+    .eq('school_id', currentSchool!.id)
     .ilike("code", pattern)
    
     .limit(30);
@@ -94,9 +100,11 @@ return sorted.map((c) => ({
   const handleProfessorChange = async (value: string, id: string | null) => {
   setProfessorInput(value);
   setSelectedProfessorId(id);
+  setCourseInput('');
+  setSelectedCourseId(null);
+  setCoursePrefix(null);
 
   if (!id) {
-    setCoursePrefix(null);
     setCourseContextMessage(null);
     return;
   }
@@ -107,6 +115,7 @@ return sorted.map((c) => ({
   const { data, error } = await supabase
     .from("professor_courses")
     .select("course_id")
+    .eq('school_id', currentSchool!.id)
     .eq("professor_id", id)
     .limit(200);
 
@@ -125,37 +134,26 @@ return sorted.map((c) => ({
     return;
   }
 
-  // course_id から courses.code を取得
-  const { data: courseRows, error: courseErr } = await supabase
-    .from("courses")
-    .select("code")
-    .in("id", courseIds);
+  const { data: courseRows, error: courseError } = await supabase
+    .from('courses')
+    .select('code')
+    .eq('school_id', currentSchool!.id)
+    .in('id', courseIds as string[]);
 
-  if (courseErr) {
-    console.error('授業情報を取得できませんでした。');
+  if (courseError) {
     setCoursePrefix(null);
     setCourseContextMessage('関連する授業を確認できませんでした。全授業から検索できます。');
     return;
   }
 
-  const codes = (courseRows ?? []).map((r: { code: string | null }) => r.code).filter(Boolean) as string[];
+  const prefixes = (courseRows ?? [])
+    .map(({ code }) => code?.split(' ')[0])
+    .filter((prefix): prefix is string => Boolean(prefix));
+  const counts = new Map<string, number>();
+  for (const prefix of prefixes) counts.set(prefix, (counts.get(prefix) ?? 0) + 1);
+  const bestPrefix = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
 
-  // "MATH 13" → "MATH"
-  const prefixes = codes.map((c) => c.split(" ")[0]);
-
-  const count = new Map<string, number>();
-  for (const p of prefixes) count.set(p, (count.get(p) ?? 0) + 1);
-
-  let best: string | null = null;
-  let max = 0;
-  for (const [p, n] of count.entries()) {
-    if (n > max) {
-      best = p;
-      max = n;
-    }
-  }
-
-  setCoursePrefix(best);
+  setCoursePrefix(bestPrefix);
   setCourseContextMessage('選択した教授に関連する科目を優先して表示します。');
 };
 
@@ -182,6 +180,7 @@ return sorted.map((c) => ({
     setLoading(true);
 
     const { error } = await supabase.from('reviews').insert({
+      school_id: currentSchool!.id,
       user_id: user.id,
       professor_id: selectedProfessorId,
       course_id: selectedCourseId,

@@ -1,5 +1,15 @@
+export interface School {
+  id: string;
+  name: string;
+  slug: string;
+  short_name: string;
+  is_active: boolean;
+  created_at: string;
+}
+
 export interface Professor {
   id: string;
+  school_id: string;
   name: string;
   created_at: string;
   updated_at: string;
@@ -7,6 +17,7 @@ export interface Professor {
 
 export interface Course {
   id: string;
+  school_id: string;
   code: string;
   name: string;
   created_at: string;
@@ -15,6 +26,7 @@ export interface Course {
 
 export interface ProfessorCourse {
   id: string;
+  school_id: string;
   professor_id: string;
   course_id: string;
   created_at: string;
@@ -22,6 +34,7 @@ export interface ProfessorCourse {
 
 export interface Review {
   id: string;
+  school_id: string;
   user_id: string;
   professor_id: string;
   course_id: string;

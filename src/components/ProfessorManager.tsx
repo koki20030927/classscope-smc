@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase';
 import { Professor } from '../lib/types';
 import { Plus, Search, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useSchool } from '../contexts/SchoolContext';
 
 function getProfessorErrorMessage(error: { code?: string; message?: string }) {
   const message = error.message?.toLowerCase() ?? '';
@@ -21,6 +22,7 @@ function getProfessorErrorMessage(error: { code?: string; message?: string }) {
 
 export function ProfessorManager() {
   const { isAdmin, isAdminLoading } = useAuth();
+  const { currentSchool } = useSchool();
   const [professors, setProfessors] = useState<Professor[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [newProfessorName, setNewProfessorName] = useState('');
@@ -33,7 +35,7 @@ export function ProfessorManager() {
     if (isAdmin) {
       void loadProfessors();
     }
-  }, [isAdmin]);
+  }, [isAdmin, currentSchool?.id]);
 
   const loadProfessors = async () => {
     setListLoading(true);
@@ -41,6 +43,7 @@ export function ProfessorManager() {
     const { data, error } = await supabase
       .from('professors')
       .select('*')
+      .eq('school_id', currentSchool!.id)
       .order('name');
 
     if (!error && data) {
@@ -58,7 +61,7 @@ export function ProfessorManager() {
 
     const { error } = await supabase
       .from('professors')
-      .insert({ name: newProfessorName });
+      .insert({ school_id: currentSchool!.id, name: newProfessorName });
 
     if (!error) {
       setNewProfessorName('');

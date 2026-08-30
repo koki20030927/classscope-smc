@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { Professor } from '../lib/types';
+import { useSchool } from '../contexts/SchoolContext';
 
 interface ProfessorWithStats extends Professor {
   averageRating: number;
@@ -8,13 +9,14 @@ interface ProfessorWithStats extends Professor {
 }
 
 export function ProfessorStats({ refresh }: { refresh: number }) {
+  const { currentSchool } = useSchool();
   const [professors, setProfessors] = useState<ProfessorWithStats[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     loadProfessorStats();
-  }, [refresh]);
+  }, [refresh, currentSchool?.id]);
 
   const loadProfessorStats = async () => {
     setLoading(true);
@@ -23,11 +25,13 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
     const { data: professorData, error: professorError } = await supabase
       .from('professors')
       .select('*')
+      .eq('school_id', currentSchool!.id)
       .order('name');
 
     const { data: reviewData, error: reviewError } = await supabase
       .from('reviews')
-      .select('professor_id, rating');
+      .select('professor_id, rating')
+      .eq('school_id', currentSchool!.id);
 
     if (!professorError && !reviewError && professorData && reviewData) {
       const statsMap = new Map<string, { totalRating: number; count: number }>();

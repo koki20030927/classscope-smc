@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase';
 import { Course } from '../lib/types';
 import { Plus, Search, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useSchool } from '../contexts/SchoolContext';
 
 function getCourseErrorMessage(error: { code?: string; message?: string }) {
   const message = error.message?.toLowerCase() ?? '';
@@ -21,6 +22,7 @@ function getCourseErrorMessage(error: { code?: string; message?: string }) {
 
 export function CourseManager() {
   const { isAdmin, isAdminLoading } = useAuth();
+  const { currentSchool } = useSchool();
   const [courses, setCourses] = useState<Course[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [newCourseCode, setNewCourseCode] = useState('');
@@ -34,7 +36,7 @@ export function CourseManager() {
     if (isAdmin) {
       void loadCourses();
     }
-  }, [isAdmin]);
+  }, [isAdmin, currentSchool?.id]);
 
   const loadCourses = async () => {
     setListLoading(true);
@@ -42,6 +44,7 @@ export function CourseManager() {
     const { data, error } = await supabase
       .from('courses')
       .select('*')
+      .eq('school_id', currentSchool!.id)
       .order('code');
 
     if (!error && data) {
@@ -59,7 +62,7 @@ export function CourseManager() {
 
     const { error } = await supabase
       .from('courses')
-      .insert({ code: newCourseCode, name: newCourseName });
+      .insert({ school_id: currentSchool!.id, code: newCourseCode, name: newCourseName });
 
     if (!error) {
       setNewCourseCode('');

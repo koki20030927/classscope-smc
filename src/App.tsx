@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from './contexts/AuthContext';
+import { useSchool } from './contexts/SchoolContext';
 import { Auth } from './components/Auth';
+import { CollegeSelection } from './components/CollegeSelection';
 import { ProfessorManager } from './components/ProfessorManager';
 import { CourseManager } from './components/CourseManager';
 import ReviewForm from './components/ReviewForm';
@@ -11,6 +13,7 @@ import { BookOpen, LogOut, MessageSquareText, Users } from 'lucide-react';
 
 function App() {
   const { user, loading, isAdmin, isAdminLoading, signOut } = useAuth();
+  const { currentSchool, clearSchool } = useSchool();
   const [reviewRefresh, setReviewRefresh] = useState(0);
   const [activeTab, setActiveTab] = useState<'reviews' | 'professors' | 'courses'>('reviews');
 
@@ -19,6 +22,10 @@ function App() {
       setActiveTab('reviews');
     }
   }, [activeTab, isAdmin, isAdminLoading]);
+
+  useEffect(() => {
+    setActiveTab('reviews');
+  }, [currentSchool?.id]);
 
   const navigationItems = [
     { id: 'reviews' as const, label: 'レビュー', icon: MessageSquareText },
@@ -42,13 +49,18 @@ function App() {
     return <Auth />;
   }
 
+  if (!currentSchool) {
+    return <CollegeSelection />;
+  }
+
   return (
     <div className="min-h-screen bg-[var(--page)] text-[var(--text)]">
       <header className="sticky top-0 z-30 border-b border-[var(--divider)] bg-[var(--page)]/95 backdrop-blur-sm lg:hidden">
         <div className="flex h-16 items-center justify-between px-4 sm:px-6">
           <div>
-            <h1 className="text-[17px] font-semibold leading-tight tracking-[-0.015em]">ClassScope SMC</h1>
-            <p className="mt-0.5 text-[10px] leading-4 text-[var(--muted)]">非公式SMC学生レビュー</p>
+            <h1 className="text-[17px] font-semibold leading-tight tracking-[-0.015em]">ClassScope {currentSchool.short_name}</h1>
+            <p className="mt-0.5 text-[10px] leading-4 text-[var(--muted)]">非公式{currentSchool.short_name}学生レビュー</p>
+            <button onClick={clearSchool} className="mt-1 min-h-7 text-left text-[10px] font-medium text-[var(--accent)] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]">大学を切り替える</button>
           </div>
           <button
             onClick={signOut}
@@ -64,8 +76,9 @@ function App() {
       <div className="mx-auto flex max-w-[1536px]">
         <aside className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-[var(--divider)] bg-[var(--workspace)] px-3 py-4 lg:flex">
           <div className="px-3 py-2">
-            <h1 className="text-[15px] font-semibold leading-5 tracking-[-0.015em]">ClassScope SMC</h1>
-            <p className="mt-1.5 text-[10px] leading-[1.55] text-[var(--muted)]">※ Santa Monica College 公式サイトではありません</p>
+            <h1 className="text-[15px] font-semibold leading-5 tracking-[-0.015em]">ClassScope {currentSchool.short_name}</h1>
+            <p className="mt-1.5 text-[10px] leading-[1.55] text-[var(--muted)]">※ {currentSchool.name} 公式サイトではありません</p>
+            <button onClick={clearSchool} className="mt-3 min-h-9 text-left text-[11px] font-medium text-[var(--accent)] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]">大学を切り替える</button>
           </div>
           <nav aria-label="メインナビゲーション" className="mt-7 grid gap-0.5">
             {navigationItems.map(({ id, label, icon: Icon }, index) => (
@@ -144,7 +157,7 @@ function App() {
         {activeTab === 'reviews' && (
           <div className="grid items-start gap-11 xl:grid-cols-[minmax(0,1.35fr)_minmax(340px,0.65fr)] xl:gap-12">
             <div>
-              <ReviewForm onReviewSubmitted={() => setReviewRefresh(prev => prev + 1)} />
+              <ReviewForm key={currentSchool.id} onReviewSubmitted={() => setReviewRefresh(prev => prev + 1)} />
             </div>
             <div className="grid gap-8">
               <ProfessorStats refresh={reviewRefresh} />
