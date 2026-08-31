@@ -127,14 +127,16 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
       <div className="flex flex-col gap-4 border-b border-[var(--divider)] pb-7 pt-2 sm:flex-row sm:items-end sm:justify-between sm:pb-8 sm:pt-3">
         <div>
           <h2 className="app-section-title text-[var(--text)]">教授別評価</h2>
-          <p className="app-section-description mt-1.5 text-[var(--secondary)]">Review v2を項目別に集計。Legacy評価は別表示します。</p>
+          <p className="app-section-description mt-1.5 text-[var(--secondary)]">学生のレビューをもとにした教授別の評価です。</p>
         </div>
-        <p className="app-metadata tabular-nums text-[var(--muted)]">{professors.length}名</p>
+        {professors.length > 0 && (
+          <p className="app-metadata shrink-0 whitespace-nowrap tabular-nums text-[var(--muted)]">{professors.length}名</p>
+        )}
       </div>
 
       {professors.length === 0 ? (
         <div className="px-1 py-12 text-center">
-          <p className="text-[14px] font-medium leading-5 text-[var(--text)]">まだ評価データがありません</p>
+          <p className="text-[14px] font-medium leading-5 text-[var(--text)]">まだ教授評価はありません。</p>
           <p className="app-metadata mt-1.5 text-[var(--secondary)]">レビューが投稿されると集計が表示されます。</p>
         </div>
       ) : (
@@ -143,7 +145,7 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
             <div key={professor.id} className="grid gap-5 px-1 py-6 sm:grid-cols-[minmax(0,0.75fr)_minmax(300px,1fr)] sm:items-center sm:gap-8">
               <div className="min-w-0">
                 <h3 className="truncate text-[15px] font-medium leading-6 tracking-[-0.005em] text-[var(--text)]">{professor.name}</h3>
-                <p className="app-metadata mt-1.5 text-[var(--muted)]">v2 {professor.v2ReviewCount}件 · Legacy {professor.legacyReviewCount}件</p>
+                <p className="app-metadata mt-1.5 text-[var(--muted)]">レビュー {professor.v2ReviewCount + professor.legacyReviewCount}件</p>
               </div>
               {professor.v2ReviewCount > 0 ? (
                 <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-[12px]">
@@ -155,14 +157,14 @@ export function ProfessorStats({ refresh }: { refresh: number }) {
                   ].map(([label, value]) => (
                     <div key={label as string} className="flex items-baseline justify-between gap-3 border-b border-[var(--divider)] pb-2">
                       <span className="text-[var(--secondary)]">{label}</span>
-                      <span className="font-medium tabular-nums text-[var(--text)]">{typeof value === 'number' ? value.toFixed(2) : '—'}</span>
+                      <span className="font-medium tabular-nums text-[var(--text)]">{typeof value === 'number' ? value.toFixed(1) : '—'}</span>
                     </div>
                   ))}
                 </div>
               ) : (
                 <div className="flex items-baseline justify-between gap-4">
-                  <span className="app-metadata text-[var(--secondary)]">Legacy おすすめ度</span>
-                  <span className="text-[17px] font-medium tabular-nums text-[var(--text)]">{professor.legacyAverageRating?.toFixed(2) ?? '—'}</span>
+                  <span className="app-metadata text-[var(--secondary)]">おすすめ度</span>
+                  <span className="text-[17px] font-medium tabular-nums text-[var(--text)]">{professor.legacyAverageRating?.toFixed(1) ?? '—'}</span>
                 </div>
               )}
             </div>
