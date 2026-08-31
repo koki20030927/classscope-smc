@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useSchool } from '../contexts/SchoolContext';
 
 export function ReviewList({ refresh }: { refresh: number }) {
-  const { user } = useAuth();
+  const { user, isAdmin } = useAuth();
   const { currentSchool } = useSchool();
   const [reviews, setReviews] = useState<ReviewWithDetails[]>([]);
   const [filteredReviews, setFilteredReviews] = useState<ReviewWithDetails[]>([]);
@@ -51,12 +51,24 @@ export function ReviewList({ refresh }: { refresh: number }) {
         user_id,
         professor_id,
         course_id,
+        review_schema_version,
         rating,
         difficulty,
         homework_amount,
         support_quality,
         attendance_required,
+        professor_quality,
+        easy_a,
+        course_quality,
+        recommendation,
+        class_format,
+        year_taken,
+        semester,
         content,
+        is_imported,
+        source_type,
+        source_row_key,
+        imported_at,
         helpful_count,
         not_good_count,
         created_at,
@@ -176,27 +188,57 @@ export function ReviewList({ refresh }: { refresh: number }) {
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" size={17} aria-hidden="true" />
           <input type="search" aria-label="レビューを教授名または授業コードで検索" placeholder="教授名または授業コードを検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-[15px] leading-6 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[14px] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" />
         </div>
-        <p className="app-metadata mt-3.5 max-w-lg text-[var(--muted)]">おすすめ度・サポートは5が高評価、難易度・宿題量は5が高負荷です。</p>
+        <p className="app-metadata mt-3.5 max-w-lg text-[var(--muted)]">Review v2は教授・Easy A・授業・おすすめ度をそれぞれ5段階で表示します。</p>
       </div>
 
       <div className="divide-y divide-[var(--divider)]">
         {filteredReviews.map((review) => {
           const userVote = userVotes.get(review.id);
           const isOwner = user?.id === review.user_id;
+          const canDelete = isOwner || isAdmin;
+          const isV2 = review.review_schema_version === 2;
+          const classFormatLabel = review.class_format === 'in_person'
+            ? '対面'
+            : review.class_format === 'online'
+              ? 'オンライン'
+              : review.class_format === 'hybrid'
+                ? 'ハイブリッド'
+                : null;
+          const semesterLabel = review.semester
+            ? review.semester.charAt(0).toUpperCase() + review.semester.slice(1)
+            : null;
 
           return (
             <article key={review.id} className="py-8 first:pt-7 sm:py-9">
               <div className="flex items-start justify-between gap-6">
                 <div className="min-w-0">
+                  {review.is_imported && <span className="mb-2 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/[0.06] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.08em] text-cyan-200">External evaluation</span>}
                   <h3 className="text-[17px] font-semibold leading-[1.35] tracking-[-0.01em] text-white sm:text-[18px]">{review.professors?.name}</h3>
                   <p className="mt-1.5 text-[13px] leading-5 text-[var(--secondary)]"><span className="font-medium text-slate-300">{review.courses?.code}</span>{review.courses?.name ? ` · ${review.courses.name}` : ''}</p>
                 </div>
-                <div className="shrink-0 text-right"><span className="text-[22px] font-semibold leading-none tabular-nums text-white">{review.rating.toFixed(1)}</span><span className="ml-1 text-[11px] font-normal text-[var(--muted)]">/ 5</span><p className="mt-1 text-[10px] font-normal leading-4 text-[var(--muted)]">おすすめ度</p></div>
+                <div className="shrink-0 text-right">
+                  <span className="text-[22px] font-semibold leading-none tabular-nums text-white">{(isV2 ? review.recommendation : review.rating)?.toFixed(1) ?? '—'}</span>
+                  {(isV2 ? review.recommendation : review.rating) !== null && <span className="ml-1 text-[11px] font-normal text-[var(--muted)]">/ 5</span>}
+                  <p className="mt-1 text-[10px] font-normal leading-4 text-[var(--muted)]">おすすめ度</p>
+                </div>
               </div>
               <p className="mt-6 whitespace-pre-wrap text-[15px] font-normal leading-[1.8] text-slate-300">{review.content}</p>
-              <div className="app-metadata mt-5 flex flex-wrap gap-x-4 gap-y-2 tabular-nums text-[var(--secondary)]">
-                <span>難易度 {review.difficulty.toFixed(1)}</span><span>宿題 {review.homework_amount.toFixed(1)}</span><span>サポート {review.support_quality.toFixed(1)}</span><span>{review.attendance_required === 'yes' ? '出席あり' : review.attendance_required === 'no' ? '出席なし' : 'オンライン'}</span>
-              </div>
+              {isV2 ? (
+                <div className="app-metadata mt-5 flex flex-wrap gap-x-4 gap-y-2 tabular-nums text-[var(--secondary)]">
+                  {review.professor_quality !== null && <span>教授の質 {review.professor_quality.toFixed(1)}</span>}
+                  {review.easy_a !== null && <span>Easy A {review.easy_a.toFixed(1)}</span>}
+                  {review.course_quality !== null && <span>授業の質 {review.course_quality.toFixed(1)}</span>}
+                  {classFormatLabel && <span>{classFormatLabel}</span>}
+                  {review.year_taken !== null && semesterLabel && <span>{review.year_taken} {semesterLabel}</span>}
+                </div>
+              ) : (
+                <div className="app-metadata mt-5 flex flex-wrap gap-x-4 gap-y-2 tabular-nums text-[var(--secondary)]">
+                  {review.difficulty !== null && <span>難易度 {review.difficulty.toFixed(1)}</span>}
+                  {review.homework_amount !== null && <span>宿題 {review.homework_amount.toFixed(1)}</span>}
+                  {review.support_quality !== null && <span>サポート {review.support_quality.toFixed(1)}</span>}
+                  {review.attendance_required && <span>{review.attendance_required === 'yes' ? '出席あり' : review.attendance_required === 'no' ? '出席なし' : 'オンライン'}</span>}
+                </div>
+              )}
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex flex-wrap items-center gap-2">
                   <button
@@ -231,7 +273,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
                   <span className="app-metadata text-[var(--muted)]">
                     {new Date(review.created_at).toLocaleDateString('ja-JP')}
                   </span>
-                  {isOwner && (
+                  {canDelete && (
                     <>
                       {deleteConfirmId === review.id ? (
                         <div className="flex flex-wrap items-center gap-2">

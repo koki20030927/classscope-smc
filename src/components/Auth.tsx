@@ -39,7 +39,7 @@ export function Auth() {
               <span className="block text-[var(--accent)]">授業選びを明確に</span>
             </h1>
             <p className="mt-5 max-w-xl text-[15px] leading-7 text-[var(--secondary)] sm:text-base sm:leading-8 lg:mt-7">
-              <span className="block">教授、授業、課題量、難易度を学生同士で共有し</span>
+              <span className="block">教授、授業、Easy A度、おすすめ度を学生同士で共有し</span>
               <span className="block">次の学期に向けた判断材料を見つけられるレビューサービスです。</span>
             </p>
           </div>

@@ -1,0 +1,24 @@
+{
+  "source_type": "external_occ_sheet_01",
+  "sheet_selection": "first_sheet",
+  "sheet_name": null,
+  "header_row": 4,
+  "columns": {
+    "year_taken": "replace_with_exact_header",
+    "semester": "replace_with_exact_header",
+    "course_code": "replace_with_exact_header",
+    "professor_name": "replace_with_exact_header",
+    "professor_quality": "replace_with_exact_header",
+    "easy_a": "replace_with_exact_header",
+    "course_quality": "replace_with_exact_header",
+    "recommendation": "replace_with_exact_header_or_null",
+    "class_format": "replace_with_exact_header",
+    "content": "replace_with_exact_header"
+  },
+  "semester_values": {
+    "replace_source_value": "fall"
+  },
+  "class_format_values": {
+    "replace_source_value": "in_person"
+  }
+}

@@ -1,0 +1,7 @@
+raw/
+normalized/
+reports/
+*.xlsx
+*.xls
+*.csv
+!mapping-template.json

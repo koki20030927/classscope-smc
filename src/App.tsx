@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--page)] text-[var(--text)]">
       <header className="sticky top-0 z-30 border-b border-[var(--divider)] bg-[var(--page)]/95 backdrop-blur-sm lg:hidden">
-        <div className="flex h-16 items-center justify-between px-4 sm:px-6">
+        <div className="flex h-20 items-center justify-between px-4 sm:px-6">
           <div>
             <h1 className="text-[17px] font-semibold leading-tight tracking-[-0.015em]">ClassScope {currentSchool.short_name}</h1>
             <p className="mt-0.5 text-[10px] leading-4 text-[var(--muted)]">非公式{currentSchool.short_name}学生レビュー</p>

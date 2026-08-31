@@ -1,0 +1,27 @@
+{
+  "source_type": "external_occ_sheet_02",
+  "sheet_selection": "named_sheet",
+  "sheet_name": "Sheet1",
+  "header_row": 3,
+  "columns": {
+    "year_taken": "受講した年",
+    "semester": "Semester",
+    "course_code": "コースNo.",
+    "professor_name": "Professorの名前",
+    "professor_quality": "教授の質",
+    "easy_a": "Easy A度",
+    "course_quality": "授業の質",
+    "recommendation": "おすすめ度",
+    "class_format": "形式",
+    "content": "コメント"
+  },
+  "semester_values": {
+    "Fall": "fall",
+    "Spring": "spring"
+  },
+  "class_format_values": {
+    "In-Person": "in_person",
+    "Online": "online",
+    "Hybrid": "hybrid"
+  }
+}

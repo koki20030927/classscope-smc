@@ -1,0 +1,24 @@
+{
+  "source_type": "replace_with_non_personal_dataset_id",
+  "sheet_selection": "named_sheet",
+  "sheet_name": "replace_with_exact_sheet_name",
+  "header_row": 1,
+  "columns": {
+    "year_taken": "replace_with_exact_header",
+    "semester": "replace_with_exact_header",
+    "course_code": "replace_with_exact_header",
+    "professor_name": "replace_with_exact_header",
+    "professor_quality": "replace_with_exact_header",
+    "easy_a": "replace_with_exact_header",
+    "course_quality": "replace_with_exact_header",
+    "recommendation": null,
+    "class_format": "replace_with_exact_header",
+    "content": "replace_with_exact_header"
+  },
+  "semester_values": {
+    "replace_source_value": "fall"
+  },
+  "class_format_values": {
+    "replace_source_value": "in_person"
+  }
+}

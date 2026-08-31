@@ -1,0 +1,33 @@
+{
+  "source_type": "external_occ_sheet_03",
+  "sheet_selection": "named_sheet",
+  "sheet_name": "シート1",
+  "header_row": 1,
+  "columns": {
+    "year_taken": "学期",
+    "semester": "学期",
+    "course_code": "コース番号",
+    "professor_name": "教授",
+    "professor_quality": "教授の質",
+    "easy_a": "Easy A度",
+    "course_quality": "授業の質",
+    "recommendation": null,
+    "class_format": "授業の種類",
+    "content": "コメント"
+  },
+  "semester_values": {
+    "2023 Fall": "fall",
+    "2024 Spring": "spring",
+    "2024 Summer": "summer",
+    "2024 Fall": "fall",
+    "2025 Spring": "spring",
+    "2025 Summer": "summer",
+    "2025 Fall": "fall",
+    "2026 Spring": "spring"
+  },
+  "class_format_values": {
+    "In-Person": "in_person",
+    "Online": "online",
+    "Hybrid": "hybrid"
+  }
+}
