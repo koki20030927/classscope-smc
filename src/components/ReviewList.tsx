@@ -5,7 +5,16 @@ import { ThumbsUp, ThumbsDown, Trash2, Search } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useSchool } from '../contexts/SchoolContext';
 
-export function ReviewList({ refresh }: { refresh: number }) {
+interface ReviewListProps {
+  refresh: number;
+  professorId?: string;
+  courseId?: string;
+  embedded?: boolean;
+  onReviewsLoaded?: (reviews: ReviewWithDetails[]) => void;
+  onReviewDeleted?: () => void;
+}
+
+export function ReviewList({ refresh, professorId, courseId, embedded = false, onReviewsLoaded, onReviewDeleted }: ReviewListProps) {
   const { user, isAdmin } = useAuth();
   const { currentSchool } = useSchool();
   const [reviews, setReviews] = useState<ReviewWithDetails[]>([]);
@@ -23,7 +32,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
       else setUserVotes(new Map());
     };
     void loadSchoolReviews();
-  }, [refresh, user, currentSchool?.id]);
+  }, [refresh, user, currentSchool?.id, professorId, courseId]);
 
   useEffect(() => {
     if (searchQuery.trim() === '') {
@@ -43,7 +52,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
   const loadReviews = async (): Promise<string[]> => {
     setLoading(true);
     setLoadError(null);
-    const { data, error } = await supabase
+    let query = supabase
       .from('reviews')
       .select(`
         id,
@@ -79,13 +88,20 @@ export function ReviewList({ refresh }: { refresh: number }) {
       .eq('school_id', currentSchool!.id)
       .order('created_at', { ascending: false });
 
+    if (professorId) query = query.eq('professor_id', professorId);
+    if (courseId) query = query.eq('course_id', courseId);
+
+    const { data, error } = await query;
+
     if (!error && data) {
       const reviewRows = data as unknown as ReviewWithDetails[];
       setReviews(reviewRows);
       setFilteredReviews(reviewRows);
+      onReviewsLoaded?.(reviewRows);
       setLoading(false);
       return reviewRows.map((review) => review.id);
     } else {
+      onReviewsLoaded?.([]);
       setLoadError('レビューを読み込めませんでした。少し時間をおいて再度お試しください。');
     }
     setLoading(false);
@@ -162,6 +178,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
     if (!error) {
       setDeleteConfirmId(null);
       await loadReviews();
+      onReviewDeleted?.();
     }
   };
 
@@ -179,7 +196,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
 
   return (
     <section>
-      <div className="border-b border-[var(--divider)] pb-8 pt-2 sm:pb-9 sm:pt-3">
+      {!embedded && <div className="border-b border-[var(--divider)] pb-8 pt-2 sm:pb-9 sm:pt-3">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div><h2 className="app-section-title text-white">レビューを探す</h2><p className="app-section-description mt-1.5 text-[var(--secondary)]">教授名または授業コードで絞り込めます。</p></div>
           <span className="app-metadata shrink-0 tabular-nums text-[var(--muted)]">{filteredReviews.length}件</span>
@@ -189,7 +206,7 @@ export function ReviewList({ refresh }: { refresh: number }) {
           <input type="search" aria-label="レビューを教授名または授業コードで検索" placeholder="教授名または授業コードを検索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-[50px] w-full rounded-lg border border-[var(--border)] bg-[var(--elevated)] pl-10 pr-4 text-[15px] leading-6 text-[var(--text)] outline-none transition-colors duration-150 placeholder:text-[14px] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--focus)] motion-reduce:transition-none" />
         </div>
         <p className="app-metadata mt-3.5 max-w-lg text-[var(--muted)]">Review v2は教授・Easy A・授業・おすすめ度をそれぞれ5段階で表示します。</p>
-      </div>
+      </div>}
 
       <div className="divide-y divide-[var(--divider)]">
         {filteredReviews.map((review) => {
