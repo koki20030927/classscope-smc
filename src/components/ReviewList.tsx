@@ -239,7 +239,9 @@ export function ReviewList({ refresh, professorId, courseId, embedded = false, o
                   <p className="mt-1 text-[10px] font-normal leading-4 text-[var(--muted)]">おすすめ度</p>
                 </div>
               </div>
-              <p className="mt-6 whitespace-pre-wrap text-[15px] font-normal leading-[1.8] text-slate-300">{review.content}</p>
+              {review.content?.trim() && (
+                <p className="mt-6 whitespace-pre-wrap text-[15px] font-normal leading-[1.8] text-slate-300">{review.content}</p>
+              )}
               {isV2 ? (
                 <div className="app-metadata mt-5 flex flex-wrap gap-x-4 gap-y-2 tabular-nums text-[var(--secondary)]">
                   {review.professor_quality !== null && <span>教授の質 {review.professor_quality.toFixed(1)}</span>}

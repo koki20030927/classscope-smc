@@ -134,6 +134,9 @@ def read_rows(
                 "selected_sheet": "",
                 "selected_sheet_index": None,
                 "excluded_sheet_count": 0,
+                "header_row": 1,
+                "first_data_row": 2,
+                "completely_empty_rows": 0,
             }
 
     if path.suffix.lower() != ".xlsx":
@@ -177,9 +180,19 @@ def read_rows(
     except StopIteration:
         workbook.close()
         raise ValueError(f"header_row {header_row} does not exist in selected sheet: {selected_sheet}") from None
+    data_rows = list(iterator)
+    while data_rows and not any(text(value) for value in data_rows[-1]):
+        data_rows.pop()
+    completely_empty_rows = sum(
+        not any(text(value) for value in values)
+        for values in data_rows
+    )
     rows = [
-        dict(zip(headers, values))
-        for values in iterator
+        {
+            "__source_row_number": row_number,
+            **dict(zip(headers, values)),
+        }
+        for row_number, values in enumerate(data_rows, start=header_row + 1)
         if any(text(value) for value in values)
     ]
     workbook_metadata = {
@@ -189,6 +202,7 @@ def read_rows(
         "excluded_sheet_count": len(workbook.sheetnames) - 1,
         "header_row": header_row,
         "first_data_row": header_row + 1,
+        "completely_empty_rows": completely_empty_rows,
     }
     workbook.close()
     return headers, rows, workbook_metadata
@@ -266,6 +280,7 @@ def main() -> None:
         raise ValueError(f"mapped headers are missing: {missing_headers}")
 
     sensitive_headers = sorted(header for header in headers if SENSITIVE_HEADER.search(header))
+    unmapped_headers = sorted({header for header in headers if header and header not in mapped_headers})
     if mapped_headers.intersection(sensitive_headers):
         raise ValueError("a sensitive column may not be mapped")
 
@@ -281,7 +296,12 @@ def main() -> None:
     missing_recommendation_count = 0
     missing_comment_count = 0
 
-    for row_number, source in enumerate(source_rows, start=workbook_metadata["first_data_row"]):
+    professor_matched_count = 0
+    course_matched_count = 0
+    relationship_matched_count = 0
+
+    for source in source_rows:
+        row_number = int(source["__source_row_number"])
         raw_course = text(source.get(columns["course_code"]))
         raw_professor = text(source.get(columns["professor_name"]))
         content = text(source.get(columns["content"]))
@@ -310,19 +330,29 @@ def main() -> None:
 
         canonical_course = next(iter(course_candidates)) if len(course_candidates) == 1 else ""
         canonical_professor = next(iter(professor_candidates)) if len(professor_candidates) == 1 else ""
+        if canonical_course:
+            course_matched_count += 1
+        if canonical_professor:
+            professor_matched_count += 1
+        relationship_matched = bool(
+            canonical_course
+            and canonical_professor
+            and (normalize_course(canonical_course), normalize_professor(canonical_professor)) in relationship_index
+        )
+        if relationship_matched:
+            relationship_matched_count += 1
         pii = contains_personal_data([content])
         issues: list[str] = []
-        if not all((professor_quality_ok, easy_a_ok, course_quality_ok, recommendation_ok)):
-            issues.append("invalid_rating")
+        if not all((professor_quality_ok, easy_a_ok, course_quality_ok)):
+            issues.append("invalid_required_rating")
+        if not recommendation_ok:
+            issues.append("invalid_recommendation")
         if not year_ok:
             issues.append("invalid_year")
         if not semester:
             issues.append("invalid_semester")
         if not class_format:
             issues.append("invalid_class_format")
-        if not content:
-            issues.append("missing_comment")
-
         if pii:
             status = "personal_data"
             content = ""
@@ -330,10 +360,19 @@ def main() -> None:
             status = "invalid"
         elif len(course_candidates) == 0 or len(professor_candidates) == 0:
             status = "not_found"
+            if len(course_candidates) == 0:
+                issues.append("course_not_found")
+            if len(professor_candidates) == 0:
+                issues.append("professor_not_found")
         elif len(course_candidates) > 1 or len(professor_candidates) > 1:
             status = "ambiguous"
-        elif (normalize_course(canonical_course), normalize_professor(canonical_professor)) not in relationship_index:
+            if len(course_candidates) > 1:
+                issues.append("course_ambiguous")
+            if len(professor_candidates) > 1:
+                issues.append("professor_ambiguous")
+        elif not relationship_matched:
             status = "invalid_relationship"
+            issues.append("invalid_professor_course_relationship")
         else:
             status = "matched"
 
@@ -384,17 +423,27 @@ def main() -> None:
         "header_row": workbook_metadata["header_row"],
         "sheet_name": workbook_metadata["selected_sheet"],
         "raw_rows": len(preview),
+        "completely_empty_rows": workbook_metadata["completely_empty_rows"],
         "valid_rows": valid_rows,
         "rows": len(preview),
         "columns": headers,
         "mapped_columns": sorted(mapped_headers),
+        "unmapped_columns": unmapped_headers,
         "excluded_sensitive_columns": sensitive_headers,
         "matched": status_counts["matched"],
+        "professor_matched": professor_matched_count,
+        "course_matched": course_matched_count,
+        "relationship_matched": relationship_matched_count,
+        "master_not_found": status_counts["not_found"],
         "ambiguous": status_counts["ambiguous"],
         "not_found": status_counts["not_found"],
         "duplicates": status_counts["duplicate"],
         "invalid": status_counts["invalid"],
-        "invalid_rating": sum("invalid_rating" in row["issues"].split(";") for row in preview),
+        "invalid_rating": sum(
+            bool({"invalid_required_rating", "invalid_recommendation"}.intersection(row["issues"].split(";")))
+            for row in preview
+        ),
+        "invalid_required_rating": sum("invalid_required_rating" in row["issues"].split(";") for row in preview),
         "personal_data": status_counts["personal_data"],
         "pii_excluded": status_counts["personal_data"],
         "invalid_relationship": status_counts["invalid_relationship"],

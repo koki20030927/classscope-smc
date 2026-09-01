@@ -59,3 +59,7 @@ Required order: DB migration, legacy SMC regression, Git commit/push, Vercel Rev
 ## Production gate
 
 The database-first stage is complete: `20260831010000_review_schema_v2.sql` is present in Production migration history, legacy SMC data preservation passed, and the old frontend remained compatible. Frontend deployment and the fixed 33-row external Review import require their own explicit approvals; importing external Reviews remains prohibited until that final approval.
+
+## Revised full-import gate
+
+The original 33 imported OCC Reviews remain unchanged. The revised source recount permits commentless imported Reviews and produces a separate 47-row idempotent full batch: 33 existing source identities and 14 new candidates. Local validation uses `20260831170000_imported_review_nullable_content.sql`, which keeps comments required for normal users and legacy Reviews while allowing `NULL` only for controlled imported v2 rows. Production migration and the 14 additional Reviews remain prohibited until their own explicit approval.

@@ -55,7 +55,7 @@ export interface Review {
   class_format: ClassFormat | null;
   year_taken: number | null;
   semester: Semester | null;
-  content: string;
+  content: string | null;
   is_imported: boolean;
   source_type: string | null;
   source_row_key: string | null;

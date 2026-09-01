@@ -109,6 +109,25 @@ begin
   exception
     when insufficient_privilege then null;
   end;
+
+  begin
+    insert into public.reviews (
+      school_id, user_id, professor_id, course_id, review_schema_version,
+      rating, difficulty, homework_amount, support_quality, attendance_required,
+      professor_quality, easy_a, course_quality, recommendation,
+      class_format, year_taken, semester, content
+    ) values (
+      '00000000-0000-4000-8000-000000000001',
+      '12000000-0000-4000-8000-000000000001',
+      '22000000-0000-4000-8000-000000000001',
+      '32000000-0000-4000-8000-000000000001',
+      2, null, null, null, null, null,
+      5, 4, 5, 5, 'hybrid', 2026, 'fall', null
+    );
+    raise exception 'normal user created a commentless Review';
+  exception
+    when check_violation then null;
+  end;
 end;
 $$;
 
@@ -157,7 +176,7 @@ insert into public.reviews (
   'in_person',
   2025,
   'spring',
-  'Imported Review without a source recommendation',
+  null,
   true,
   'review_v2_fixture',
   'fixture_row_1',

@@ -73,7 +73,6 @@ begin
        or class_format not in ('in_person', 'online', 'hybrid')
        or year_taken not between 2000 and 2100
        or semester not in ('fall', 'spring', 'summer', 'winter')
-       or btrim(content) = ''
   ) then
     raise exception 'invalid OCC external Review staging value';
   end if;

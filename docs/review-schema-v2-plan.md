@@ -34,6 +34,7 @@ Add the schema version, four rating columns, class format, year, semester, and i
 - Year is 2000 through 2100.
 - Version 1 requires the complete legacy payload and no v2 payload.
 - Version 2 requires the v2 payload and no legacy ratings. Recommendation may be null only on an imported Review because some source sheets may genuinely omit it.
+- Comment remains required for user-authored v2 Reviews. A controlled imported v2 Review may preserve a missing source comment as `NULL`; no placeholder comment is generated.
 
 ### Phase C — Frontend
 
