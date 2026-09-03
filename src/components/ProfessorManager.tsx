@@ -4,6 +4,7 @@ import { Professor } from '../lib/types';
 import { Plus, Search, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useSchool } from '../contexts/SchoolContext';
+import { fetchAllPages } from '../lib/fetchAllPages';
 
 function getProfessorErrorMessage(error: { code?: string; message?: string }) {
   const message = error.message?.toLowerCase() ?? '';
@@ -30,29 +31,42 @@ export function ProfessorManager() {
   const [searchQuery, setSearchQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [listLoading, setListLoading] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const currentSchoolId = currentSchool?.id;
 
   useEffect(() => {
-    if (isAdmin) {
-      void loadProfessors();
-    }
-  }, [isAdmin, currentSchool?.id]);
+    if (!isAdmin || !currentSchoolId) return;
 
-  const loadProfessors = async () => {
-    setListLoading(true);
-    setErrorMessage(null);
-    const { data, error } = await supabase
-      .from('professors')
-      .select('*')
-      .eq('school_id', currentSchool!.id)
-      .order('name');
+    let cancelled = false;
+    const schoolId = currentSchoolId;
 
-    if (!error && data) {
-      setProfessors(data);
-    } else if (error) {
-      setErrorMessage(getProfessorErrorMessage(error));
-    }
-    setListLoading(false);
-  };
+    const loadProfessors = async () => {
+      setListLoading(true);
+      setErrorMessage(null);
+      const { data, error } = await fetchAllPages<Professor, { code?: string; message?: string }>(
+        async (from, to) => supabase
+          .from('professors')
+          .select('*')
+          .eq('school_id', schoolId)
+          .order('name')
+          .order('id')
+          .range(from, to),
+      );
+
+      if (cancelled) return;
+      if (!error && data) {
+        setProfessors(data);
+      } else if (error) {
+        setErrorMessage(getProfessorErrorMessage(error));
+      }
+      setListLoading(false);
+    };
+
+    void loadProfessors();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin, currentSchoolId, reloadKey]);
 
   const handleAddProfessor = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,7 +80,7 @@ export function ProfessorManager() {
     if (!error) {
       setNewProfessorName('');
       setShowForm(false);
-      loadProfessors();
+      setReloadKey((current) => current + 1);
     } else {
       setErrorMessage(getProfessorErrorMessage(error));
     }

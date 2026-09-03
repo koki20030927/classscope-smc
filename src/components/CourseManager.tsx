@@ -4,6 +4,7 @@ import { Course } from '../lib/types';
 import { Plus, Search, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useSchool } from '../contexts/SchoolContext';
+import { fetchAllPages } from '../lib/fetchAllPages';
 
 function getCourseErrorMessage(error: { code?: string; message?: string }) {
   const message = error.message?.toLowerCase() ?? '';
@@ -31,29 +32,42 @@ export function CourseManager() {
   const [searchQuery, setSearchQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [listLoading, setListLoading] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const currentSchoolId = currentSchool?.id;
 
   useEffect(() => {
-    if (isAdmin) {
-      void loadCourses();
-    }
-  }, [isAdmin, currentSchool?.id]);
+    if (!isAdmin || !currentSchoolId) return;
 
-  const loadCourses = async () => {
-    setListLoading(true);
-    setErrorMessage(null);
-    const { data, error } = await supabase
-      .from('courses')
-      .select('*')
-      .eq('school_id', currentSchool!.id)
-      .order('code');
+    let cancelled = false;
+    const schoolId = currentSchoolId;
 
-    if (!error && data) {
-      setCourses(data);
-    } else if (error) {
-      setErrorMessage(getCourseErrorMessage(error));
-    }
-    setListLoading(false);
-  };
+    const loadCourses = async () => {
+      setListLoading(true);
+      setErrorMessage(null);
+      const { data, error } = await fetchAllPages<Course, { code?: string; message?: string }>(
+        async (from, to) => supabase
+          .from('courses')
+          .select('*')
+          .eq('school_id', schoolId)
+          .order('code')
+          .order('id')
+          .range(from, to),
+      );
+
+      if (cancelled) return;
+      if (!error && data) {
+        setCourses(data);
+      } else if (error) {
+        setErrorMessage(getCourseErrorMessage(error));
+      }
+      setListLoading(false);
+    };
+
+    void loadCourses();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin, currentSchoolId, reloadKey]);
 
   const handleAddCourse = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,7 +82,7 @@ export function CourseManager() {
       setNewCourseCode('');
       setNewCourseName('');
       setShowForm(false);
-      loadCourses();
+      setReloadKey((current) => current + 1);
     } else {
       setErrorMessage(getCourseErrorMessage(error));
     }
